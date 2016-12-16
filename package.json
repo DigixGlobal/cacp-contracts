@@ -1,7 +1,7 @@
 {
   "name": "cacp-contracts",
   "version": "0.0.1",
-  "description": "Digix Contract Access Control",
+  "description": "Contract Access Control",
   "license": "BSD-3-Clause",
   "author": "DigixGlobal",
   "scripts": {
