@@ -1,4 +1,7 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.6;
+
+/// @title Some useful constants
+/// @author DigixGlobal
 
 contract Constants {
 

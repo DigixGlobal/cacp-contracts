@@ -7,12 +7,18 @@ contract Migrations {
 
   /// @notice The owner of this Contract
   /// @dev Set to `msg.sender` on creation
+
+  /// The owner of the migrations contract.
   address public owner;
+
+  /// Timestamp of the last completed migration.
   uint public last_completed_migration;
 
   modifier restricted() {
     if (msg.sender == owner) _;
   }
+
+  /// Constructor
   function Migrations() {
     owner = msg.sender;
   }

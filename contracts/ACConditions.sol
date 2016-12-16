@@ -1,6 +1,9 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.6;
 
 import "./Constants.sol";
+
+/// @title Condition based access control
+/// @author DigixGlobal
 
 contract ACConditions is Constants {
    

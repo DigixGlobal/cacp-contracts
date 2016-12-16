@@ -1,5 +1,7 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.6;
 
+/// @title State machine access control
+/// @author DigixGlobal
 
 contract ACState {
 

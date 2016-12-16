@@ -1,5 +1,7 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.6;
 
+/// @title Locking based access control
+/// @author DigixGlobal
 
 contract ACSimpleMutex {
 

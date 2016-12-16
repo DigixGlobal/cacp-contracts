@@ -1,7 +1,9 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.6;
 
 import "./ACGroups.sol";
 
+/// @title User levels based access control
+/// @author DigixGlobal
 
 contract ACUserLevel is ACGroups {
 

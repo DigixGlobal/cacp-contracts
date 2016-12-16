@@ -1,6 +1,6 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.6;
 
-/// @title Digix Access Control for Owner
+/// @title Owner based access control
 /// @author DigixGlobal
 
 contract ACOwned {

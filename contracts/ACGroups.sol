@@ -1,6 +1,9 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.6;
+
 import "./ACOwned.sol";
 
+/// @title Owner based access control
+/// @author DigixGlobal
 
 contract ACGroups is ACOwned {
 

@@ -1,5 +1,7 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.6;
 
+/// @title Blocktime based access control
+/// @author DigixGlobal
 
 contract ACDates {
 
