@@ -3,14 +3,15 @@
   "version": "0.0.1",
   "description": "Digix Contract Access Control",
   "scripts": {
-    "dev": "node ./watch-tests.js",
-    "test": "node ./node_modules/truffle/cli.js test test/index.js",
-    "console": "node ./node_modules/truffle/cli.js console --network development",
-    "test-server": "testrpc -p 6545",
-    "compile": "rm -rf ./build; node ./node_modules/truffle/cli.js compile --network development",
+    "dev": "node ./scripts/watch-tests.js",
     "inspect": "node --inspect --debug-brk ./node_modules/truffle/cli.js test",
-    "deploy-tests": "node ./node_modules/truffle/cli.js migrate --reset --network development",
-    "deploy-morden": "node ./node_modules/truffle/cli.js migrate --network morden"
+    "console": "node ./node_modules/truffle/cli.js console --network development",
+    "compile": "rm -rf ./build; node ./node_modules/truffle/cli.js compile --network development",
+    "test-server": "./node_modules/.bin/testrpc -p 6545",
+    "deploy-tests": "node ./node_modules/truffle/cli.js migrate --network development",
+    "run-tests": "node ./node_modules/truffle/cli.js test",
+    "test": "npm run compile && npm run deploy-tests && npm run run-tests",
+    "deploy-morden": "node ./node_modules/truffle/cli.js migrate --reset --network morden"
   },
   "devDependencies": {
     "@digix/contest": "^0.2.0",

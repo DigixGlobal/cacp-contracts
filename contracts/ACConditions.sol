@@ -1,6 +1,6 @@
 pragma solidity ^0.4.2;
 
-import "../aux/Constants.sol";
+import "./Constants.sol";
 
 contract ACConditions is Constants {
    

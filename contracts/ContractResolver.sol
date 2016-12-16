@@ -1,6 +1,6 @@
 pragma solidity ^0.4.2;
 
-import "../ac/ACGroups.sol";
+import "./ACGroups.sol";
 
 
 contract ContractResolver is ACGroups {
