@@ -3,7 +3,7 @@ module.exports = sigmate.truffle({
   networks: {
     morden: {
       network_id: 2,
-      providerUrl: 'https://morden.infura.io/ftFX2a6rGHbiA45c6m0r',
+      providerUrl: 'https://ropsten.infura.io/ftFX2a6rGHbiA45c6m0r',
       // providerUrl: 'http://localhost:8545',
       gas: 3000000,
       keystore: {

@@ -1,11 +1,11 @@
 linkPrefix = "/cacp-contracts"
 compiler = "0.4.7-develop.2016.12.14+commit.f8fe6e4f.Darwin.appleclang"
-name = "cacp-contracts"
+name = "@digix/cacp-contracts"
 license = "BSD-3-Clause"
-version = "0.0.1"
-description = "Digix Contract Access Control"
+version = "0.0.2"
+description = "Contract Access Control"
 author = "DigixGlobal"
-buildTime = 2016-12-16T03:01:16.513Z
+buildTime = 2016-12-27T18:29:28.872Z
 target = "scripts/doxity"
 src = "contracts/*"
 dir = "pages/docs"
