@@ -347,6 +347,12 @@ var SolidityEvent = require("web3/lib/web3/event.js");
   };
 
   Contract.all_networks = {
+  "3": {
+    "abi": [],
+    "unlinked_binary": "0x6060604052346000575b60358060166000396000f30060606040525b60005600a165627a7a723058209e710f0524dc2153cc24766eddf8e1a2843433fbd12f23712e8f329c096ea1fd0029",
+    "events": {},
+    "updated_at": 1483572687334
+  },
   "default": {
     "abi": [],
     "unlinked_binary": "0x6060604052346000575b60098060156000396000f360606040525b600056",

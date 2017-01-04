@@ -347,6 +347,31 @@ var SolidityEvent = require("web3/lib/web3/event.js");
   };
 
   Contract.all_networks = {
+  "3": {
+    "abi": [
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_mutexId",
+            "type": "bytes32"
+          }
+        ],
+        "name": "isUserMutexLocked",
+        "outputs": [
+          {
+            "name": "_locked",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "type": "function"
+      }
+    ],
+    "unlinked_binary": "0x606060405234610000575b60c7806100186000396000f300606060405263ffffffff60e060020a600035041663403f3b5781146022575b6000565b34600057602f6004356043565b604080519115158252519081900360200190f35b604080516c0100000000000000000000000073ffffffffffffffffffffffffffffffffffffffff331602815260148101839052815190819003603401902060008181526020819052919091205460ff16905b509190505600a165627a7a72305820aa756f13b438211f82f396e5743a49f9e250885596260622a071e7792e7a39da0029",
+    "events": {},
+    "updated_at": 1483572687360
+  },
   "default": {
     "abi": [
       {

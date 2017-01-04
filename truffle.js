@@ -1,26 +1,26 @@
 const sigmate = require('./node_modules/@digix/sigmate');
-module.exports = sigmate.truffle({
+
+module.exports = {
   networks: {
-    morden: {
-      network_id: 2,
-      providerUrl: 'https://ropsten.infura.io/ftFX2a6rGHbiA45c6m0r',
-      // providerUrl: 'http://localhost:8545',
-      gas: 3000000,
+    testnet: sigmate.config({
+      network_id: '3',
+      prefund: 1e18, // 1 ether from coinbase to each account
+      rpcUrl: 'https://ropsten.infura.io/',
       keystore: {
         label: 'testing',
         password: 'testing',
       },
-    },
-    test: {
-      port: 6545,
-    },
-    development: {
+    }),
+    development: sigmate.config({
       network_id: 'default',
-      port: 6545,
-    },
+      prefund: 10e18,
+      // virtual: true,
+      // prefund: true,
+      rpcUrl: 'http://localhost:6545',
+      keystore: {
+        label: 'testing',
+        password: 'testing',
+      },
+    }),
   },
-  rpc: {
-    host: 'localhost',
-    port: 8545,
-  },
-});
+};

@@ -347,6 +347,44 @@ var SolidityEvent = require("web3/lib/web3/event.js");
   };
 
   Contract.all_networks = {
+  "3": {
+    "abi": [
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "testIfOwner",
+        "outputs": [
+          {
+            "name": "_success",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "payable": false,
+        "type": "constructor"
+      }
+    ],
+    "unlinked_binary": "0x606060405234610000575b60008054600160a060020a03191633600160a060020a03161790555b5b60ce806100356000396000f300606060405263ffffffff60e060020a6000350416638da5cb5b8114602c578063abf8ba33146052575b6000565b3460005760366070565b60408051600160a060020a039092168252519081900360200190f35b34600057605c607f565b604080519115158252519081900360200190f35b600054600160a060020a031681565b6000805433600160a060020a039081169116146099576000565b5060015b5b5b905600a165627a7a723058200c25f06c7a9c7d5a067e10e00465ab28093485bc417a083a53ff639d1b7b18d10029",
+    "events": {},
+    "updated_at": 1483572687354
+  },
   "default": {
     "abi": [
       {
