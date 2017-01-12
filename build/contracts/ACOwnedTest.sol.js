@@ -277,21 +277,23 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         tx_params.data = self.binary;
       }
 
-      // web3 0.9.0 and above calls new twice this callback twice.
-      // Why, I have no idea...
-      var intermediary = function(err, web3_instance) {
-        if (err != null) {
-          reject(err);
-          return;
+      args.push(tx_params);
+      // don't use new, which requires filter; use sendTransaction & manually poll...
+      const newArgs = args[args.length - 1];
+      newArgs.data = contract_class.new.getData.apply(contract_class, args);
+      self.web3.eth.sendTransaction(newArgs, (err, tx) => {
+        if (err) { throw new Error(err); }
+        function poll() {
+          return self.web3.eth.getTransactionReceipt(tx, (err, res) => {
+            if (res) {
+              accept(new self(contract_class.at(res.contractAddress)));
+            } else {
+              setTimeout(poll, 5 * 1000);
+            }
+          })
         }
-
-        if (err == null && web3_instance != null && web3_instance.address != null) {
-          accept(new self(web3_instance));
-        }
-      };
-
-      args.push(tx_params, intermediary);
-      contract_class.new.apply(contract_class, args);
+        setTimeout(poll, 10);
+      });
     });
   };
 
@@ -383,7 +385,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
     ],
     "unlinked_binary": "0x606060405234610000575b60008054600160a060020a03191633600160a060020a03161790555b5b60ce806100356000396000f300606060405263ffffffff60e060020a6000350416638da5cb5b8114602c578063abf8ba33146052575b6000565b3460005760366070565b60408051600160a060020a039092168252519081900360200190f35b34600057605c607f565b604080519115158252519081900360200190f35b600054600160a060020a031681565b6000805433600160a060020a039081169116146099576000565b5060015b5b5b905600a165627a7a723058200c25f06c7a9c7d5a067e10e00465ab28093485bc417a083a53ff639d1b7b18d10029",
     "events": {},
-    "updated_at": 1483572687354
+    "updated_at": 1484228036012
   },
   "default": {
     "abi": [
@@ -419,9 +421,9 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         "type": "constructor"
       }
     ],
-    "unlinked_binary": "0x606060405234610000575b60008054600160a060020a0319166c01000000000000000000000000338102041790555b5b609f8061003c6000396000f3606060405260e060020a60003504638da5cb5b81146026578063abf8ba3314604c575b6000565b346000576030606a565b60408051600160a060020a039092168252519081900360200190f35b3460005760566079565b604080519115158252519081900360200190f35b600054600160a060020a031681565b6000805433600160a060020a03908116911614609657600056609a565b5060015b5b5b9056",
+    "unlinked_binary": "0x606060405234610000575b60008054600160a060020a03191633600160a060020a03161790555b5b60ce806100356000396000f300606060405263ffffffff60e060020a6000350416638da5cb5b8114602c578063abf8ba33146052575b6000565b3460005760366070565b60408051600160a060020a039092168252519081900360200190f35b34600057605c607f565b604080519115158252519081900360200190f35b600054600160a060020a031681565b6000805433600160a060020a039081169116146099576000565b5060015b5b5b905600a165627a7a723058200c25f06c7a9c7d5a067e10e00465ab28093485bc417a083a53ff639d1b7b18d10029",
     "events": {},
-    "updated_at": 1482863367815
+    "updated_at": 1484228018443
   }
 };
 

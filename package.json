@@ -1,26 +1,26 @@
 {
   "name": "@digix/cacp-contracts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Contract Access Control",
   "license": "BSD-3-Clause",
   "author": "DigixGlobal",
   "scripts": {
     "dev": "node ./scripts/watch-tests.js",
-    "inspect": "node --inspect --debug-brk ./node_modules/truffle/cli.js test",
-    "console": "node ./node_modules/truffle/cli.js console --network development",
-    "compile": "node ./node_modules/truffle/cli.js compile --reset --network development",
     "test-server": "./node_modules/.bin/testrpc -p 6545 --verbose",
     "test-server-attach": "geth attach http://localhost:6545",
-    "deploy-tests": "node ./node_modules/truffle/cli.js migrate --reset --network development",
     "run-tests": "node ./node_modules/truffle/cli.js test",
-    "test": "npm run test-server && npm run compile && npm run deploy-tests && npm run run-tests",
+    "inspect": "node --inspect --debug-brk ./node_modules/truffle/cli.js test",
+    "console": "node ./node_modules/truffle/cli.js console",
+    "compile": "node ./node_modules/truffle/cli.js compile --reset",
+    "deploy": "node ./node_modules/truffle/cli.js migrate --reset",
+    "test": "npm run test-server && npm run compile && npm run deploy && npm run run-tests",
     "console-testnet": "node ./node_modules/truffle/cli.js console --network testnet",
     "compile-testnet": "node ./node_modules/truffle/cli.js compile --reset --network testnet",
     "deploy-testnet": "node ./node_modules/truffle/cli.js migrate --reset --network testnet"
   },
   "devDependencies": {
     "@digix/contest": "^0.2.0",
-    "@digix/sigmate": "^2.1.0-dev",
+    "@digix/sigmate": "^2.1.5-dev",
     "@digix/tempo": "0.0.3",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-stage-2": "^6.17.0",
@@ -31,7 +31,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "multi-hash": "^0.1.1",
-    "truffle": "git://github.com/hitchcott/truffle.git#8d245f9edcc8f761c890861b31cae847f6b3fe3f"
+    "truffle": "git://github.com/hitchcott/truffle.git#79adfa8b1fcd7c49c1db40c6e8d7a96d42330e4f"
   },
   "repository": {
     "type": "git",

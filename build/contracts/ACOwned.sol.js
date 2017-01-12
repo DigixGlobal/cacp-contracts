@@ -277,21 +277,23 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         tx_params.data = self.binary;
       }
 
-      // web3 0.9.0 and above calls new twice this callback twice.
-      // Why, I have no idea...
-      var intermediary = function(err, web3_instance) {
-        if (err != null) {
-          reject(err);
-          return;
+      args.push(tx_params);
+      // don't use new, which requires filter; use sendTransaction & manually poll...
+      const newArgs = args[args.length - 1];
+      newArgs.data = contract_class.new.getData.apply(contract_class, args);
+      self.web3.eth.sendTransaction(newArgs, (err, tx) => {
+        if (err) { throw new Error(err); }
+        function poll() {
+          return self.web3.eth.getTransactionReceipt(tx, (err, res) => {
+            if (res) {
+              accept(new self(contract_class.at(res.contractAddress)));
+            } else {
+              setTimeout(poll, 5 * 1000);
+            }
+          })
         }
-
-        if (err == null && web3_instance != null && web3_instance.address != null) {
-          accept(new self(web3_instance));
-        }
-      };
-
-      args.push(tx_params, intermediary);
-      contract_class.new.apply(contract_class, args);
+        setTimeout(poll, 10);
+      });
     });
   };
 
@@ -365,7 +367,7 @@ var SolidityEvent = require("web3/lib/web3/event.js");
     ],
     "unlinked_binary": "0x6060604052346000575b609d806100176000396000f300606060405263ffffffff60e060020a6000350416638da5cb5b81146022575b6000565b34600057602c6055565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a7230582099cb3918cbc88d43dbd772dce4c5f4530a515cf0816b4cbc8973b097da513e6c0029",
     "events": {},
-    "updated_at": 1483572687352
+    "updated_at": 1484228036010
   },
   "default": {
     "abi": [
@@ -383,9 +385,9 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         "type": "function"
       }
     ],
-    "unlinked_binary": "0x6060604052346000575b606b806100166000396000f3606060405260e060020a60003504638da5cb5b8114601c575b6000565b346000576026604f565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff168156",
+    "unlinked_binary": "0x6060604052346000575b609d806100176000396000f300606060405263ffffffff60e060020a6000350416638da5cb5b81146022575b6000565b34600057602c6055565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a7230582099cb3918cbc88d43dbd772dce4c5f4530a515cf0816b4cbc8973b097da513e6c0029",
     "events": {},
-    "updated_at": 1482863367815
+    "updated_at": 1484228018443
   }
 };
 
