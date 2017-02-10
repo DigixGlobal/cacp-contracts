@@ -1,26 +1,28 @@
-const sigmate = require('./node_modules/@digix/sigmate');
-module.exports = sigmate.truffle({
+const LightWalletProvider = require('@digix/truffle-lightwallet-provider');
+
+const { KEYSTORE, PASSWORD } = process.env;
+
+if (!KEYSTORE || !PASSWORD) { throw new Error('You must export KEYSTORE and PASSWORD (see truffle.js)'); }
+
+module.exports = {
   networks: {
-    morden: {
-      network_id: 2,
-      providerUrl: 'https://ropsten.infura.io/ftFX2a6rGHbiA45c6m0r',
-      // providerUrl: 'http://localhost:8545',
-      gas: 3000000,
-      keystore: {
-        label: 'testing',
-        password: 'testing',
-      },
+    ropsten: {
+      provider: new LightWalletProvider({
+        keystore: KEYSTORE,
+        password: PASSWORD,
+        rpcUrl: 'https://ropsten.infura.io/',
+        debug: true,
+      }),
+      network_id: '3',
     },
     test: {
-      port: 6545,
-    },
-    development: {
-      network_id: 'default',
-      port: 6545,
+      provider: new LightWalletProvider({
+        keystore: KEYSTORE,
+        password: PASSWORD,
+        prefund: 1e18,
+        rpcUrl: 'http://localhost:6545/',
+      }),
+      network_id: '*',
     },
   },
-  rpc: {
-    host: 'localhost',
-    port: 8545,
-  },
-});
+};

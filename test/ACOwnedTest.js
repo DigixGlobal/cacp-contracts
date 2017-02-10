@@ -1,14 +1,17 @@
 /* globals DigixMath */
-import Contest from '@digix/contest';
-import Tempo from '@digix/tempo';
-import { asyncIterator } from './helpers/async';
-import { randomInt } from './helpers/random';
-import { BIG_INT, BIG_INT_MINUS_TWO, ONE_DAY_IN_SECONDS } from './helpers/constants';
+const Contest = require('@digix/contest').default;
+const {
+  BIG_INT_MINUS_TWO,
+  BIG_INT,
+  ONE_DAY_IN_SECONDS,
+  currentTimestamp,
+  randomTime,
+  randomInt,
+} = require('@digix/contest/lib/helpers');
 
 contract('ACOwnedTest', function (accounts) {
-  let tempo;
-  new Contest({ debug: true })
-  .deployed('ACOwnedTest')
+  new Contest()
+  .artifact('ACOwnedTest')
   .describe('testIfOwner')
   .call('testIfOwner', 'returns true if called from the contract owner', [
     [[{from: accounts[0]}], [true]],

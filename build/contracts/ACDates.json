@@ -1,0 +1,8 @@
+{
+  "contract_name": "ACDates",
+  "abi": [],
+  "unlinked_binary": "0x6060604052346000575b60358060166000396000f30060606040525b60005600a165627a7a723058206cd4951f0fc3bb4b0f77e5749e1e464820ad7c64ac7bacf8f115f48e308ab5b60029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1486691532100
+}
