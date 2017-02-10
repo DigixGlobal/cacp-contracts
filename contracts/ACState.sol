@@ -7,7 +7,7 @@ contract ACState {
 
     mapping (bytes32 => uint256) states;
 
-    modifier ifState(bytes32 _key, uint8 _state) {
+    modifier if_state(bytes32 _key, uint8 _state) {
 
         if (states[_key] != _state) {
             throw;
@@ -16,7 +16,7 @@ contract ACState {
         }
     }
 
-    modifier unlessState(bytes32 _key, uint8 _state) {
+    modifier unless_state(bytes32 _key, uint8 _state) {
         if (states[_key] == _state) {
             throw;
         } else {
@@ -24,7 +24,11 @@ contract ACState {
         }
     }
 
-    function setState(bytes32 _key, uint8 _state) private returns (bool _success) {
+    function set_state(bytes32 _key, 
+                       uint8 _state) 
+                       private 
+                       returns (bool _success) 
+    {
         states[_key] = _state;
         _success = true;
         return _success;

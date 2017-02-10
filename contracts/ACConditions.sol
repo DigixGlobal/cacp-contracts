@@ -7,7 +7,7 @@ import "./Constants.sol";
 
 contract ACConditions is Constants {
    
-    modifier notNullAddress(address _item) {
+    modifier not_null_address(address _item) {
         if (_item == NULL_ADDRESS) {
             throw;
         } else {
@@ -15,7 +15,7 @@ contract ACConditions is Constants {
         }
     }
 
-    modifier ifNullAddress(address _item) {
+    modifier if_null_address(address _item) {
         if (_item != NULL_ADDRESS) {
             throw;
         } else {
@@ -23,7 +23,7 @@ contract ACConditions is Constants {
         }
     }
 
-    modifier notNullUint(uint256 _item) {
+    modifier not_null_uint(uint256 _item) {
         if (_item == NONE) {
             throw;
         } else {
@@ -31,7 +31,7 @@ contract ACConditions is Constants {
         }
     }
 
-    modifier ifNullUint(uint256 _item) {
+    modifier if_null_uint(uint256 _item) {
         if (_item != NONE) {
             throw;
         } else {
@@ -39,7 +39,7 @@ contract ACConditions is Constants {
         }
     }
 
-    modifier notNullBytes(bytes32 _item) {
+    modifier not_null_bytes(bytes32 _item) {
         if (_item == EMPTY) {
             throw;
         } else {
@@ -47,7 +47,7 @@ contract ACConditions is Constants {
         }
     }
 
-    modifier ifNullBytes(bytes32 _item) {
+    modifier if_null_bytes(bytes32 _item) {
         if (_item != EMPTY) {
             throw;
         } else {
@@ -55,7 +55,7 @@ contract ACConditions is Constants {
         }
     }
 
-    modifier notNullString(string _item) {
+    modifier not_null_string(string _item) {
         bytes memory _i = bytes(_item);
         if (_i.length == 0) {
             throw;
@@ -64,7 +64,7 @@ contract ACConditions is Constants {
         }
     }
 
-    modifier ifNullString(string _item) {
+    modifier if_null_string(string _item) {
         bytes memory _i = bytes(_item);
         if (_i.length != 0) {
             throw;
@@ -73,7 +73,7 @@ contract ACConditions is Constants {
         }
     }
 
-    modifier requireGas(uint256 _requiredgas) {
+    modifier require_gas(uint256 _requiredgas) {
         if (msg.gas < _requiredgas) {
             throw;
         } else {

@@ -8,7 +8,10 @@ contract ACOwnedTest is ACOwned {
     owner = msg.sender;
   }
 
-  function testIfOwner() ifOwner() returns (bool _success) {
+  function test_if_owner() 
+                        if_owner 
+                        returns (bool _success) 
+  {
     return true;
   }
 

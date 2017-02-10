@@ -8,7 +8,7 @@ contract ACOwned {
     address public owner;
     
     /// @dev Modifier to check if msg.sender is the contract owner
-    modifier ifOwner() {
+    modifier if_owner() {
         if (owner != msg.sender) {
             throw;
         } else {

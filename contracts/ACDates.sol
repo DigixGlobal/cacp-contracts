@@ -5,7 +5,7 @@ pragma solidity ^0.4.8;
 
 contract ACDates {
 
-    modifier ifBefore(uint256 _date) {
+    modifier if_before(uint256 _date) {
         if (now > _date) {
             throw;
         } else {
@@ -13,7 +13,7 @@ contract ACDates {
         }
     }
 
-    modifier ifAfter(uint256 _date) {
+    modifier if_after(uint256 _date) {
         if (now < _date) {
             throw;
         } else {

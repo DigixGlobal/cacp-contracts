@@ -5,38 +5,48 @@ pragma solidity ^0.4.8;
 
 contract ACSimpleMutex {
 
-    mapping (bytes32 => bool) slocks;
+    mapping (bytes32 => bool) locks;
     
-    modifier ifSimpleMutexLocked(bytes32 _mId) {
-        if (!isSimpleMutexLocked(_mId)) {
+    modifier if_simple_mutex_is_locked(bytes32 _mutex_id) {
+        if (!is_simple_mutex_locked(_mutex_id)) {
             throw;
         } else {
             _;
         }
     }
     
-    modifier unlessSimpleMutexLocked(bytes32 _mId) {
-        if (isSimpleMutexLocked(_mId)) {
+    modifier unless_simple_mutex_is_locked(bytes32 _mutex_id) {
+        if (is_simple_mutex_locked(_mutex_id)) {
             throw;
         } else {
             _;
         }
     }
 
-    function simpleMutexLock(bytes32 _mutexId) private returns (bool _success) {
-        slocks[_mutexId] = true;
+    function lock_simple_mutex(bytes32 _mutex_id) 
+                               private 
+                               returns (bool _success) 
+    {
+        locks[_mutex_id] = true;
         _success = true;
         return _success;
     }
     
-    function simpleMutexUnlock(bytes32 _mutexId) private returns (bool _success) {
-        slocks[_mutexId] = false;
+    function unlock_simple_mutex(bytes32 _mutex_id) 
+                                 private 
+                                 returns (bool _success) 
+    {
+        locks[_mutex_id] = false;
         _success = true;
         return _success;
     }
     
-    function isSimpleMutexLocked(bytes32 _mutexId) public constant returns (bool _locked) {
-        _locked = slocks[_mutexId];
+    function is_simple_mutex_locked(bytes32 _mutex_id) 
+                                    public 
+                                    constant 
+                                    returns (bool _locked) 
+    {
+        _locked = locks[_mutex_id];
         return _locked;
     }
 

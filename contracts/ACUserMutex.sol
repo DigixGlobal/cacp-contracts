@@ -5,41 +5,51 @@ pragma solidity ^0.4.8;
 
 contract ACUserMutex {
 
-    mapping (bytes32 => bool) umlocks;
+    mapping (bytes32 => bool) user_mutex_locks;
 
-    modifier ifUserMutexLocked(bytes32 _mId) {
-        if (!isUserMutexLocked(_mId)) {
+    modifier if_user_mutex_locked(bytes32 _mutex_id) {
+        if (!is_user_mutex_locked(_mutex_id)) {
             throw;
         } else {
             _;
         }
     }
 
-    modifier unlessUserMutexLocked(bytes32 _mId) {
-        if (isUserMutexLocked(_mId)) {
+    modifier unless_user_mutex_locked(bytes32 _mutex_id) {
+        if (is_user_mutex_locked(_mutex_id)) {
             throw;
         } else {
             _;
         }
     }
 
-    function userMutexLock(bytes32 _mutexId) private returns (bool _success) {
-        bytes32 _key = sha3(msg.sender, _mutexId);
-        umlocks[_key] = true;
+    function lock_user_mutex(bytes32 _mutex_id) 
+                             private 
+                             returns (bool _success) 
+    {
+        bytes32 _key = sha3(msg.sender, _mutex_id);
+        user_mutex_locks[_key] = true;
         _success = true;
         return _success;
     }
     
-    function userMutexUnlock(bytes32 _mutexId) private returns (bool _success) {
-        bytes32 _key = sha3(msg.sender, _mutexId);
-        umlocks[_key] = true;
+    function unlock_user_mutex(bytes32 _mutex_id) 
+                               private 
+                               returns (bool _success) 
+    {
+        bytes32 _key = sha3(msg.sender, _mutex_id);
+        user_mutex_locks[_key] = true;
         _success = true;
         return _success;
     }
     
-    function isUserMutexLocked(bytes32 _mutexId) public constant returns (bool _locked) {
-        bytes32 _key = sha3(msg.sender, _mutexId);
-        _locked = umlocks[_key];
+    function is_user_mutex_locked(bytes32 _mutex_id) 
+                                  public 
+                                  constant 
+                                  returns (bool _locked) 
+    {
+        bytes32 _key = sha3(msg.sender, _mutex_id);
+        _locked = user_mutex_locks[_key];
         return _locked;
     }
 
