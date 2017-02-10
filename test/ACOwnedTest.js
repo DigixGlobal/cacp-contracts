@@ -1,5 +1,7 @@
 /* globals DigixMath */
 const Contest = require('@digix/contest').default;
+const ACOwnedTest = artifacts.require('./ACOwnedTest.sol');
+
 const {
   BIG_INT_MINUS_TWO,
   BIG_INT,
@@ -11,12 +13,12 @@ const {
 
 contract('ACOwnedTest', function (accounts) {
   new Contest()
-  .artifact('ACOwnedTest')
+  .artifact(ACOwnedTest)
   .describe('testIfOwner')
   .call('testIfOwner', 'returns true if called from the contract owner', [
     [[{from: accounts[0]}], [true]],
   ])
-  .call('testIfOwner', 'throws if not called from the owner account', [ 
+  .call('testIfOwner', 'throws if not called from the owner account', [
     [{from: accounts[1]}],
     [{from: accounts[2]}],
   ])
