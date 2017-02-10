@@ -14,15 +14,15 @@ const {
 contract('ACOwnedTest', function (accounts) {
   new Contest()
   .artifact(ACOwnedTest)
-  .describe('testIfOwner')
-  .call('testIfOwner', 'returns true if called from the contract owner', [
+  .describe('test_if_owner')
+  .call('test_if_owner', 'returns true if called from the contract owner', [
     [[{from: accounts[0]}], [true]],
   ])
-  .call('testIfOwner', 'throws if not called from the owner account', [
+  .call('test_if_owner', 'throws if not called from the owner account', [
     [{from: accounts[1]}],
     [{from: accounts[2]}],
   ])
-  .call('testIfOwner', 'does not throw if called from the owner account', [
+  .call('test_if_owner', 'does not throw if called from the owner account', [
     [{from: accounts[0]}],
   ]).done();
 });
