@@ -277,21 +277,23 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         tx_params.data = self.binary;
       }
 
-      // web3 0.9.0 and above calls new twice this callback twice.
-      // Why, I have no idea...
-      var intermediary = function(err, web3_instance) {
-        if (err != null) {
-          reject(err);
-          return;
+      args.push(tx_params);
+      // don't use new, which requires filter; use sendTransaction & manually poll...
+      const newArgs = args[args.length - 1];
+      newArgs.data = contract_class.new.getData.apply(contract_class, args);
+      self.web3.eth.sendTransaction(newArgs, (err, tx) => {
+        if (err) { throw new Error(err); }
+        function poll() {
+          return self.web3.eth.getTransactionReceipt(tx, (err, res) => {
+            if (res) {
+              accept(new self(contract_class.at(res.contractAddress)));
+            } else {
+              setTimeout(poll, 5 * 1000);
+            }
+          })
         }
-
-        if (err == null && web3_instance != null && web3_instance.address != null) {
-          accept(new self(web3_instance));
-        }
-      };
-
-      args.push(tx_params, intermediary);
-      contract_class.new.apply(contract_class, args);
+        setTimeout(poll, 10);
+      });
     });
   };
 
@@ -347,11 +349,17 @@ var SolidityEvent = require("web3/lib/web3/event.js");
   };
 
   Contract.all_networks = {
+  "3": {
+    "abi": [],
+    "unlinked_binary": "0x6060604052346000575b60358060166000396000f30060606040525b60005600a165627a7a72305820014f2046c76703bd1d3cf43ecb777ca18c96edf17e3573da3e0eb932e03003bf0029",
+    "events": {},
+    "updated_at": 1484228035999
+  },
   "default": {
     "abi": [],
-    "unlinked_binary": "0x6060604052346000575b60098060156000396000f360606040525b600056",
+    "unlinked_binary": "0x6060604052346000575b60358060166000396000f30060606040525b60005600a165627a7a72305820014f2046c76703bd1d3cf43ecb777ca18c96edf17e3573da3e0eb932e03003bf0029",
     "events": {},
-    "updated_at": 1482863367814
+    "updated_at": 1484228018440
   }
 };
 
