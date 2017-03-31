@@ -81,4 +81,40 @@ contract ACConditions is Constants {
         }
     }
 
+    function is_contract(address _contract) 
+                         public
+                         constant
+                         returns (bool _is_contract)
+    {
+      uint32 _code_length;
+
+      assembly {
+        _code_length := extcodesize(_contract)
+      }
+
+      if(_code_length > 1) {
+        _is_contract = true;
+      } else {
+        _is_contract = false;
+      }
+      
+      return _is_contract;
+    }
+
+    modifier if_contract(address _contract) {
+      if (is_contract(_contract)) {
+        _;
+      } else {
+        throw;
+      }
+    }
+
+    modifier unless_contract(address _contract) {
+      if(!is_contract(_contract)) {
+        _;
+      } else {
+        throw;
+      }
+    }
+
 }
