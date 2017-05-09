@@ -1,6 +1,6 @@
 {
   "name": "@digix/cacp-contracts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Contract Access Control",
   "license": "BSD-3-Clause",
   "author": "DigixGlobal",
@@ -22,7 +22,7 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "ethereumjs-testrpc": "^3.0.3",
-    "truffle": "3.1.1",
+    "truffle": "3.2.2",
     "truffle-compile": "1.0.0",
     "truffle-contract": "git://github.com/DigixGlobal/truffle-contract.git#29d8151584fce2b5cfe01da16b26270fa8934798"
   },

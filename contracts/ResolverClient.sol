@@ -1,4 +1,4 @@
-pragma solidity ^0.4.8;
+pragma solidity ^0.4.11;
 
 import "./ContractResolver.sol";
 
@@ -11,7 +11,7 @@ contract ResolverClient {
   address public resolver;
 
   /// Make our own address available to us as a constant
-  address public constant CONTRACT_ADDRESS = address(this);
+  address public CONTRACT_ADDRESS;
 
   /// Function modifier to check if msg.sender corresponds to the resolved address of a given key
   /// @param _contract The resolver key
@@ -39,6 +39,7 @@ contract ResolverClient {
                 internal 
                 returns (bool _success) 
   {
+    CONTRACT_ADDRESS = address(this);
     _success = ContractResolver(resolver).init_register_contract(_key, CONTRACT_ADDRESS);
     return _success;
   }
