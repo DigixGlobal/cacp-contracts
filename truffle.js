@@ -6,22 +6,41 @@ if (!KEYSTORE || !PASSWORD) { throw new Error('You must export KEYSTORE and PASS
 
 module.exports = {
   networks: {
-    ropsten: {
+    kovan: {
       provider: new LightWalletProvider({
         keystore: KEYSTORE,
         password: PASSWORD,
-        rpcUrl: 'https://ropsten.infura.io/',
-        debug: true,
+        rpcUrl: 'https://kovan.infura.io/',
+        pollingInterval: 2000,
+        // debug: true,
       }),
-      network_id: '3',
+      gas: 4600000,
+      network_id: '42',
     },
-    test: {
+    mainnet: {
       provider: new LightWalletProvider({
         keystore: KEYSTORE,
         password: PASSWORD,
-        prefund: 1e18,
-        rpcUrl: 'http://localhost:6545/',
+        rpcUrl: 'https://mainnet.infura.io/',
+        pollingInterval: 5000,
+        // debug: true,
       }),
+      network_id: '1',
+    },
+    classic: {
+      provider: new LightWalletProvider({
+        keystore: KEYSTORE,
+        password: PASSWORD,
+        rpcUrl: 'https://digixparity04.digix.io/',
+        pollingInterval: 5000,
+        // debug: true,
+      }),
+      gas: 400000,
+      network_id: '61',
+    },
+    development: {
+      host: 'localhost',
+      port: 6545,
       network_id: '*',
     },
   },
