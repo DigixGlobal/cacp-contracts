@@ -1,0 +1,53 @@
+{
+  "contract_name": "ACOwned",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "change_owner",
+      "outputs": [
+        {
+          "name": "_success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "is_owner",
+      "outputs": [
+        {
+          "name": "_is_owner",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b61014e8061001f6000396000f300606060405263ffffffff60e060020a600035041663253c8bd4811461003a5780638da5cb5b1461006d578063ad721ff61461009c575b600080fd5b341561004557600080fd5b610059600160a060020a03600435166100c3565b604051901515815260200160405180910390f35b341561007857600080fd5b6100806100fd565b604051600160a060020a03909116815260200160405180910390f35b34156100a757600080fd5b61005961010c565b604051901515815260200160405180910390f35b60006100cd61010c565b15156100d857600080fd5b5060008054600160a060020a031916600160a060020a03831617905560015b5b919050565b600054600160a060020a031681565b60005433600160a060020a039081169116145b905600a165627a7a72305820236125e2373ba3b8799b63e0eb399611354975d3c691699bfb506e2f8d469a1b0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1501557571233
+}

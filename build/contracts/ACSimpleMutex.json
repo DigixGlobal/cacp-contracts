@@ -1,0 +1,27 @@
+{
+  "contract_name": "ACSimpleMutex",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_mutex_id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "is_simple_mutex_locked",
+      "outputs": [
+        {
+          "name": "_locked",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x60606040523415600e57600080fd5b5b608e8061001d6000396000f300606060405263ffffffff60e060020a60003504166327379aa781146023575b600080fd5b3415602d57600080fd5b6036600435604a565b604051901515815260200160405180910390f35b60008181526020819052604090205460ff165b9190505600a165627a7a72305820e8edc7ca617eb315ea5ad8cc766860340281538d1c08f729ba7fcbab8a43ca240029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1501557571233
+}

@@ -1,0 +1,27 @@
+{
+  "contract_name": "ACConditions",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_contract",
+          "type": "address"
+        }
+      ],
+      "name": "is_contract",
+      "outputs": [
+        {
+          "name": "_is_contract",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60a58061001e6000396000f300606060405263ffffffff60e060020a600035041663649c07d581146023575b600080fd5b3415602d57600080fd5b603f600160a060020a03600435166053565b604051901515815260200160405180910390f35b6000813b600163ffffffff82161115606d57600191506072565b600091505b5b509190505600a165627a7a72305820a8fcbdbdfe0a8fd0cbea56260f9dc5e1cd50e02681081679d355af3f0767e5d00029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1501557571233
+}
