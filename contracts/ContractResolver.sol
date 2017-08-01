@@ -1,66 +1,54 @@
-pragma solidity ^0.4.11;
+pragma solidity ^0.4.13;
 
 import "./ACGroups.sol";
+import "./Constants.sol";
 
 /// @title Contract Name Registry
 /// @author DigixGlobal
 
-contract ContractResolver is ACGroups {
+contract ContractResolver is ACGroups, Constants {
 
   mapping (bytes32 => address) contracts;
   event RegisterEvent(bytes32 indexed _contract_name, 
                       address indexed _contract_address);
   bool public locked;
-  bool public timeLocked;
-  uint public gracePeriod;
+  bool public time_locked;
+  uint public grace_period;
 
   modifier unless_registered(bytes32 _key) {
-    if (contracts[_key] != 0x0) {
-      throw;
-    } else {
-      _;
-    }
+    require(contracts[_key] == NULL_ADDRESS);
+    _;
   }
 
   modifier if_owner_origin() {
-    if (tx.origin != owner) {
-      throw;
-    } else {
-      _;
-    }
+    require(tx.origin == owner);
+    _;
   }
 
-  modifier lock_after_period() {
-    if (timeLocked && (gracePeriod < now)) {
-      throw;
-    } else {
-      _;
-    }
+  modifier locked_after_period() {
+    require((time_locked == false) && (grace_period > now));
+    _;
   }
 
   /// @dev ContractResolver constructor will perform the following: 1. Set msg.sender as the contract owner.  2. Adds msg.sender to the default groups 'admins' and 'nsadmins'
   function ContractResolver() 
   {
-    address _sender = msg.sender;
-    owner = _sender;
+    require(init_ac_groups());
     locked = false;
-    groups["admins"].members[_sender] = true;
-    groups["nsadmins"].members[_sender] = true;
+    groups["nsadmins"].members[owner] = true;
   }
     
   /// @dev Called at contract initialization
   /// @param _key bytestring for CACP name
   /// @param _contract_address The address of the contract to be registered
   /// @return _success if the operation is successful
-  function init_register_contract(bytes32 _key, 
-                                  address _contract_address) 
+  function init_register_contract(bytes32 _key, address _contract_address) 
            if_owner_origin() 
            unless_registered(_key) 
            returns (bool _success) 
   {
     contracts[_key] = _contract_address;
     _success = true;
-    return _success;
   }
 
   /// @dev Lock the resolver from any further modifications.  This can only be called from an account that is part of the nsadmins group
@@ -71,7 +59,6 @@ contract ContractResolver is ACGroups {
   {
     locked = true;
     _success = true;
-    return _success;
   }
 
   /// @dev Unlock the resolver to allow further modifications.  This can only be called from an account that is part of the nsadmins group
@@ -82,18 +69,17 @@ contract ContractResolver is ACGroups {
   {
      locked = false;
      _success = true;
-     return _success;
   }
     
   /// @dev Enable time locking.  
-  /// @param _gracePeriod the unix timestamp when the resolver is locked forever
-  function enable_time_locking(uint _gracePeriod) 
+  /// @param _grace_period the unix timestamp when the resolver is locked forever
+  function enable_time_locking(uint _grace_period) 
            if_group("nsadmins") 
-           lock_after_period() 
+           locked_after_period() 
            returns (bool _success)
   {
-    gracePeriod = _gracePeriod;
-    timeLocked = true;
+    grace_period = _grace_period;
+    time_locked = true;
     _success = true;
   }
 
@@ -101,10 +87,10 @@ contract ContractResolver is ACGroups {
   /// @param _key the bytestring of the contract name
   /// @param _contract the address of the contract
   /// @return _success if the operation is successful
-  function register_contract(bytes32 _key, 
-                             address _contract) 
+  function register_contract(bytes32 _key, address _contract) 
            if_group("nsadmins") 
-           lock_after_period()
+           locked_after_period()
+           public
            returns (bool _success) 
   {
     contracts[_key] = _contract;
@@ -121,10 +107,8 @@ contract ContractResolver is ACGroups {
            constant 
            returns (address _contract) 
   {
-    if (contracts[_key] == address(0x0)) {
-      throw;
-    }
-    return contracts[_key];
+    require(contracts[_key] != NULL_ADDRESS);
+    _contract = contracts[_key];
   }
 
 }

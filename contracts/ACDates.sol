@@ -1,23 +1,17 @@
-pragma solidity ^0.4.11;
+pragma solidity ^0.4.13;
 
 /// @title Blocktime based access control
 /// @author DigixGlobal
 
 contract ACDates {
 
-    modifier if_before(uint256 _date) {
-        if (now > _date) {
-            throw;
-        } else {
-            _;
-        }
-    }
+  modifier if_before(uint256 _date) {
+    require(now < _date);
+    _;
+  }
 
-    modifier if_after(uint256 _date) {
-        if (now < _date) {
-            throw;
-        } else {
-            _;
-        }
-    }
+  modifier if_after(uint256 _date) {
+    require(now > _date);
+    _;
+  }
 }

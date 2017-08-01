@@ -1,16 +1,16 @@
-pragma solidity ^0.4.11;
+pragma solidity ^0.4.13;
 
 import "./ACOwned.sol";
 
 contract ACOwnedTest is ACOwned {
 
   function ACOwnedTest() {
-    owner = msg.sender;
+    require(init_ac_owned());
   }
 
   function test_if_owner() 
-                        if_owner 
-                        returns (bool _success) 
+           if_owner 
+           returns (bool _success) 
   {
     return true;
   }

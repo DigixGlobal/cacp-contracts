@@ -1,4 +1,4 @@
-pragma solidity ^0.4.11;
+pragma solidity ^0.4.13;
 
 import "./ContractResolver.sol";
 
@@ -16,54 +16,46 @@ contract ResolverClient {
   /// Function modifier to check if msg.sender corresponds to the resolved address of a given key
   /// @param _contract The resolver key
   modifier if_sender_is(bytes32 _contract) {
-    if (msg.sender != ContractResolver(resolver).get_contract(_contract)) {
-      throw;
-    } else {
-      _;
-    }
+    require(msg.sender == ContractResolver(resolver).get_contract(_contract));
+    _;
   }
 
   /// Function modifier to check resolver's locking status.
   modifier unless_resolver_is_locked() {
-    if (is_locked()) {
-      throw;
-    } else {
-      _;
-    }
+    require(is_locked() == false);
+    _;
   }
 
   /// @dev Initialize new contract
   /// @param _key the resolver key for this contract
   /// @return _success if the initialization is successful
   function init(bytes32 _key) 
-                internal 
-                returns (bool _success) 
+           unless_resolver_is_locked()
+           internal 
+           returns (bool _success) 
   {
     CONTRACT_ADDRESS = address(this);
     _success = ContractResolver(resolver).init_register_contract(_key, CONTRACT_ADDRESS);
-    return _success;
   }
 
   /// @dev Check if resolver is locked
   /// @return _locked if the resolver is currently locked
   function is_locked() 
-                     public 
-                     constant 
-                     returns (bool _locked) 
+           public 
+           constant 
+           returns (bool _locked) 
   {
     _locked = ContractResolver(resolver).locked();
-    return _locked;
   }
 
   /// @dev Get the address of a contract
   /// @param _key the resolver key to look up
   /// @return _contract the address of the contract
   function get_contract(bytes32 _key) 
-                        public 
-                        constant 
-                        returns (address _contract) 
+           public 
+           constant 
+           returns (address _contract) 
   {
     _contract = ContractResolver(resolver).get_contract(_key);
-    return _contract;
   }
 }
