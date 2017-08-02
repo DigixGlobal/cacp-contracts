@@ -6,7 +6,7 @@ pragma solidity ^0.4.14;
 contract ACOwned {
 
   address public owner;
-  bool ac_owned_init;
+  bool is_ac_owned_init;
     
   /// @dev Modifier to check if msg.sender is the contract owner
   modifier if_owner() {
@@ -15,7 +15,7 @@ contract ACOwned {
   }
 
   modifier unless_ac_owned_initialized() {
-    require(ac_owned_init == false);
+    require(is_ac_owned_init == false);
     _;
   }
 
@@ -25,6 +25,7 @@ contract ACOwned {
            returns (bool _success)
   {
     owner = msg.sender;
+    is_ac_owned_init = true;
     _success = true;
   }
 

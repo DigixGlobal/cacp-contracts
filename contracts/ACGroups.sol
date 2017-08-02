@@ -7,7 +7,7 @@ import "./ACOwned.sol";
 
 contract ACGroups is ACOwned {
 
-  bool is_groups_init = false;
+  bool is_ac_groups_init = false;
 
   struct Group {
     mapping(address => bool) members;
@@ -21,7 +21,7 @@ contract ACGroups is ACOwned {
   }
 
   modifier unless_ac_groups_init() {
-    require(is_groups_init == false);
+    require(is_ac_groups_init == false);
     _;
   }
 
@@ -30,8 +30,9 @@ contract ACGroups is ACOwned {
            internal
            returns (bool _success)
   {
+    require(init_ac_owned());
     groups["admins"].members[msg.sender] = true;
-    require(init_ac_groups());
+    is_ac_groups_init = true;
     _success = true;
   }
 
