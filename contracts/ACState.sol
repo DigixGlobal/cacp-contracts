@@ -1,4 +1,4 @@
-pragma solidity ^0.4.13;
+pragma solidity ^0.4.14;
 
 /// @title State machine access control
 /// @author DigixGlobal
