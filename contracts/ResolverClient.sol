@@ -1,11 +1,12 @@
 pragma solidity ^0.4.14;
 
 import "./ContractResolver.sol";
+import "./ACOwned.sol";
 
 /// @title Contract Resolver Interface
 /// @author DigixGlobal
 
-contract ResolverClient {
+contract ResolverClient is ACOwned {
 
   /// The address of the resolver contract for this project
   address public resolver;
@@ -36,6 +37,7 @@ contract ResolverClient {
   {
     CONTRACT_ADDRESS = address(this);
     resolver = _resolver;
+    owner = msg.sender;
     _success = ContractResolver(resolver).init_register_contract(_key, CONTRACT_ADDRESS);
   }
 
