@@ -29,12 +29,13 @@ contract ResolverClient {
   /// @dev Initialize new contract
   /// @param _key the resolver key for this contract
   /// @return _success if the initialization is successful
-  function init(bytes32 _key) 
+  function init(bytes32 _key, address _resolver) 
            unless_resolver_is_locked()
            internal 
            returns (bool _success) 
   {
     CONTRACT_ADDRESS = address(this);
+    resolver = _resolver;
     _success = ContractResolver(resolver).init_register_contract(_key, CONTRACT_ADDRESS);
   }
 
