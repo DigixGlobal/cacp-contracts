@@ -37,7 +37,7 @@ contract ResolverClient is ACOwned {
   {
     CONTRACT_ADDRESS = address(this);
     resolver = _resolver;
-    owner = msg.sender;
+    require(init_ac_owned());
     _success = ContractResolver(resolver).init_register_contract(_key, CONTRACT_ADDRESS);
   }
 
