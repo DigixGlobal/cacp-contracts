@@ -30,7 +30,9 @@ contract ACGroups is ACOwned {
            internal
            returns (bool _success)
   {
-    require(init_ac_owned());
+    if(is_ac_owned_init == false) {
+      init_ac_owned();
+    }
     groups["admins"].members[msg.sender] = true;
     is_ac_groups_init = true;
     _success = true;
