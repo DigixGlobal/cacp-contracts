@@ -14,18 +14,14 @@ contract ACOwned {
     _;
   }
 
-  modifier unless_ac_owned_initialized() {
-    require(is_ac_owned_init == false);
-    _;
-  }
-
   function init_ac_owned()
-           unless_ac_owned_initialized()
            internal
            returns (bool _success)
   {
-    owner = msg.sender;
-    is_ac_owned_init = true;
+    if (is_ac_owned_init == false) {
+      owner = msg.sender;
+      is_ac_owned_init = true;
+    }
     _success = true;
   }
 
