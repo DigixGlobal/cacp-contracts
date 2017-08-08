@@ -31,14 +31,19 @@ contract ResolverClient is ACOwned {
   /// @param _key the resolver key for this contract
   /// @return _success if the initialization is successful
   function init(bytes32 _key, address _resolver) 
-           unless_resolver_is_locked()
            internal 
            returns (bool _success) 
   {
-    CONTRACT_ADDRESS = address(this);
-    resolver = _resolver;
-    require(init_ac_owned());
-    _success = ContractResolver(resolver).init_register_contract(_key, CONTRACT_ADDRESS);
+    bool _is_locked = ContractResolver(_resolver).locked();
+    if (_is_locked == false) {
+      CONTRACT_ADDRESS = address(this);
+      resolver = _resolver;
+      require(init_ac_owned());
+      require(ContractResolver(_resolver).init_register_contract(_key, CONTRACT_ADDRESS));
+      _success = true;
+    }  else {
+      _success = false;
+    }
   }
 
   /// @dev Check if resolver is locked

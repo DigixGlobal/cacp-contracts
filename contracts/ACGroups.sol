@@ -20,21 +20,17 @@ contract ACGroups is ACOwned {
     _;
   }
 
-  modifier unless_ac_groups_init() {
-    require(is_ac_groups_init == false);
-    _;
-  }
-
   function init_ac_groups()
-           unless_ac_groups_init()
            internal
            returns (bool _success)
   {
     if(is_ac_owned_init == false) {
       init_ac_owned();
     }
-    groups["admins"].members[msg.sender] = true;
-    is_ac_groups_init = true;
+    if(is_ac_groups_init == false) {
+      groups["admins"].members[msg.sender] = true;
+      is_ac_groups_init = true;
+    }
     _success = true;
   }
 

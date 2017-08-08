@@ -26,16 +26,20 @@ contract ContractResolver is ACGroups, Constants {
   }
 
   modifier locked_after_period() {
-    require((time_locked == false) && (grace_period > now));
-    _;
+    if (time_locked == false) {
+      _;
+    } else {
+      require(grace_period > now);
+      _;
+    }
   }
 
   /// @dev ContractResolver constructor will perform the following: 1. Set msg.sender as the contract owner.  2. Adds msg.sender to the default groups 'admins' and 'nsadmins'
   function ContractResolver() 
   {
     require(init_ac_groups());
-    locked = false;
     groups["nsadmins"].members[owner] = true;
+    locked = false;
   }
     
   /// @dev Called at contract initialization
@@ -45,6 +49,7 @@ contract ContractResolver is ACGroups, Constants {
   function init_register_contract(bytes32 _key, address _contract_address) 
            if_owner_origin() 
            unless_registered(_key) 
+           locked_after_period() 
            returns (bool _success) 
   {
     contracts[_key] = _contract_address;
