@@ -4,6 +4,9 @@ extends:
 settings:
   ecmascript: 6
 
+env:
+  mocha: true
+
 rules:
   arrow-body-style: 0
   max-len: 0
@@ -17,6 +20,7 @@ globals:
   contract: 1
   assert: 1
   web3: 1
+  artifacts: 1
 
 parserOptions:
   ecmaFeatures:
