@@ -15,10 +15,6 @@ contract MockACDates is ACDates {
     return true;
   }
 
-  function get_now() returns (uint256 _now) {
-    return _now;
-  }
-
   /*modifier if_before(uint256 _date) {
     require(now < _date);
     _;
