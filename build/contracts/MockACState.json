@@ -1,0 +1,31 @@
+{
+  "contract_name": "MockACState",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        },
+        {
+          "name": "_state",
+          "type": "uint8"
+        }
+      ],
+      "name": "test_if_state",
+      "outputs": [
+        {
+          "name": "_success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60c38061001e6000396000f300606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663b38cd2a28114603c575b600080fd5b3415604657600080fd5b605560043560ff602435166069565b604051901515815260200160405180910390f35b6000828152602081905260408120548390839060ff821614608957600080fd5b600192505b5b5050929150505600a165627a7a72305820db0804219300b4b42966711c395f767346b0da26ef750b82084d747fc71777a30029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1503643019530
+}
