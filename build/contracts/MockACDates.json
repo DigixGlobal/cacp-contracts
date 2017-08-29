@@ -1,0 +1,45 @@
+{
+  "contract_name": "MockACDates",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_date",
+          "type": "uint256"
+        }
+      ],
+      "name": "test_if_before",
+      "outputs": [
+        {
+          "name": "_success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_date",
+          "type": "uint256"
+        }
+      ],
+      "name": "test_if_after",
+      "outputs": [
+        {
+          "name": "_success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60f68061001e6000396000f300606060405263ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166355b3daac81146046578063689358cb14606d575b600080fd5b3415605057600080fd5b60596004356094565b604051901515815260200160405180910390f35b3415607757600080fd5b605960043560af565b604051901515815260200160405180910390f35b6000814281901060a357600080fd5b600191505b5b50919050565b6000814281901160a357600080fd5b600191505b5b509190505600a165627a7a72305820268a0f30dccfa35d0331dbe7e6df5cd3df9b954681851e4db68e747c22b4fe450029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1503994609930
+}

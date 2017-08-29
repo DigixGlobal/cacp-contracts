@@ -7,6 +7,137 @@
         {
           "name": "_key",
           "type": "bytes32"
+        }
+      ],
+      "name": "get_state",
+      "outputs": [
+        {
+          "name": "_state_value",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "test_decrement_state_before_set_100",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "test_increment_state_before_increment_100",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        },
+        {
+          "name": "_state",
+          "type": "uint8"
+        }
+      ],
+      "name": "mock_setup_set_state",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        },
+        {
+          "name": "_state",
+          "type": "uint8"
+        }
+      ],
+      "name": "test_set_state",
+      "outputs": [
+        {
+          "name": "_success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "test_decrement_state_after",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "test_increment_state_after",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        },
+        {
+          "name": "_state",
+          "type": "uint8"
+        }
+      ],
+      "name": "test_unless_state",
+      "outputs": [
+        {
+          "name": "_success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
         },
         {
           "name": "_state",
@@ -22,10 +153,53 @@
       ],
       "payable": false,
       "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "test_decrement_state_before_increment_100",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "test_increment_state_before_set_100",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_key",
+          "type": "bytes32"
+        },
+        {
+          "name": "_state",
+          "type": "uint8"
+        }
+      ],
+      "name": "test_set_state_after",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
     }
   ],
-  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60c38061001e6000396000f300606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663b38cd2a28114603c575b600080fd5b3415604657600080fd5b605560043560ff602435166069565b604051901515815260200160405180910390f35b6000828152602081905260408120548390839060ff821614608957600080fd5b600192505b5b5050929150505600a165627a7a72305820db0804219300b4b42966711c395f767346b0da26ef750b82084d747fc71777a30029",
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b6104268061001f6000396000f300606060405236156100b65763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041662de9a2281146100bb57806318ca0582146100e3578063357c7813146100fb578063464059b81461011357806375709a28146101315780637637856814610161578063954df0d01461017957806397025c2814610191578063b38cd2a2146101c1578063b3be90b5146101f1578063d401c3a3146100e3578063e36a5cad14610221575b600080fd5b34156100c657600080fd5b6100d160043561023f565b60405190815260200160405180910390f35b34156100ee57600080fd5b6100f9600435610254565b005b341561010657600080fd5b6100f960043561026d565b005b341561011e57600080fd5b6100f960043560ff60243516610289565b005b341561013c57600080fd5b61014d60043560ff602435166102a2565b604051901515815260200160405180910390f35b341561016c57600080fd5b6100f96004356102b7565b005b341561018457600080fd5b6100f96004356102e6565b005b341561019c57600080fd5b61014d60043560ff60243516610314565b604051901515815260200160405180910390f35b34156101cc57600080fd5b61014d60043560ff60243516610344565b604051901515815260200160405180910390f35b34156101fc57600080fd5b6100f9600435610373565b005b34156100ee57600080fd5b6100f9600435610254565b005b341561022c57600080fd5b6100f960043560ff602435166103a8565b005b6000818152602081905260409020545b919050565b600081815260208190526040902060649055805b5b5050565b600081815260208190526040902080546065019055805b5b5050565b600082815260208190526040902060ff821690555b5050565b60006102ae83836103dd565b90505b92915050565b600081815260208190526040902060649055805b600081815260208190526040902080546000190190555b5050565b600081815260208190526040902060649055805b6000818152602081905260409020805460010190555b5050565b6000828152602081905260408120548390839060ff8216141561033657600080fd5b600192505b5b505092915050565b6000828152602081905260408120548390839060ff82161461033657600080fd5b600192505b5b505092915050565b600081815260208190526040902080546063019055805b5b5050565b600081815260208190526040902060649055805b5b5050565b600082815260208190526040902060ff6064830116905581815b600082815260208190526040902060ff821690555b50505050565b600082815260208190526040902060ff8216905560015b929150505600a165627a7a72305820e2bc876e21e5c8b73cc7c948e2dabb401b8475405094c8a01d27f8c8aece4c030029",
   "networks": {},
   "schema_version": "0.0.5",
-  "updated_at": 1503643019530
+  "updated_at": 1503994609933
 }

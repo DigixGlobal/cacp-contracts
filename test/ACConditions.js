@@ -100,10 +100,10 @@ contract('ACConditions', function (addresses) {
 
   describe('require_gas', function () {
     const requiredGas = 500000;
-    const enoughGas = requiredGas + 22500;
+    const enoughGas = requiredGas + 22000;
 
     const notEnoughGas = requiredGas - 1;
-    const shouldBeEnoughGas = requiredGas + 21250; // from 21250 to 22500
+    const shouldBeEnoughGas = requiredGas + 22000; // from 21250 to 22500
 
     it('not enough gas: should throw', async function () {
       assert.ok(await a.failure(mockACConditions.test_require_gas.call(requiredGas, { gas: notEnoughGas })));
@@ -120,10 +120,10 @@ contract('ACConditions', function (addresses) {
   });
 
   describe('require_gas (small amount of gas)', function () {
-    const requiredGas = 40000;
+    const requiredGas = 100000;
     const enoughGas = requiredGas + 22500;
     const notEnoughGas = requiredGas - 1;
-    const shouldBeEnoughGas = requiredGas + 21250; // from 21250 to 22500
+    const shouldBeEnoughGas = requiredGas + 22000; // from 21250 to 22500
 
     it('not enough gas: should throw', async function () {
       assert.ok(await a.failure(mockACConditions.test_require_gas.call(requiredGas, { gas: notEnoughGas })));
