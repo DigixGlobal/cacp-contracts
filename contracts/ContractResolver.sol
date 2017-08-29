@@ -29,7 +29,7 @@ contract ContractResolver is ACGroups, Constants {
     if (time_locked == false) {
       _;
     } else {
-      require(grace_period > now);
+      require(grace_period >= now);
       _;
     }
   }

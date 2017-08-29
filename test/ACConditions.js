@@ -18,12 +18,15 @@ contract('ACConditions', function (addresses) {
 
   before(async function () {
     mockACConditions = await MockACConditions.new();
+    // console.log("mockACConditions:", mockACConditions);
+    // console.log({addresses});
     someContractAddress = mockACConditions.address;
   });
 
   describe('not_null_address', function () {
     it('throws when address is null', async function () {
       assert.ok(await a.failure(mockACConditions.test_not_null_address.call(nullAddress)));
+      // console.log("test_null_address", await mockACConditions.test_not_null_address.call(nullAddress));
     });
     it('does not throw when address is not null', async function () {
       assert.equal(await mockACConditions.test_not_null_address.call(addresses[0]), true);
@@ -96,25 +99,44 @@ contract('ACConditions', function (addresses) {
   });
 
   describe('require_gas', function () {
-    const requiredGas = 40000;
-    const enoughGas = 400000;
-    const notEnoughGas = 39999;
-    const shouldBeEnoughGas = 40001;
+    const requiredGas = 500000;
+    const enoughGas = requiredGas + 22000;
+
+    const notEnoughGas = requiredGas - 1;
+    const shouldBeEnoughGas = requiredGas + 22000; // from 21250 to 22500
 
     it('not enough gas: should throw', async function () {
-      // console.log(await mockACConditions.test_require_gas(requiredGas, { gas: notEnoughGas }));
       assert.ok(await a.failure(mockACConditions.test_require_gas.call(requiredGas, { gas: notEnoughGas })));
     });
 
     it('More than enough gas: should not throw', async function () {
-      // console.log(await mockACConditions.test_require_gas(requiredGas, { gas: enoughGas }));
       assert.equal(await mockACConditions.test_require_gas.call(requiredGas, { gas: enoughGas }), true);
     });
 
     // TODO Test failed. Maybe the test environments consume some extra gas?
-    // it('Barely enough gas: should not throw', async function () {
-    //   assert.equal(await mockACConditions.test_require_gas.call(requiredGas, { gas: shouldBeEnoughGas }), true);
-    // });
+    it('Barely enough gas: should not throw', async function () {
+      assert.equal(await mockACConditions.test_require_gas.call(requiredGas, { gas: shouldBeEnoughGas }), true);
+    });
+  });
+
+  describe('require_gas (small amount of gas)', function () {
+    const requiredGas = 100000;
+    const enoughGas = requiredGas + 22500;
+    const notEnoughGas = requiredGas - 1;
+    const shouldBeEnoughGas = requiredGas + 22000; // from 21250 to 22500
+
+    it('not enough gas: should throw', async function () {
+      assert.ok(await a.failure(mockACConditions.test_require_gas.call(requiredGas, { gas: notEnoughGas })));
+    });
+
+    it('More than enough gas: should not throw', async function () {
+      assert.equal(await mockACConditions.test_require_gas.call(requiredGas, { gas: enoughGas }), true);
+    });
+
+    // TODO Test failed. Maybe the test environments consume some extra gas?
+    it('Barely enough gas: should not throw', async function () {
+      assert.equal(await mockACConditions.test_require_gas.call(requiredGas, { gas: shouldBeEnoughGas }), true);
+    });
   });
 
   describe('is_contract', function () {

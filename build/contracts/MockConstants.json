@@ -1,0 +1,30 @@
+{
+  "contract_name": "MockConstants",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "test_constants",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60bd8061001e6000396000f300606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663bc17db508114603c575b600080fd5b3415604657600080fd5b604c6087565b60405173ffffffffffffffffffffffffffffffffffffffff909316835260208301919091526040808301919091526060909101905180910390f35b600080805b9091925600a165627a7a72305820afd7ce7c3648bbb5ee2beabfaf1248efc03cdbcd7c88f532a9ad77b4d963648b0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1503994609933
+}
