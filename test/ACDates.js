@@ -12,7 +12,7 @@ contract('ACDates', function () {
   describe('if_before(timestamp)', function () {
     const now = Math.floor(Date.now() / 1000); // get timestamp in seconds
     const pastTimestamp = bN(now - 1);
-    const futureTimestamp = bN(now + 1);
+    const futureTimestamp = bN(now + 5);
 
     it('throws when timestamp is in the past', async function () {
       assert.ok(await a.failure(mockACDates.test_if_before.call(pastTimestamp)));
