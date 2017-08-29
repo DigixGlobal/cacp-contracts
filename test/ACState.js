@@ -11,7 +11,7 @@ contract('ACState', function (addresses) {
 
   describe('if_state[modifier]', function () {
     before(async function () {
-      mockACState.mock_setup_set_state('test_key', 77);
+      await mockACState.mock_setup_set_state('test_key', 77);
     });
     it('throws if state value is not correct', async function () {
       assert.ok(await a.failure(mockACState.test_if_state.call('test_key', 76)));
@@ -23,7 +23,7 @@ contract('ACState', function (addresses) {
 
   describe('unless_state[modifier]', function () {
     before(async function () {
-      mockACState.mock_setup_set_state('test_key', 77);
+      await mockACState.mock_setup_set_state('test_key', 77);
     });
     it('throws if state value is correct', async function () {
       assert.ok(await a.failure(mockACState.test_unless_state.call('test_key', 77)));
