@@ -57,7 +57,7 @@ contract('ResolverClient', function (addresses) {
 
   describe('init', function () {
     it('if ContractResolver is locked, return false', async function () {
-      mockContractResolver.mock_set_locked(true);
+      await mockContractResolver.mock_set_locked(true);
       assert.deepEqual(await mockResolverClient.test_init.call('init_key', mockContractResolver.address), false);
     });
     it('if ContractResolver is unlocked, set CONTRACT_ADDRESS and resolver correctly, returns true', async function () {

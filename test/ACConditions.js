@@ -101,6 +101,7 @@ contract('ACConditions', function (addresses) {
   describe('require_gas', function () {
     const requiredGas = 500000;
     const enoughGas = requiredGas + 22500;
+
     const notEnoughGas = requiredGas - 1;
     const shouldBeEnoughGas = requiredGas + 21250; // from 21250 to 22500
 
