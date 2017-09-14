@@ -10,6 +10,7 @@ contract MockResolverClient is ResolverClient {
   function mock_set_resolver(address _resolver)
   {
     resolver = _resolver;
+    require(init('mock:resclient', resolver));
   }
 
   function test_if_sender_is (bytes32 _contract)

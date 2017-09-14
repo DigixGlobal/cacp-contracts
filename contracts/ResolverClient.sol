@@ -10,6 +10,7 @@ contract ResolverClient is ACOwned {
 
   /// The address of the resolver contract for this project
   address public resolver;
+  bytes32 public key;
 
   /// Make our own address available to us as a constant
   address public CONTRACT_ADDRESS;
@@ -38,11 +39,25 @@ contract ResolverClient is ACOwned {
     if (_is_locked == false) {
       CONTRACT_ADDRESS = address(this);
       resolver = _resolver;
+      key = _key;
       require(init_ac_owned());
-      require(ContractResolver(_resolver).init_register_contract(_key, CONTRACT_ADDRESS));
+      require(ContractResolver(resolver).init_register_contract(key, CONTRACT_ADDRESS));
       _success = true;
     }  else {
       _success = false;
+    }
+  }
+  
+  /// @dev Destroy the contract and unregister self from the ContractResolver
+  function destroy()
+           if_owner()
+           returns (bool _success)
+  {
+    bool _is_locked = ContractResolver(resolver).locked();
+    if (_is_locked == false) {
+      _success = ContractResolver(resolver).unregister_contract(key); 
+      require(_success);
+      selfdestruct(tx.origin); 
     }
   }
 

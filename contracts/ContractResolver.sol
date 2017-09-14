@@ -11,6 +11,7 @@ contract ContractResolver is ACGroups, Constants {
   mapping (bytes32 => address) contracts;
   event RegisterEvent(bytes32 indexed _contract_name, 
                       address indexed _contract_address);
+  event UnRegisterEvent(bytes32 indexed _contract_name);
   bool public locked;
   bool public time_locked;
   uint public grace_period;
@@ -22,6 +23,13 @@ contract ContractResolver is ACGroups, Constants {
 
   modifier if_owner_origin() {
     require(tx.origin == owner);
+    _;
+  }
+
+  /// Function modifier to check if msg.sender corresponds to the resolved address of a given key
+  /// @param _contract The resolver key
+  modifier if_sender_is(bytes32 _contract) {
+    require(msg.sender == get_contract(_contract));
     _;
   }
 
@@ -94,16 +102,31 @@ contract ContractResolver is ACGroups, Constants {
   /// @return _success if the operation is successful
   function register_contract(bytes32 _key, address _contract) 
            if_group("nsadmins") 
+           if_owner_origin() 
            locked_after_period()
            public
            returns (bool _success) 
   {
     contracts[_key] = _contract;
-    _success = true;
     RegisterEvent(_key, _contract);
-    return _success;
+    _success = true;
   }
 
+  /// @dev Unregister a contract.  This can only be called from an account that is part of the nsadmins group
+  /// @param _key the bytestring of the contract name
+  /// @return _success if the operation is successful
+  function unregister_contract(bytes32 _key)
+           locked_after_period()
+           if_owner_origin()
+           if_sender_is(_key)
+           public
+           returns (bool _success)
+  {
+    delete contracts[_key];
+    UnRegisterEvent(_key);
+    _success = true;
+  }
+  
   /// @dev Get address of a contract
   /// @param _key the bytestring name of the contract to look up
   /// @return _contract the address of the contract

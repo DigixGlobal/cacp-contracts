@@ -55,6 +55,12 @@ contract('ResolverClient', function (addresses) {
     });
   });
 
+  describe('destroy', function () {
+    it('should destroy the contract', async function() {
+      assert.ok(await mockResolverClient.destroy());
+    });
+  });
+
   describe('init', function () {
     it('if ContractResolver is locked, return false', async function () {
       await mockContractResolver.mock_set_locked(true);
