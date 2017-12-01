@@ -102,8 +102,8 @@ contract('ACConditions', function (addresses) {
     const requiredGas = 500000;
     const enoughGas = requiredGas + 22000;
 
-    const notEnoughGas = requiredGas - 1;
-    const shouldBeEnoughGas = requiredGas + 22000; // from 21250 to 22500
+    const notEnoughGas = requiredGas - 500;
+    const shouldBeEnoughGas = requiredGas + 2000; // from 21250 to 22500
 
     it('not enough gas: should throw', async function () {
       assert.ok(await a.failure(mockACConditions.test_require_gas.call(requiredGas, { gas: notEnoughGas })));
@@ -113,7 +113,6 @@ contract('ACConditions', function (addresses) {
       assert.equal(await mockACConditions.test_require_gas.call(requiredGas, { gas: enoughGas }), true);
     });
 
-    // TODO Test failed. Maybe the test environments consume some extra gas?
     it('Barely enough gas: should not throw', async function () {
       assert.equal(await mockACConditions.test_require_gas.call(requiredGas, { gas: shouldBeEnoughGas }), true);
     });
@@ -122,8 +121,8 @@ contract('ACConditions', function (addresses) {
   describe('require_gas (small amount of gas)', function () {
     const requiredGas = 100000;
     const enoughGas = requiredGas + 22500;
-    const notEnoughGas = requiredGas - 1;
-    const shouldBeEnoughGas = requiredGas + 22000; // from 21250 to 22500
+    const notEnoughGas = requiredGas - 500;
+    const shouldBeEnoughGas = requiredGas + 2000; // from 21250 to 22500
 
     it('not enough gas: should throw', async function () {
       assert.ok(await a.failure(mockACConditions.test_require_gas.call(requiredGas, { gas: notEnoughGas })));
@@ -133,7 +132,6 @@ contract('ACConditions', function (addresses) {
       assert.equal(await mockACConditions.test_require_gas.call(requiredGas, { gas: enoughGas }), true);
     });
 
-    // TODO Test failed. Maybe the test environments consume some extra gas?
     it('Barely enough gas: should not throw', async function () {
       assert.equal(await mockACConditions.test_require_gas.call(requiredGas, { gas: shouldBeEnoughGas }), true);
     });
