@@ -74,5 +74,12 @@ contract MockContractResolver is ContractResolver {
       _success = true;
     }
 
+    function test_if_not_locked()
+             if_not_locked()
+             returns (bool _success)
+    {
+      _success = true;
+    }
+
 
 }

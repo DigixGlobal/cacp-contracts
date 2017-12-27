@@ -9,7 +9,7 @@ import "./Constants.sol";
 contract ContractResolver is ACGroups, Constants {
 
   mapping (bytes32 => address) contracts;
-  event RegisterEvent(bytes32 indexed _contract_name, 
+  event RegisterEvent(bytes32 indexed _contract_name,
                       address indexed _contract_address);
   event UnRegisterEvent(bytes32 indexed _contract_name);
   bool public locked;
@@ -42,23 +42,29 @@ contract ContractResolver is ACGroups, Constants {
     }
   }
 
+  modifier if_not_locked() {
+    require(locked == false);
+    _;
+  }
+
   /// @dev ContractResolver constructor will perform the following: 1. Set msg.sender as the contract owner.  2. Adds msg.sender to the default groups 'admins' and 'nsadmins'
-  function ContractResolver() 
+  function ContractResolver()
   {
     require(init_ac_groups());
     groups["nsadmins"].members[owner] = true;
     locked = false;
   }
-    
+
   /// @dev Called at contract initialization
   /// @param _key bytestring for CACP name
   /// @param _contract_address The address of the contract to be registered
   /// @return _success if the operation is successful
-  function init_register_contract(bytes32 _key, address _contract_address) 
-           if_owner_origin() 
-           unless_registered(_key) 
-           locked_after_period() 
-           returns (bool _success) 
+  function init_register_contract(bytes32 _key, address _contract_address)
+           if_owner_origin()
+           if_not_locked()
+           unless_registered(_key)
+           locked_after_period()
+           returns (bool _success)
   {
     contracts[_key] = _contract_address;
     _success = true;
@@ -66,9 +72,9 @@ contract ContractResolver is ACGroups, Constants {
 
   /// @dev Lock the resolver from any further modifications.  This can only be called from an account that is part of the nsadmins group
   /// @return _success if the operation is successful
-  function lock_resolver() 
-           if_group("nsadmins") 
-           returns (bool _success) 
+  function lock_resolver()
+           if_group("nsadmins")
+           returns (bool _success)
   {
     locked = true;
     _success = true;
@@ -76,19 +82,19 @@ contract ContractResolver is ACGroups, Constants {
 
   /// @dev Unlock the resolver to allow further modifications.  This can only be called from an account that is part of the nsadmins group
   /// @return _success if the operation is successful
-  function unlock_resolver() 
-           if_group("nsadmins") 
-           returns (bool _success) 
+  function unlock_resolver()
+           if_group("nsadmins")
+           returns (bool _success)
   {
      locked = false;
      _success = true;
   }
-    
-  /// @dev Enable time locking.  
+
+  /// @dev Enable time locking.
   /// @param _grace_period the unix timestamp when the resolver is locked forever
-  function enable_time_locking(uint _grace_period) 
-           if_group("nsadmins") 
-           locked_after_period() 
+  function enable_time_locking(uint _grace_period)
+           if_group("nsadmins")
+           locked_after_period()
            returns (bool _success)
   {
     grace_period = _grace_period;
@@ -100,24 +106,27 @@ contract ContractResolver is ACGroups, Constants {
   /// @param _key the bytestring of the contract name
   /// @param _contract the address of the contract
   /// @return _success if the operation is successful
-  function register_contract(bytes32 _key, address _contract) 
-           if_group("nsadmins") 
-           if_owner_origin() 
+  function register_contract(bytes32 _key, address _contract)
+           if_group("nsadmins")
+           if_owner_origin()
+           if_not_locked()
            locked_after_period()
+           unless_registered(_key)
            public
-           returns (bool _success) 
+           returns (bool _success)
   {
     contracts[_key] = _contract;
     RegisterEvent(_key, _contract);
     _success = true;
   }
 
-  /// @dev Unregister a contract.  This can only be called from an account that is part of the nsadmins group
+  /// @dev Unregister a contract.  This can only be called from the contract with the key itself
   /// @param _key the bytestring of the contract name
   /// @return _success if the operation is successful
   function unregister_contract(bytes32 _key)
            locked_after_period()
            if_owner_origin()
+           if_not_locked()
            if_sender_is(_key)
            public
            returns (bool _success)
@@ -126,14 +135,14 @@ contract ContractResolver is ACGroups, Constants {
     UnRegisterEvent(_key);
     _success = true;
   }
-  
+
   /// @dev Get address of a contract
   /// @param _key the bytestring name of the contract to look up
   /// @return _contract the address of the contract
-  function get_contract(bytes32 _key) 
-           public 
-           constant 
-           returns (address _contract) 
+  function get_contract(bytes32 _key)
+           public
+           constant
+           returns (address _contract)
   {
     require(contracts[_key] != NULL_ADDRESS);
     _contract = contracts[_key];

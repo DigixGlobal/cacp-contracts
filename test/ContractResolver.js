@@ -72,6 +72,20 @@ contract('ContractResolver', function (addresses) {
     });
   });
 
+  describe('if_not_locked', function () {
+    before(async function () {
+      mockContractResolver = await MockContractResolver.new();
+    });
+    it('locked == true, throws', async function () {
+      await mockContractResolver.lock_resolver();
+      assert.ok(await a.failure(mockContractResolver.test_if_not_locked.call()));
+    });
+    it('locked == false, does not throw', async function () {
+      await mockContractResolver.unlock_resolver();
+      assert.deepEqual(await mockContractResolver.test_if_not_locked.call(), true);
+    });
+  });
+
   describe('init_register_contract', function () {
     it('successfully register contract, return true', async function () {
       await mockContractResolver.mock_set_time_locked(false);

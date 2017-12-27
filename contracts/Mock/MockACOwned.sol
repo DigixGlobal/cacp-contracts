@@ -4,8 +4,6 @@ import '../ACOwned.sol';
 
 contract MockACOwned is ACOwned {
 
-
-
     function set_owner (address _owner) {
       owner = _owner;
     }
