@@ -55,6 +55,7 @@ contract ACGroups is ACOwned {
            public 
            returns (bool _success) 
   {
+    require(_group != "admins");
     groups[_group].members[_user] = true;
     _success = true;
   }
@@ -64,6 +65,7 @@ contract ACGroups is ACOwned {
            public 
            returns (bool _success) 
   {
+    require(_group != "admins");
     groups[_group].members[_user] = false;
     _success = true;
   }

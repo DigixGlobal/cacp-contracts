@@ -79,6 +79,13 @@ contract('ACGroups', function (addresses) {
       await mockACGroups.add_user_to_group('test_group', addresses[1], { from: addresses[0] });
       assert.deepEqual(await mockACGroups.assert_group_member.call(addresses[1], 'test_group'), true);
     });
+    it('[owner register another admin, that admin adds another user to admins group]: should fail', async function () {
+      assert.deepEqual(await mockACGroups.register_admin.call(addresses[2], { from: addresses[0] }), true);
+      await mockACGroups.register_admin(addresses[2], { from: addresses[0] });
+
+      assert.deepEqual(await mockACGroups.is_group_member_of.call('admins', addresses[2]), true);
+      assert.ok(await a.failure(mockACGroups.add_user_to_group.call('admins', addresses[1], { from: addresses[2] })));
+    });
   });
 
   describe('delete_user_from_group(_group,_user)', function () {
