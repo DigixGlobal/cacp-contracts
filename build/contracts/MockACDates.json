@@ -1,8 +1,8 @@
 {
-  "contract_name": "MockACDates",
+  "contractName": "MockACDates",
   "abi": [
     {
-      "constant": false,
+      "constant": true,
       "inputs": [
         {
           "name": "_date",
@@ -17,11 +17,11 @@
         }
       ],
       "payable": false,
-      "stateMutability": "nonpayable",
+      "stateMutability": "view",
       "type": "function"
     },
     {
-      "constant": false,
+      "constant": true,
       "inputs": [
         {
           "name": "_date",
@@ -36,12 +36,753 @@
         }
       ],
       "payable": false,
-      "stateMutability": "nonpayable",
+      "stateMutability": "view",
       "type": "function"
     }
   ],
-  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60f68061001e6000396000f300606060405263ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166355b3daac81146046578063689358cb14606d575b600080fd5b3415605057600080fd5b60596004356094565b604051901515815260200160405180910390f35b3415607757600080fd5b605960043560af565b604051901515815260200160405180910390f35b6000814281901060a357600080fd5b600191505b5b50919050565b6000814281901160a357600080fd5b600191505b5b509190505600a165627a7a7230582043188bb059e9b847655e021bec24857b24f78003a10d27b2ebc74a681e1cd5c90029",
+  "bytecode": "0x6060604052341561000f57600080fd5b61011e8061001e6000396000f3006060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806355b3daac14604e578063689358cb146086575b600080fd5b3415605857600080fd5b606c600480803590602001909190505060be565b604051808215151515815260200191505060405180910390f35b3415609057600080fd5b60a4600480803590602001909190505060d8565b604051808215151515815260200191505060405180910390f35b600081804210151560ce57600080fd5b6001915050919050565b600081804211151560e857600080fd5b60019150509190505600a165627a7a72305820dff35c157e4ca35e992a5ed209e918dc73f28f8969b24862810e2fcf79130a500029",
+  "deployedBytecode": "0x6060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806355b3daac14604e578063689358cb146086575b600080fd5b3415605857600080fd5b606c600480803590602001909190505060be565b604051808215151515815260200191505060405180910390f35b3415609057600080fd5b60a4600480803590602001909190505060d8565b604051808215151515815260200191505060405180910390f35b600081804210151560ce57600080fd5b6001915050919050565b600081804211151560e857600080fd5b60019150509190505600a165627a7a72305820dff35c157e4ca35e992a5ed209e918dc73f28f8969b24862810e2fcf79130a500029",
+  "sourceMap": "118:278:12:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "118:278:12:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;155:119;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;278:116;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;155:119;236:13;204:5;169::1;163:3;:11;155:20;;;;;;;;265:4:12;258:11;;155:119;;;;:::o;278:116::-;357:13;325:5;244::1;238:3;:11;230:20;;;;;;;;385:4:12;378:11;;278:116;;;;:::o",
+  "source": "pragma solidity ^0.4.19;\n\n/// @title Blocktime based access control\n/// @author DigixGlobal\nimport '../ACDates.sol';\n\ncontract MockACDates is ACDates {\n\n  function test_if_before(uint256 _date) if_before(_date) public constant returns (bool _success) {\n\n    return true;\n  }\n\n  function test_if_after(uint256 _date) if_after(_date) public constant returns (bool _success) {\n    return true;\n  }\n}\n",
+  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockACDates.sol",
+  "ast": {
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockACDates.sol",
+    "exportedSymbols": {
+      "MockACDates": [
+        1490
+      ]
+    },
+    "id": 1491,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1460,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:12"
+      },
+      {
+        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACDates.sol",
+        "file": "../ACDates.sol",
+        "id": 1461,
+        "nodeType": "ImportDirective",
+        "scope": 1491,
+        "sourceUnit": 213,
+        "src": "92:24:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 1462,
+              "name": "ACDates",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 212,
+              "src": "142:7:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ACDates_$212",
+                "typeString": "contract ACDates"
+              }
+            },
+            "id": 1463,
+            "nodeType": "InheritanceSpecifier",
+            "src": "142:7:12"
+          }
+        ],
+        "contractDependencies": [
+          212
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1490,
+        "linearizedBaseContracts": [
+          1490,
+          212
+        ],
+        "name": "MockACDates",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1475,
+              "nodeType": "Block",
+              "src": "251:23:12",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1473,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "265:4:12",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1472,
+                  "id": 1474,
+                  "nodeType": "Return",
+                  "src": "258:11:12"
+                }
+              ]
+            },
+            "id": 1476,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1468,
+                    "name": "_date",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1465,
+                    "src": "204:5:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 1469,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1467,
+                  "name": "if_before",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 199,
+                  "src": "194:9:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$",
+                    "typeString": "modifier (uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "194:16:12"
+              }
+            ],
+            "name": "test_if_before",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1466,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1465,
+                  "name": "_date",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1476,
+                  "src": "179:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1464,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "179:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "178:15:12"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1472,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1471,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1476,
+                  "src": "236:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1470,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "236:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "235:15:12"
+            },
+            "scope": 1490,
+            "src": "155:119:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1488,
+              "nodeType": "Block",
+              "src": "372:22:12",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1486,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "385:4:12",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1485,
+                  "id": 1487,
+                  "nodeType": "Return",
+                  "src": "378:11:12"
+                }
+              ]
+            },
+            "id": 1489,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1481,
+                    "name": "_date",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1478,
+                    "src": "325:5:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 1482,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1480,
+                  "name": "if_after",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 211,
+                  "src": "316:8:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$",
+                    "typeString": "modifier (uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "316:15:12"
+              }
+            ],
+            "name": "test_if_after",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1479,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1478,
+                  "name": "_date",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1489,
+                  "src": "301:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1477,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "301:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "300:15:12"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1485,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1484,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1489,
+                  "src": "357:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1483,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "357:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "356:15:12"
+            },
+            "scope": 1490,
+            "src": "278:116:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1491,
+        "src": "118:278:12"
+      }
+    ],
+    "src": "0:397:12"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockACDates.sol",
+    "exportedSymbols": {
+      "MockACDates": [
+        1490
+      ]
+    },
+    "id": 1491,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1460,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:12"
+      },
+      {
+        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACDates.sol",
+        "file": "../ACDates.sol",
+        "id": 1461,
+        "nodeType": "ImportDirective",
+        "scope": 1491,
+        "sourceUnit": 213,
+        "src": "92:24:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 1462,
+              "name": "ACDates",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 212,
+              "src": "142:7:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ACDates_$212",
+                "typeString": "contract ACDates"
+              }
+            },
+            "id": 1463,
+            "nodeType": "InheritanceSpecifier",
+            "src": "142:7:12"
+          }
+        ],
+        "contractDependencies": [
+          212
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1490,
+        "linearizedBaseContracts": [
+          1490,
+          212
+        ],
+        "name": "MockACDates",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1475,
+              "nodeType": "Block",
+              "src": "251:23:12",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1473,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "265:4:12",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1472,
+                  "id": 1474,
+                  "nodeType": "Return",
+                  "src": "258:11:12"
+                }
+              ]
+            },
+            "id": 1476,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1468,
+                    "name": "_date",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1465,
+                    "src": "204:5:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 1469,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1467,
+                  "name": "if_before",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 199,
+                  "src": "194:9:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$",
+                    "typeString": "modifier (uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "194:16:12"
+              }
+            ],
+            "name": "test_if_before",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1466,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1465,
+                  "name": "_date",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1476,
+                  "src": "179:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1464,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "179:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "178:15:12"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1472,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1471,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1476,
+                  "src": "236:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1470,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "236:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "235:15:12"
+            },
+            "scope": 1490,
+            "src": "155:119:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1488,
+              "nodeType": "Block",
+              "src": "372:22:12",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1486,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "385:4:12",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1485,
+                  "id": 1487,
+                  "nodeType": "Return",
+                  "src": "378:11:12"
+                }
+              ]
+            },
+            "id": 1489,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1481,
+                    "name": "_date",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1478,
+                    "src": "325:5:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 1482,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1480,
+                  "name": "if_after",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 211,
+                  "src": "316:8:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$",
+                    "typeString": "modifier (uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "316:15:12"
+              }
+            ],
+            "name": "test_if_after",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1479,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1478,
+                  "name": "_date",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1489,
+                  "src": "301:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1477,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "301:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "300:15:12"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1485,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1484,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1489,
+                  "src": "357:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1483,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "357:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "356:15:12"
+            },
+            "scope": 1490,
+            "src": "278:116:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1491,
+        "src": "118:278:12"
+      }
+    ],
+    "src": "0:397:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+  },
   "networks": {},
-  "schema_version": "0.0.5",
-  "updated_at": 1512098514634
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-03-06T07:13:23.739Z"
 }
