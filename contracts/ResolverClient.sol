@@ -31,9 +31,9 @@ contract ResolverClient is ACOwned {
   /// @dev Initialize new contract
   /// @param _key the resolver key for this contract
   /// @return _success if the initialization is successful
-  function init(bytes32 _key, address _resolver) 
-           internal 
-           returns (bool _success) 
+  function init(bytes32 _key, address _resolver)
+           internal
+           returns (bool _success)
   {
     bool _is_locked = ContractResolver(_resolver).locked();
     if (_is_locked == false) {
@@ -47,26 +47,27 @@ contract ResolverClient is ACOwned {
       _success = false;
     }
   }
-  
+
   /// @dev Destroy the contract and unregister self from the ContractResolver
   function destroy()
            if_owner()
+           public
            returns (bool _success)
   {
     bool _is_locked = ContractResolver(resolver).locked();
     if (_is_locked == false) {
-      _success = ContractResolver(resolver).unregister_contract(key); 
+      _success = ContractResolver(resolver).unregister_contract(key);
       require(_success);
-      selfdestruct(tx.origin); 
+      selfdestruct(tx.origin);
     }
   }
 
   /// @dev Check if resolver is locked
   /// @return _locked if the resolver is currently locked
-  function is_locked() 
-           public 
-           constant 
-           returns (bool _locked) 
+  function is_locked()
+           public
+           constant
+           returns (bool _locked)
   {
     _locked = ContractResolver(resolver).locked();
   }
@@ -74,10 +75,10 @@ contract ResolverClient is ACOwned {
   /// @dev Get the address of a contract
   /// @param _key the resolver key to look up
   /// @return _contract the address of the contract
-  function get_contract(bytes32 _key) 
-           public 
-           constant 
-           returns (address _contract) 
+  function get_contract(bytes32 _key)
+           public
+           constant
+           returns (address _contract)
   {
     _contract = ContractResolver(resolver).get_contract(_key);
   }

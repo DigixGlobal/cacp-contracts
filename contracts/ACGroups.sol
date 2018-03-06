@@ -34,46 +34,48 @@ contract ACGroups is ACOwned {
     _success = true;
   }
 
-  function register_admin(address _newadmin) 
-           if_owner 
-           returns (bool _success) 
+  function register_admin(address _newadmin)
+           if_owner
+           public
+           returns (bool _success)
   {
     groups["admins"].members[_newadmin] = true;
     _success = true;
   }
 
-  function unregister_admin(address _oldadmin) 
-           if_owner 
-           returns (bool _success) 
+  function unregister_admin(address _oldadmin)
+           if_owner
+           public
+           returns (bool _success)
   {
     groups["admins"].members[_oldadmin] = false;
     _success = true;
   }
 
-  function add_user_to_group(bytes32 _group, address _user) 
-           if_group("admins") 
-           public 
-           returns (bool _success) 
+  function add_user_to_group(bytes32 _group, address _user)
+           if_group("admins")
+           public
+           returns (bool _success)
   {
     require(_group != "admins");
     groups[_group].members[_user] = true;
     _success = true;
   }
 
-  function delete_user_from_group(bytes32 _group, address _user) 
-           if_group("admins") 
-           public 
-           returns (bool _success) 
+  function delete_user_from_group(bytes32 _group, address _user)
+           if_group("admins")
+           public
+           returns (bool _success)
   {
     require(_group != "admins");
     groups[_group].members[_user] = false;
     _success = true;
   }
 
-  function is_group_member_of(bytes32 _group, address _user) 
-           public 
-           constant 
-           returns (bool _ismember) 
+  function is_group_member_of(bytes32 _group, address _user)
+           public
+           constant
+           returns (bool _ismember)
   {
     _ismember = groups[_group].members[_user];
   }
