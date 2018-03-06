@@ -48,7 +48,7 @@ contract ContractResolver is ACGroups, Constants {
   }
 
   /// @dev ContractResolver constructor will perform the following: 1. Set msg.sender as the contract owner.  2. Adds msg.sender to the default groups 'admins' and 'nsadmins'
-  function ContractResolver()
+  function ContractResolver() public
   {
     require(init_ac_groups());
     groups["nsadmins"].members[owner] = true;
@@ -64,6 +64,7 @@ contract ContractResolver is ACGroups, Constants {
            if_not_locked()
            unless_registered(_key)
            locked_after_period()
+           public
            returns (bool _success)
   {
     contracts[_key] = _contract_address;
@@ -74,6 +75,7 @@ contract ContractResolver is ACGroups, Constants {
   /// @return _success if the operation is successful
   function lock_resolver()
            if_group("nsadmins")
+           public
            returns (bool _success)
   {
     locked = true;
@@ -84,6 +86,7 @@ contract ContractResolver is ACGroups, Constants {
   /// @return _success if the operation is successful
   function unlock_resolver()
            if_group("nsadmins")
+           public
            returns (bool _success)
   {
      locked = false;
@@ -95,6 +98,7 @@ contract ContractResolver is ACGroups, Constants {
   function enable_time_locking(uint _grace_period)
            if_group("nsadmins")
            locked_after_period()
+           public
            returns (bool _success)
   {
     grace_period = _grace_period;
