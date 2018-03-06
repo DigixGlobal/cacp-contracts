@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.19;
 
 /// @title Blocktime based access control
 /// @author DigixGlobal

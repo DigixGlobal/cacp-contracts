@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.19;
 
 /// @title Per user locking based access control
 /// @author DigixGlobal
@@ -46,4 +46,3 @@ contract ACUserMutex {
   }
 
 }
-
