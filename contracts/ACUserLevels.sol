@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.19;
 
 import "./ACGroups.sol";
 
@@ -18,12 +18,12 @@ contract ACUserLevels is ACGroups {
   modifier if_below_level(address _user, bytes32 _category, uint8 _required_level) {
     require(user_levels[_category][_user] < _required_level);
     _;
-  } 
+  }
 
   modifier if_at_level(address _user, bytes32 _category, uint8 _required_level) {
     require(user_levels[_category][_user] == _required_level);
     _;
-  } 
+  }
 
   modifier unless_ac_user_levels_initialized() {
     require(is_ac_user_levels_init == false);

@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.19;
 
 import "./Constants.sol";
 
@@ -6,7 +6,7 @@ import "./Constants.sol";
 /// @author DigixGlobal
 
 contract ACConditions is Constants {
-   
+
   modifier not_null_address(address _item) {
     require(_item != NULL_ADDRESS);
     _;
@@ -54,7 +54,7 @@ contract ACConditions is Constants {
     _;
   }
 
-  function is_contract(address _contract) 
+  function is_contract(address _contract)
            public
            constant
            returns (bool _is_contract)

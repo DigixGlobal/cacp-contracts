@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.19;
 
 import "../ResolverClient.sol";
 
@@ -8,6 +8,7 @@ import "../ResolverClient.sol";
 contract MockResolverClient is ResolverClient {
 
   function mock_set_resolver(address _resolver)
+           public
   {
     resolver = _resolver;
     require(init('mock:resclient', resolver));
@@ -15,6 +16,8 @@ contract MockResolverClient is ResolverClient {
 
   function test_if_sender_is (bytes32 _contract)
            if_sender_is(_contract)
+           public
+           constant
            returns (bool _success)
   {
     _success = true;
@@ -22,26 +25,19 @@ contract MockResolverClient is ResolverClient {
 
   function test_unless_resolver_is_locked ()
            unless_resolver_is_locked ()
+           public
+           constant
            returns (bool _success)
   {
     _success = true;
   }
 
   function test_init(bytes32 _key, address _resolver)
+           public
            returns (bool _success)
   {
     _success = init(_key, _resolver);
   }
-
-  /// @dev Check if resolver is locked
-  /// @return _locked if the resolver is currently locked
-  /*function is_locked()
-           public
-           constant
-           returns (bool _locked)
-  {
-    _locked = ContractResolver(resolver).locked();
-  }*/
 
   /// @dev Get the address of a contract
   /// @param _key the resolver key to look up

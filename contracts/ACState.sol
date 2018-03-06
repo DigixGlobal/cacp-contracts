@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.19;
 
 /// @title State machine access control
 /// @author DigixGlobal
@@ -42,12 +42,12 @@ contract ACState {
     _;
   }
 
-  function set_state(bytes32 _key, uint8 _state) 
-           internal 
-           returns (bool _success) 
+  function set_state(bytes32 _key, uint8 _state)
+           internal
+           returns (bool _success)
   {
     states[_key] = _state;
     _success = true;
   }
-    
+
 }
