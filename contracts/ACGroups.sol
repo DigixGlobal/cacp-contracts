@@ -80,4 +80,13 @@ contract ACGroups is ACOwned {
     _ismember = groups[_group].members[_user];
   }
 
+  function claim_ownership()
+           public
+           returns (bool _success)
+  {
+    // revoke admins role of old owner, add new owner to admins
+    groups["admins"].members[owner] = false;
+    groups["admins"].members[new_owner] = true;
+    _success = super.claim_ownership();
+  }
 }

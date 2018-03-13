@@ -31,14 +31,14 @@
     "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACSimpleMutex.sol",
     "exportedSymbols": {
       "ACSimpleMutex": [
-        592
+        622
       ]
     },
-    "id": 593,
+    "id": 623,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 509,
+        "id": 539,
         "literals": [
           "solidity",
           "^",
@@ -54,19 +54,19 @@
         "contractKind": "contract",
         "documentation": "@title Locking based access control\n @author DigixGlobal",
         "fullyImplemented": true,
-        "id": 592,
+        "id": 622,
         "linearizedBaseContracts": [
-          592
+          622
         ],
         "name": "ACSimpleMutex",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 513,
+            "id": 543,
             "name": "locks",
             "nodeType": "VariableDeclaration",
-            "scope": 592,
+            "scope": 622,
             "src": "119:31:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -75,9 +75,9 @@
               "typeString": "mapping(bytes32 => bool)"
             },
             "typeName": {
-              "id": 512,
+              "id": 542,
               "keyType": {
-                "id": 510,
+                "id": 540,
                 "name": "bytes32",
                 "nodeType": "ElementaryTypeName",
                 "src": "128:7:4",
@@ -93,7 +93,7 @@
                 "typeString": "mapping(bytes32 => bool)"
               },
               "valueType": {
-                "id": 511,
+                "id": 541,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "139:4:4",
@@ -108,7 +108,7 @@
           },
           {
             "body": {
-              "id": 526,
+              "id": 556,
               "nodeType": "Block",
               "src": "209:68:4",
               "statements": [
@@ -122,7 +122,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 522,
+                        "id": 552,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -132,11 +132,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 519,
+                              "id": 549,
                               "name": "_mutex_id",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 515,
+                              "referencedDeclaration": 545,
                               "src": "246:9:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes32",
@@ -151,18 +151,18 @@
                                 "typeString": "bytes32"
                               }
                             ],
-                            "id": 518,
+                            "id": 548,
                             "name": "is_simple_mutex_locked",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 591,
+                            "referencedDeclaration": 621,
                             "src": "223:22:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bool_$",
                               "typeString": "function (bytes32) view returns (bool)"
                             }
                           },
-                          "id": 520,
+                          "id": 550,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -181,7 +181,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 521,
+                          "id": 551,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -210,18 +210,18 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 517,
+                      "id": 547,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2660,
+                      "referencedDeclaration": 2715,
                       "src": "215:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 523,
+                    "id": 553,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -235,30 +235,30 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 524,
+                  "id": 554,
                   "nodeType": "ExpressionStatement",
                   "src": "215:50:4"
                 },
                 {
-                  "id": 525,
+                  "id": 555,
                   "nodeType": "PlaceholderStatement",
                   "src": "271:1:4"
                 }
               ]
             },
-            "id": 527,
+            "id": 557,
             "name": "if_simple_mutex_is_locked",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 516,
+              "id": 546,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 515,
+                  "id": 545,
                   "name": "_mutex_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 527,
+                  "scope": 557,
                   "src": "190:17:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -267,7 +267,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 514,
+                    "id": 544,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "190:7:4",
@@ -287,7 +287,7 @@
           },
           {
             "body": {
-              "id": 540,
+              "id": 570,
               "nodeType": "Block",
               "src": "339:69:4",
               "statements": [
@@ -301,7 +301,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 536,
+                        "id": 566,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -311,11 +311,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 533,
+                              "id": 563,
                               "name": "_mutex_id",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 529,
+                              "referencedDeclaration": 559,
                               "src": "376:9:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes32",
@@ -330,18 +330,18 @@
                                 "typeString": "bytes32"
                               }
                             ],
-                            "id": 532,
+                            "id": 562,
                             "name": "is_simple_mutex_locked",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 591,
+                            "referencedDeclaration": 621,
                             "src": "353:22:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bool_$",
                               "typeString": "function (bytes32) view returns (bool)"
                             }
                           },
-                          "id": 534,
+                          "id": 564,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -360,7 +360,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 535,
+                          "id": 565,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -389,18 +389,18 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 531,
+                      "id": 561,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2660,
+                      "referencedDeclaration": 2715,
                       "src": "345:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 537,
+                    "id": 567,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -414,30 +414,30 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 538,
+                  "id": 568,
                   "nodeType": "ExpressionStatement",
                   "src": "345:51:4"
                 },
                 {
-                  "id": 539,
+                  "id": 569,
                   "nodeType": "PlaceholderStatement",
                   "src": "402:1:4"
                 }
               ]
             },
-            "id": 541,
+            "id": 571,
             "name": "unless_simple_mutex_is_locked",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 530,
+              "id": 560,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 529,
+                  "id": 559,
                   "name": "_mutex_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 541,
+                  "scope": 571,
                   "src": "320:17:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -446,7 +446,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 528,
+                    "id": 558,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "320:7:4",
@@ -466,14 +466,14 @@
           },
           {
             "body": {
-              "id": 558,
+              "id": 588,
               "nodeType": "Block",
               "src": "515:55:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 552,
+                    "id": 582,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -482,25 +482,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 548,
+                        "id": 578,
                         "name": "locks",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 513,
+                        "referencedDeclaration": 543,
                         "src": "521:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
                           "typeString": "mapping(bytes32 => bool)"
                         }
                       },
-                      "id": 550,
+                      "id": 580,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 549,
+                        "id": 579,
                         "name": "_mutex_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 543,
+                        "referencedDeclaration": 573,
                         "src": "527:9:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -523,7 +523,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 551,
+                      "id": 581,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -544,25 +544,25 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 553,
+                  "id": 583,
                   "nodeType": "ExpressionStatement",
                   "src": "521:23:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 556,
+                    "id": 586,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 554,
+                      "id": 584,
                       "name": "_success",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 546,
+                      "referencedDeclaration": 576,
                       "src": "550:8:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -574,7 +574,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 555,
+                      "id": 585,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -595,13 +595,13 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 557,
+                  "id": 587,
                   "nodeType": "ExpressionStatement",
                   "src": "550:15:4"
                 }
               ]
             },
-            "id": 559,
+            "id": 589,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -609,15 +609,15 @@
             "name": "lock_simple_mutex",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 544,
+              "id": 574,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 543,
+                  "id": 573,
                   "name": "_mutex_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 559,
+                  "scope": 589,
                   "src": "439:17:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -626,7 +626,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 542,
+                    "id": 572,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "439:7:4",
@@ -643,15 +643,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 547,
+              "id": 577,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 546,
+                  "id": 576,
                   "name": "_success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 559,
+                  "scope": 589,
                   "src": "498:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -660,7 +660,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 545,
+                    "id": 575,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "498:4:4",
@@ -675,7 +675,7 @@
               ],
               "src": "497:15:4"
             },
-            "scope": 592,
+            "scope": 622,
             "src": "412:158:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -683,14 +683,14 @@
           },
           {
             "body": {
-              "id": 576,
+              "id": 606,
               "nodeType": "Block",
               "src": "679:56:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 570,
+                    "id": 600,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -699,25 +699,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 566,
+                        "id": 596,
                         "name": "locks",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 513,
+                        "referencedDeclaration": 543,
                         "src": "685:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
                           "typeString": "mapping(bytes32 => bool)"
                         }
                       },
-                      "id": 568,
+                      "id": 598,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 567,
+                        "id": 597,
                         "name": "_mutex_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 561,
+                        "referencedDeclaration": 591,
                         "src": "691:9:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -740,7 +740,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 569,
+                      "id": 599,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -761,25 +761,25 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 571,
+                  "id": 601,
                   "nodeType": "ExpressionStatement",
                   "src": "685:24:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 574,
+                    "id": 604,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 572,
+                      "id": 602,
                       "name": "_success",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 564,
+                      "referencedDeclaration": 594,
                       "src": "715:8:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -791,7 +791,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 573,
+                      "id": 603,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -812,13 +812,13 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 575,
+                  "id": 605,
                   "nodeType": "ExpressionStatement",
                   "src": "715:15:4"
                 }
               ]
             },
-            "id": 577,
+            "id": 607,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -826,15 +826,15 @@
             "name": "unlock_simple_mutex",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 562,
+              "id": 592,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 561,
+                  "id": 591,
                   "name": "_mutex_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 577,
+                  "scope": 607,
                   "src": "603:17:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -843,7 +843,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 560,
+                    "id": 590,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "603:7:4",
@@ -860,15 +860,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 565,
+              "id": 595,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 564,
+                  "id": 594,
                   "name": "_success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 577,
+                  "scope": 607,
                   "src": "662:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -877,7 +877,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 563,
+                    "id": 593,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "662:4:4",
@@ -892,7 +892,7 @@
               ],
               "src": "661:15:4"
             },
-            "scope": 592,
+            "scope": 622,
             "src": "574:161:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -900,25 +900,25 @@
           },
           {
             "body": {
-              "id": 590,
+              "id": 620,
               "nodeType": "Block",
               "src": "864:37:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 588,
+                    "id": 618,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 584,
+                      "id": 614,
                       "name": "_locked",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 582,
+                      "referencedDeclaration": 612,
                       "src": "870:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -931,25 +931,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 585,
+                        "id": 615,
                         "name": "locks",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 513,
+                        "referencedDeclaration": 543,
                         "src": "880:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
                           "typeString": "mapping(bytes32 => bool)"
                         }
                       },
-                      "id": 587,
+                      "id": 617,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 586,
+                        "id": 616,
                         "name": "_mutex_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 579,
+                        "referencedDeclaration": 609,
                         "src": "886:9:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -973,13 +973,13 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 589,
+                  "id": 619,
                   "nodeType": "ExpressionStatement",
                   "src": "870:26:4"
                 }
               ]
             },
-            "id": 591,
+            "id": 621,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -987,15 +987,15 @@
             "name": "is_simple_mutex_locked",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 580,
+              "id": 610,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 579,
+                  "id": 609,
                   "name": "_mutex_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 591,
+                  "scope": 621,
                   "src": "771:17:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1004,7 +1004,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 578,
+                    "id": 608,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "771:7:4",
@@ -1021,15 +1021,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 583,
+              "id": 613,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 582,
+                  "id": 612,
                   "name": "_locked",
                   "nodeType": "VariableDeclaration",
-                  "scope": 591,
+                  "scope": 621,
                   "src": "848:12:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1038,7 +1038,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 581,
+                    "id": 611,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "848:4:4",
@@ -1053,14 +1053,14 @@
               ],
               "src": "847:14:4"
             },
-            "scope": 592,
+            "scope": 622,
             "src": "739:162:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 593,
+        "scope": 623,
         "src": "91:813:4"
       }
     ],
@@ -1070,14 +1070,14 @@
     "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACSimpleMutex.sol",
     "exportedSymbols": {
       "ACSimpleMutex": [
-        592
+        622
       ]
     },
-    "id": 593,
+    "id": 623,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 509,
+        "id": 539,
         "literals": [
           "solidity",
           "^",
@@ -1093,19 +1093,19 @@
         "contractKind": "contract",
         "documentation": "@title Locking based access control\n @author DigixGlobal",
         "fullyImplemented": true,
-        "id": 592,
+        "id": 622,
         "linearizedBaseContracts": [
-          592
+          622
         ],
         "name": "ACSimpleMutex",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 513,
+            "id": 543,
             "name": "locks",
             "nodeType": "VariableDeclaration",
-            "scope": 592,
+            "scope": 622,
             "src": "119:31:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1114,9 +1114,9 @@
               "typeString": "mapping(bytes32 => bool)"
             },
             "typeName": {
-              "id": 512,
+              "id": 542,
               "keyType": {
-                "id": 510,
+                "id": 540,
                 "name": "bytes32",
                 "nodeType": "ElementaryTypeName",
                 "src": "128:7:4",
@@ -1132,7 +1132,7 @@
                 "typeString": "mapping(bytes32 => bool)"
               },
               "valueType": {
-                "id": 511,
+                "id": 541,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "139:4:4",
@@ -1147,7 +1147,7 @@
           },
           {
             "body": {
-              "id": 526,
+              "id": 556,
               "nodeType": "Block",
               "src": "209:68:4",
               "statements": [
@@ -1161,7 +1161,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 522,
+                        "id": 552,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1171,11 +1171,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 519,
+                              "id": 549,
                               "name": "_mutex_id",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 515,
+                              "referencedDeclaration": 545,
                               "src": "246:9:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes32",
@@ -1190,18 +1190,18 @@
                                 "typeString": "bytes32"
                               }
                             ],
-                            "id": 518,
+                            "id": 548,
                             "name": "is_simple_mutex_locked",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 591,
+                            "referencedDeclaration": 621,
                             "src": "223:22:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bool_$",
                               "typeString": "function (bytes32) view returns (bool)"
                             }
                           },
-                          "id": 520,
+                          "id": 550,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1220,7 +1220,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 521,
+                          "id": 551,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1249,18 +1249,18 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 517,
+                      "id": 547,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2660,
+                      "referencedDeclaration": 2715,
                       "src": "215:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 523,
+                    "id": 553,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1274,30 +1274,30 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 524,
+                  "id": 554,
                   "nodeType": "ExpressionStatement",
                   "src": "215:50:4"
                 },
                 {
-                  "id": 525,
+                  "id": 555,
                   "nodeType": "PlaceholderStatement",
                   "src": "271:1:4"
                 }
               ]
             },
-            "id": 527,
+            "id": 557,
             "name": "if_simple_mutex_is_locked",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 516,
+              "id": 546,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 515,
+                  "id": 545,
                   "name": "_mutex_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 527,
+                  "scope": 557,
                   "src": "190:17:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1306,7 +1306,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 514,
+                    "id": 544,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "190:7:4",
@@ -1326,7 +1326,7 @@
           },
           {
             "body": {
-              "id": 540,
+              "id": 570,
               "nodeType": "Block",
               "src": "339:69:4",
               "statements": [
@@ -1340,7 +1340,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 536,
+                        "id": 566,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1350,11 +1350,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 533,
+                              "id": 563,
                               "name": "_mutex_id",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 529,
+                              "referencedDeclaration": 559,
                               "src": "376:9:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes32",
@@ -1369,18 +1369,18 @@
                                 "typeString": "bytes32"
                               }
                             ],
-                            "id": 532,
+                            "id": 562,
                             "name": "is_simple_mutex_locked",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 591,
+                            "referencedDeclaration": 621,
                             "src": "353:22:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bool_$",
                               "typeString": "function (bytes32) view returns (bool)"
                             }
                           },
-                          "id": 534,
+                          "id": 564,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1399,7 +1399,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 535,
+                          "id": 565,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1428,18 +1428,18 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 531,
+                      "id": 561,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2660,
+                      "referencedDeclaration": 2715,
                       "src": "345:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 537,
+                    "id": 567,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1453,30 +1453,30 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 538,
+                  "id": 568,
                   "nodeType": "ExpressionStatement",
                   "src": "345:51:4"
                 },
                 {
-                  "id": 539,
+                  "id": 569,
                   "nodeType": "PlaceholderStatement",
                   "src": "402:1:4"
                 }
               ]
             },
-            "id": 541,
+            "id": 571,
             "name": "unless_simple_mutex_is_locked",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 530,
+              "id": 560,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 529,
+                  "id": 559,
                   "name": "_mutex_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 541,
+                  "scope": 571,
                   "src": "320:17:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1485,7 +1485,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 528,
+                    "id": 558,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "320:7:4",
@@ -1505,14 +1505,14 @@
           },
           {
             "body": {
-              "id": 558,
+              "id": 588,
               "nodeType": "Block",
               "src": "515:55:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 552,
+                    "id": 582,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1521,25 +1521,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 548,
+                        "id": 578,
                         "name": "locks",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 513,
+                        "referencedDeclaration": 543,
                         "src": "521:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
                           "typeString": "mapping(bytes32 => bool)"
                         }
                       },
-                      "id": 550,
+                      "id": 580,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 549,
+                        "id": 579,
                         "name": "_mutex_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 543,
+                        "referencedDeclaration": 573,
                         "src": "527:9:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -1562,7 +1562,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 551,
+                      "id": 581,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1583,25 +1583,25 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 553,
+                  "id": 583,
                   "nodeType": "ExpressionStatement",
                   "src": "521:23:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 556,
+                    "id": 586,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 554,
+                      "id": 584,
                       "name": "_success",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 546,
+                      "referencedDeclaration": 576,
                       "src": "550:8:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1613,7 +1613,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 555,
+                      "id": 585,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1634,13 +1634,13 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 557,
+                  "id": 587,
                   "nodeType": "ExpressionStatement",
                   "src": "550:15:4"
                 }
               ]
             },
-            "id": 559,
+            "id": 589,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1648,15 +1648,15 @@
             "name": "lock_simple_mutex",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 544,
+              "id": 574,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 543,
+                  "id": 573,
                   "name": "_mutex_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 559,
+                  "scope": 589,
                   "src": "439:17:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1665,7 +1665,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 542,
+                    "id": 572,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "439:7:4",
@@ -1682,15 +1682,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 547,
+              "id": 577,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 546,
+                  "id": 576,
                   "name": "_success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 559,
+                  "scope": 589,
                   "src": "498:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1699,7 +1699,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 545,
+                    "id": 575,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "498:4:4",
@@ -1714,7 +1714,7 @@
               ],
               "src": "497:15:4"
             },
-            "scope": 592,
+            "scope": 622,
             "src": "412:158:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1722,14 +1722,14 @@
           },
           {
             "body": {
-              "id": 576,
+              "id": 606,
               "nodeType": "Block",
               "src": "679:56:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 570,
+                    "id": 600,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1738,25 +1738,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 566,
+                        "id": 596,
                         "name": "locks",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 513,
+                        "referencedDeclaration": 543,
                         "src": "685:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
                           "typeString": "mapping(bytes32 => bool)"
                         }
                       },
-                      "id": 568,
+                      "id": 598,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 567,
+                        "id": 597,
                         "name": "_mutex_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 561,
+                        "referencedDeclaration": 591,
                         "src": "691:9:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -1779,7 +1779,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 569,
+                      "id": 599,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1800,25 +1800,25 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 571,
+                  "id": 601,
                   "nodeType": "ExpressionStatement",
                   "src": "685:24:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 574,
+                    "id": 604,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 572,
+                      "id": 602,
                       "name": "_success",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 564,
+                      "referencedDeclaration": 594,
                       "src": "715:8:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1830,7 +1830,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 573,
+                      "id": 603,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1851,13 +1851,13 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 575,
+                  "id": 605,
                   "nodeType": "ExpressionStatement",
                   "src": "715:15:4"
                 }
               ]
             },
-            "id": 577,
+            "id": 607,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1865,15 +1865,15 @@
             "name": "unlock_simple_mutex",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 562,
+              "id": 592,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 561,
+                  "id": 591,
                   "name": "_mutex_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 577,
+                  "scope": 607,
                   "src": "603:17:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1882,7 +1882,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 560,
+                    "id": 590,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "603:7:4",
@@ -1899,15 +1899,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 565,
+              "id": 595,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 564,
+                  "id": 594,
                   "name": "_success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 577,
+                  "scope": 607,
                   "src": "662:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1916,7 +1916,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 563,
+                    "id": 593,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "662:4:4",
@@ -1931,7 +1931,7 @@
               ],
               "src": "661:15:4"
             },
-            "scope": 592,
+            "scope": 622,
             "src": "574:161:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1939,25 +1939,25 @@
           },
           {
             "body": {
-              "id": 590,
+              "id": 620,
               "nodeType": "Block",
               "src": "864:37:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 588,
+                    "id": 618,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 584,
+                      "id": 614,
                       "name": "_locked",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 582,
+                      "referencedDeclaration": 612,
                       "src": "870:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1970,25 +1970,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 585,
+                        "id": 615,
                         "name": "locks",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 513,
+                        "referencedDeclaration": 543,
                         "src": "880:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
                           "typeString": "mapping(bytes32 => bool)"
                         }
                       },
-                      "id": 587,
+                      "id": 617,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 586,
+                        "id": 616,
                         "name": "_mutex_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 579,
+                        "referencedDeclaration": 609,
                         "src": "886:9:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -2012,13 +2012,13 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 589,
+                  "id": 619,
                   "nodeType": "ExpressionStatement",
                   "src": "870:26:4"
                 }
               ]
             },
-            "id": 591,
+            "id": 621,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2026,15 +2026,15 @@
             "name": "is_simple_mutex_locked",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 580,
+              "id": 610,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 579,
+                  "id": 609,
                   "name": "_mutex_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 591,
+                  "scope": 621,
                   "src": "771:17:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2043,7 +2043,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 578,
+                    "id": 608,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "771:7:4",
@@ -2060,15 +2060,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 583,
+              "id": 613,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 582,
+                  "id": 612,
                   "name": "_locked",
                   "nodeType": "VariableDeclaration",
-                  "scope": 591,
+                  "scope": 621,
                   "src": "848:12:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2077,7 +2077,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 581,
+                    "id": 611,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "848:4:4",
@@ -2092,14 +2092,14 @@
               ],
               "src": "847:14:4"
             },
-            "scope": 592,
+            "scope": 622,
             "src": "739:162:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 593,
+        "scope": 623,
         "src": "91:813:4"
       }
     ],
@@ -2111,5 +2111,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-06T07:13:23.733Z"
+  "updatedAt": "2018-03-13T06:46:52.607Z"
 }
