@@ -119,4 +119,31 @@ contract('ACGroups', function (addresses) {
       assert.deepEqual(await mockACGroups.is_group_member_of.call('test_group', addresses[1], { from: addresses[0] }), true);
     });
   });
+
+  describe('claim_ownership', function () {
+    before(async function () {
+      mockACGroups = await MockACGroups.new();
+      await mockACGroups.mock_add_user_to_group(addresses[0], 'test_group');
+      assert.deepEqual(await mockACGroups.test_init_ac_groups.call(), true);
+      await mockACGroups.test_init_ac_groups();
+      assert.deepEqual(await mockACGroups.is_owner.call(), true);
+      await mockACGroups.change_owner(addresses[2]);
+    });
+    it('[ownership claimed by address who is not new_owner]: throw', async function () {
+      assert.ok(await a.failure(mockACGroups.claim_ownership.call({ from: addresses[4] })));
+
+      // new_owner should not be part of `admins` group
+      // owner should still be a part of `admins` group
+      assert.deepEqual(await mockACGroups.is_group_member_of.call('admins', addresses[0]), true);
+      assert.deepEqual(await mockACGroups.is_group_member_of.call('admins', addresses[2]), false);
+    });
+    it('[ownership is claimed by new_owner]', async function () {
+      assert.deepEqual(await mockACGroups.claim_ownership.call({ from: addresses[2] }), true);
+      await mockACGroups.claim_ownership({ from: addresses[2] });
+
+      assert.deepEqual(await mockACGroups.is_owner.call({ from: addresses[2] }), true);
+      assert.deepEqual(await mockACGroups.is_group_member_of.call('admins', addresses[0]), false);
+      assert.deepEqual(await mockACGroups.is_group_member_of.call('admins', addresses[2]), true);
+    });
+  });
 });
