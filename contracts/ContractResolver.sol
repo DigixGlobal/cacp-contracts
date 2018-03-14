@@ -93,10 +93,10 @@ contract ContractResolver is ACGroups, Constants {
      _success = true;
   }
 
-  /// @dev Enable time locking.
+  /// @dev Enable time locking. This is potentially dangerous and must be from the owner
   /// @param _grace_period the unix timestamp when the resolver is locked forever
   function enable_time_locking(uint _grace_period)
-           if_group("nsadmins")
+           if_owner()
            locked_after_period()
            public
            returns (bool _success)
@@ -124,7 +124,8 @@ contract ContractResolver is ACGroups, Constants {
     _success = true;
   }
 
-  /// @dev Unregister a contract.  This can only be called from the contract with the key itself
+  /// @dev Unregister a contract.  This can only be called from the contract with the key itself, which should be destroyed in the process
+  /// this must also be originated from the owner of this ContractResolver as well.
   /// @param _key the bytestring of the contract name
   /// @return _success if the operation is successful
   function unregister_contract(bytes32 _key)
@@ -152,4 +153,13 @@ contract ContractResolver is ACGroups, Constants {
     _contract = contracts[_key];
   }
 
+  function claim_ownership()
+           public
+           returns (bool _success)
+  {
+    // revoke nsadmins role of old owner, add new owner to nsadmins
+    groups["nsadmins"].members[owner] = false;
+    groups["nsadmins"].members[new_owner] = true;
+    _success = super.claim_ownership();
+  }
 }
