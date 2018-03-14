@@ -120,19 +120,24 @@ contract('ContractResolver', function (addresses) {
   });
 
   describe('enable_time_locking', function () {
-    it('throws if msg.sender is not in nsadmins', async function () {
+    it('throws if msg.sender is not owner', async function () {
       assert.ok(await a.failure(mockContractResolver.enable_time_locking.call(bN(100), { from: addresses[1] })));
     });
-    it('if msg.sender is in nsadmins, set time_locked = true, returns true', async function () {
+    it('if msg.sender is owner, set time_locked = true, returns true', async function () {
       await mockContractResolver.mock_set_time_locked(false);
       assert.deepEqual(await mockContractResolver.enable_time_locking.call(bN(100), { from: addresses[0] }), true);
       await mockContractResolver.enable_time_locking(bN(100), { from: addresses[0] });
       assert.deepEqual(await mockContractResolver.mock_check_time_locked.call(), true);
     });
-    it('if msg.sender is in nsadmins, set grace_period correctly', async function () {
+    it('if msg.sender is owner, set grace_period correctly', async function () {
       await mockContractResolver.mock_set_time_locked(false);
       await mockContractResolver.enable_time_locking(bN(123), { from: addresses[0] });
       assert.deepEqual(await mockContractResolver.mock_get_grace_period.call(), bN(123));
+    });
+    it('[msg.sender is in nsadmins, but not owner]: throw', async function () {
+      assert.deepEqual(await mockContractResolver.add_user_to_group.call('nsadmins', addresses[5]), true);
+      await mockContractResolver.add_user_to_group('nsadmins', addresses[5]);
+      assert.ok(await a.failure(mockContractResolver.enable_time_locking.call(bN(100), { from: addresses[5] })));
     });
   });
 
@@ -152,6 +157,26 @@ contract('ContractResolver', function (addresses) {
     it('successfully get registered contract', async function () {
       await mockContractResolver.mock_register_contract(mockContractResolver.address, 'newly_created');
       assert.deepEqual(await mockContractResolver.get_contract.call('newly_created'), mockContractResolver.address);
+    });
+  });
+
+  describe('claim_ownership', function () {
+    before(async function () {
+      assert.deepEqual(await mockContractResolver.change_owner.call(addresses[2]), true);
+      await mockContractResolver.change_owner(addresses[2]);
+    });
+    it('[ownership claimed by somebody else]: throw', async function () {
+      assert.ok(await a.failure(mockContractResolver.claim_ownership.call({ from: addresses[3] })));
+      assert.deepEqual(await mockContractResolver.mock_check_group_member.call(addresses[0], 'nsadmins'), true);
+      assert.deepEqual(await mockContractResolver.mock_check_group_member.call(addresses[2], 'nsadmins'), false);
+    });
+    it('[ownership claimed by new_owner]', async function () {
+      assert.deepEqual(await mockContractResolver.claim_ownership.call({ from: addresses[2] }), true);
+      await mockContractResolver.claim_ownership({ from: addresses[2] });
+      assert.deepEqual(await mockContractResolver.test_if_owner_origin.call({ from: addresses[2] }), true);
+      assert.ok(await a.failure(mockContractResolver.test_if_owner_origin.call()));
+      assert.deepEqual(await mockContractResolver.mock_check_group_member.call(addresses[0], 'nsadmins'), false);
+      assert.deepEqual(await mockContractResolver.mock_check_group_member.call(addresses[2], 'nsadmins'), true);
     });
   });
 });
