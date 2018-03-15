@@ -34,4 +34,8 @@ contract MockACGroups is ACGroups {
   function assert_group_member(address _user, bytes32 _group_name) public constant returns (bool _success) {
     _success = groups[_group_name].members[_user];
   }
+
+  function test_if_owner () if_owner() public constant returns (bool _success) {
+    return true;
+  }
 }

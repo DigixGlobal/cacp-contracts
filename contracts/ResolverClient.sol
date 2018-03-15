@@ -65,7 +65,7 @@ contract ResolverClient is ACOwned {
   /// @dev Check if resolver is locked
   /// @return _locked if the resolver is currently locked
   function is_locked()
-           public
+           private
            constant
            returns (bool _locked)
   {

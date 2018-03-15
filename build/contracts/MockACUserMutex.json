@@ -172,7 +172,7 @@
       "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Mock/MockACUserMutex.sol",
       "exportedSymbols": {
         "MockACUserMutex": [
-          2247
+          2257
         ]
       }
     },
@@ -186,7 +186,7 @@
             ".19"
           ]
         },
-        "id": 2119,
+        "id": 2129,
         "name": "PragmaDirective",
         "src": "0:24:18"
       },
@@ -195,13 +195,13 @@
           "SourceUnit": 968,
           "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACUserMutex.sol",
           "file": "../ACUserMutex.sol",
-          "scope": 2248,
+          "scope": 2258,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 2120,
+        "id": 2130,
         "name": "ImportDirective",
         "src": "99:28:18"
       },
@@ -214,11 +214,11 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            2247,
+            2257,
             967
           ],
           "name": "MockACUserMutex",
-          "scope": 2248
+          "scope": 2258
         },
         "children": [
           {
@@ -235,12 +235,12 @@
                   "referencedDeclaration": 967,
                   "type": "contract ACUserMutex"
                 },
-                "id": 2121,
+                "id": 2131,
                 "name": "UserDefinedTypeName",
                 "src": "157:11:18"
               }
             ],
-            "id": 2122,
+            "id": 2132,
             "name": "InheritanceSpecifier",
             "src": "157:11:18"
           },
@@ -254,7 +254,7 @@
               ],
               "name": "mock_setup_set_user_mutex",
               "payable": false,
-              "scope": 2247,
+              "scope": 2257,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -266,7 +266,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_user",
-                      "scope": 2140,
+                      "scope": 2150,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -279,12 +279,12 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 2123,
+                        "id": 2133,
                         "name": "ElementaryTypeName",
                         "src": "210:7:18"
                       }
                     ],
-                    "id": 2124,
+                    "id": 2134,
                     "name": "VariableDeclaration",
                     "src": "210:13:18"
                   },
@@ -292,7 +292,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_mutex_id",
-                      "scope": 2140,
+                      "scope": 2150,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -305,12 +305,12 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2125,
+                        "id": 2135,
                         "name": "ElementaryTypeName",
                         "src": "225:7:18"
                       }
                     ],
-                    "id": 2126,
+                    "id": 2136,
                     "name": "VariableDeclaration",
                     "src": "225:17:18"
                   },
@@ -318,7 +318,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_value",
-                      "scope": 2140,
+                      "scope": 2150,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -331,17 +331,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 2127,
+                        "id": 2137,
                         "name": "ElementaryTypeName",
                         "src": "244:4:18"
                       }
                     ],
-                    "id": 2128,
+                    "id": 2138,
                     "name": "VariableDeclaration",
                     "src": "244:11:18"
                   }
                 ],
-                "id": 2129,
+                "id": 2139,
                 "name": "ParameterList",
                 "src": "209:47:18"
               },
@@ -352,7 +352,7 @@
                   ]
                 },
                 "children": [],
-                "id": 2130,
+                "id": 2140,
                 "name": "ParameterList",
                 "src": "277:0:18"
               },
@@ -401,7 +401,7 @@
                                       "type": "mapping(address => mapping(bytes32 => bool))",
                                       "value": "user_mutexes"
                                     },
-                                    "id": 2131,
+                                    "id": 2141,
                                     "name": "Identifier",
                                     "src": "283:12:18"
                                   },
@@ -411,16 +411,16 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 2124,
+                                      "referencedDeclaration": 2134,
                                       "type": "address",
                                       "value": "_user"
                                     },
-                                    "id": 2132,
+                                    "id": 2142,
                                     "name": "Identifier",
                                     "src": "296:5:18"
                                   }
                                 ],
-                                "id": 2134,
+                                "id": 2144,
                                 "name": "IndexAccess",
                                 "src": "283:19:18"
                               },
@@ -430,16 +430,16 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 2126,
+                                  "referencedDeclaration": 2136,
                                   "type": "bytes32",
                                   "value": "_mutex_id"
                                 },
-                                "id": 2133,
+                                "id": 2143,
                                 "name": "Identifier",
                                 "src": "303:9:18"
                               }
                             ],
-                            "id": 2135,
+                            "id": 2145,
                             "name": "IndexAccess",
                             "src": "283:30:18"
                           },
@@ -449,31 +449,31 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2128,
+                              "referencedDeclaration": 2138,
                               "type": "bool",
                               "value": "_value"
                             },
-                            "id": 2136,
+                            "id": 2146,
                             "name": "Identifier",
                             "src": "316:6:18"
                           }
                         ],
-                        "id": 2137,
+                        "id": 2147,
                         "name": "Assignment",
                         "src": "283:39:18"
                       }
                     ],
-                    "id": 2138,
+                    "id": 2148,
                     "name": "ExpressionStatement",
                     "src": "283:39:18"
                   }
                 ],
-                "id": 2139,
+                "id": 2149,
                 "name": "Block",
                 "src": "277:50:18"
               }
             ],
-            "id": 2140,
+            "id": 2150,
             "name": "FunctionDefinition",
             "src": "174:153:18"
           },
@@ -487,7 +487,7 @@
               ],
               "name": "mock_get_user_mutex",
               "payable": false,
-              "scope": 2247,
+              "scope": 2257,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -499,7 +499,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_user",
-                      "scope": 2158,
+                      "scope": 2168,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -512,12 +512,12 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 2141,
+                        "id": 2151,
                         "name": "ElementaryTypeName",
                         "src": "361:7:18"
                       }
                     ],
-                    "id": 2142,
+                    "id": 2152,
                     "name": "VariableDeclaration",
                     "src": "361:13:18"
                   },
@@ -525,7 +525,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_mutex_id",
-                      "scope": 2158,
+                      "scope": 2168,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -538,17 +538,17 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2143,
+                        "id": 2153,
                         "name": "ElementaryTypeName",
                         "src": "376:7:18"
                       }
                     ],
-                    "id": 2144,
+                    "id": 2154,
                     "name": "VariableDeclaration",
                     "src": "376:17:18"
                   }
                 ],
-                "id": 2145,
+                "id": 2155,
                 "name": "ParameterList",
                 "src": "360:34:18"
               },
@@ -558,7 +558,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_value",
-                      "scope": 2158,
+                      "scope": 2168,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -571,17 +571,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 2146,
+                        "id": 2156,
                         "name": "ElementaryTypeName",
                         "src": "453:4:18"
                       }
                     ],
-                    "id": 2147,
+                    "id": 2157,
                     "name": "VariableDeclaration",
                     "src": "453:11:18"
                   }
                 ],
-                "id": 2148,
+                "id": 2158,
                 "name": "ParameterList",
                 "src": "452:13:18"
               },
@@ -606,11 +606,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2147,
+                              "referencedDeclaration": 2157,
                               "type": "bool",
                               "value": "_value"
                             },
-                            "id": 2149,
+                            "id": 2159,
                             "name": "Identifier",
                             "src": "474:6:18"
                           },
@@ -644,7 +644,7 @@
                                       "type": "mapping(address => mapping(bytes32 => bool))",
                                       "value": "user_mutexes"
                                     },
-                                    "id": 2150,
+                                    "id": 2160,
                                     "name": "Identifier",
                                     "src": "483:12:18"
                                   },
@@ -654,16 +654,16 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 2142,
+                                      "referencedDeclaration": 2152,
                                       "type": "address",
                                       "value": "_user"
                                     },
-                                    "id": 2151,
+                                    "id": 2161,
                                     "name": "Identifier",
                                     "src": "496:5:18"
                                   }
                                 ],
-                                "id": 2152,
+                                "id": 2162,
                                 "name": "IndexAccess",
                                 "src": "483:19:18"
                               },
@@ -673,36 +673,36 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 2144,
+                                  "referencedDeclaration": 2154,
                                   "type": "bytes32",
                                   "value": "_mutex_id"
                                 },
-                                "id": 2153,
+                                "id": 2163,
                                 "name": "Identifier",
                                 "src": "503:9:18"
                               }
                             ],
-                            "id": 2154,
+                            "id": 2164,
                             "name": "IndexAccess",
                             "src": "483:30:18"
                           }
                         ],
-                        "id": 2155,
+                        "id": 2165,
                         "name": "Assignment",
                         "src": "474:39:18"
                       }
                     ],
-                    "id": 2156,
+                    "id": 2166,
                     "name": "ExpressionStatement",
                     "src": "474:39:18"
                   }
                 ],
-                "id": 2157,
+                "id": 2167,
                 "name": "Block",
                 "src": "468:50:18"
               }
             ],
-            "id": 2158,
+            "id": 2168,
             "name": "FunctionDefinition",
             "src": "331:187:18"
           },
@@ -713,7 +713,7 @@
               "isConstructor": false,
               "name": "test_if_user_mutex_locked",
               "payable": false,
-              "scope": 2247,
+              "scope": 2257,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -725,7 +725,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_mutex_id",
-                      "scope": 2173,
+                      "scope": 2183,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -738,17 +738,17 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2159,
+                        "id": 2169,
                         "name": "ElementaryTypeName",
                         "src": "558:7:18"
                       }
                     ],
-                    "id": 2160,
+                    "id": 2170,
                     "name": "VariableDeclaration",
                     "src": "558:17:18"
                   }
                 ],
-                "id": 2161,
+                "id": 2171,
                 "name": "ParameterList",
                 "src": "557:19:18"
               },
@@ -758,7 +758,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_success",
-                      "scope": 2173,
+                      "scope": 2183,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -771,17 +771,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 2165,
+                        "id": 2175,
                         "name": "ElementaryTypeName",
                         "src": "679:4:18"
                       }
                     ],
-                    "id": 2166,
+                    "id": 2176,
                     "name": "VariableDeclaration",
                     "src": "679:13:18"
                   }
                 ],
-                "id": 2167,
+                "id": 2177,
                 "name": "ParameterList",
                 "src": "678:15:18"
               },
@@ -797,7 +797,7 @@
                       "type": "modifier (bytes32)",
                       "value": "if_user_mutex_locked"
                     },
-                    "id": 2162,
+                    "id": 2172,
                     "name": "Identifier",
                     "src": "588:20:18"
                   },
@@ -807,16 +807,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 2160,
+                      "referencedDeclaration": 2170,
                       "type": "bytes32",
                       "value": "_mutex_id"
                     },
-                    "id": 2163,
+                    "id": 2173,
                     "name": "Identifier",
                     "src": "610:9:18"
                   }
                 ],
-                "id": 2164,
+                "id": 2174,
                 "name": "ModifierInvocation",
                 "src": "588:32:18"
               },
@@ -841,11 +841,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2166,
+                              "referencedDeclaration": 2176,
                               "type": "bool",
                               "value": "_success"
                             },
-                            "id": 2168,
+                            "id": 2178,
                             "name": "Identifier",
                             "src": "702:8:18"
                           },
@@ -862,27 +862,27 @@
                               "type": "bool",
                               "value": "true"
                             },
-                            "id": 2169,
+                            "id": 2179,
                             "name": "Literal",
                             "src": "713:4:18"
                           }
                         ],
-                        "id": 2170,
+                        "id": 2180,
                         "name": "Assignment",
                         "src": "702:15:18"
                       }
                     ],
-                    "id": 2171,
+                    "id": 2181,
                     "name": "ExpressionStatement",
                     "src": "702:15:18"
                   }
                 ],
-                "id": 2172,
+                "id": 2182,
                 "name": "Block",
                 "src": "696:26:18"
               }
             ],
-            "id": 2173,
+            "id": 2183,
             "name": "FunctionDefinition",
             "src": "522:200:18"
           },
@@ -893,7 +893,7 @@
               "isConstructor": false,
               "name": "test_unless_user_mutex_locked",
               "payable": false,
-              "scope": 2247,
+              "scope": 2257,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -905,7 +905,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_mutex_id",
-                      "scope": 2188,
+                      "scope": 2198,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -918,17 +918,17 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2174,
+                        "id": 2184,
                         "name": "ElementaryTypeName",
                         "src": "766:7:18"
                       }
                     ],
-                    "id": 2175,
+                    "id": 2185,
                     "name": "VariableDeclaration",
                     "src": "766:17:18"
                   }
                 ],
-                "id": 2176,
+                "id": 2186,
                 "name": "ParameterList",
                 "src": "765:19:18"
               },
@@ -938,7 +938,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_success",
-                      "scope": 2188,
+                      "scope": 2198,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -951,17 +951,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 2180,
+                        "id": 2190,
                         "name": "ElementaryTypeName",
                         "src": "891:4:18"
                       }
                     ],
-                    "id": 2181,
+                    "id": 2191,
                     "name": "VariableDeclaration",
                     "src": "891:13:18"
                   }
                 ],
-                "id": 2182,
+                "id": 2192,
                 "name": "ParameterList",
                 "src": "890:15:18"
               },
@@ -977,7 +977,7 @@
                       "type": "modifier (bytes32)",
                       "value": "unless_user_mutex_locked"
                     },
-                    "id": 2177,
+                    "id": 2187,
                     "name": "Identifier",
                     "src": "796:24:18"
                   },
@@ -987,16 +987,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 2175,
+                      "referencedDeclaration": 2185,
                       "type": "bytes32",
                       "value": "_mutex_id"
                     },
-                    "id": 2178,
+                    "id": 2188,
                     "name": "Identifier",
                     "src": "822:9:18"
                   }
                 ],
-                "id": 2179,
+                "id": 2189,
                 "name": "ModifierInvocation",
                 "src": "796:36:18"
               },
@@ -1021,11 +1021,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2181,
+                              "referencedDeclaration": 2191,
                               "type": "bool",
                               "value": "_success"
                             },
-                            "id": 2183,
+                            "id": 2193,
                             "name": "Identifier",
                             "src": "914:8:18"
                           },
@@ -1042,27 +1042,27 @@
                               "type": "bool",
                               "value": "true"
                             },
-                            "id": 2184,
+                            "id": 2194,
                             "name": "Literal",
                             "src": "925:4:18"
                           }
                         ],
-                        "id": 2185,
+                        "id": 2195,
                         "name": "Assignment",
                         "src": "914:15:18"
                       }
                     ],
-                    "id": 2186,
+                    "id": 2196,
                     "name": "ExpressionStatement",
                     "src": "914:15:18"
                   }
                 ],
-                "id": 2187,
+                "id": 2197,
                 "name": "Block",
                 "src": "908:26:18"
               }
             ],
-            "id": 2188,
+            "id": 2198,
             "name": "FunctionDefinition",
             "src": "726:208:18"
           },
@@ -1073,7 +1073,7 @@
               "isConstructor": false,
               "name": "test_lock_before_action",
               "payable": false,
-              "scope": 2247,
+              "scope": 2257,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1085,7 +1085,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_mutex_id",
-                      "scope": 2203,
+                      "scope": 2213,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -1098,17 +1098,17 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2189,
+                        "id": 2199,
                         "name": "ElementaryTypeName",
                         "src": "972:7:18"
                       }
                     ],
-                    "id": 2190,
+                    "id": 2200,
                     "name": "VariableDeclaration",
                     "src": "972:17:18"
                   }
                 ],
-                "id": 2191,
+                "id": 2201,
                 "name": "ParameterList",
                 "src": "971:19:18"
               },
@@ -1118,7 +1118,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_success",
-                      "scope": 2203,
+                      "scope": 2213,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1131,17 +1131,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 2195,
+                        "id": 2205,
                         "name": "ElementaryTypeName",
                         "src": "1071:4:18"
                       }
                     ],
-                    "id": 2196,
+                    "id": 2206,
                     "name": "VariableDeclaration",
                     "src": "1071:13:18"
                   }
                 ],
-                "id": 2197,
+                "id": 2207,
                 "name": "ParameterList",
                 "src": "1070:15:18"
               },
@@ -1157,7 +1157,7 @@
                       "type": "modifier (bytes32)",
                       "value": "lock_before_action"
                     },
-                    "id": 2192,
+                    "id": 2202,
                     "name": "Identifier",
                     "src": "1002:18:18"
                   },
@@ -1167,16 +1167,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 2190,
+                      "referencedDeclaration": 2200,
                       "type": "bytes32",
                       "value": "_mutex_id"
                     },
-                    "id": 2193,
+                    "id": 2203,
                     "name": "Identifier",
                     "src": "1022:9:18"
                   }
                 ],
-                "id": 2194,
+                "id": 2204,
                 "name": "ModifierInvocation",
                 "src": "1002:30:18"
               },
@@ -1201,11 +1201,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2196,
+                              "referencedDeclaration": 2206,
                               "type": "bool",
                               "value": "_success"
                             },
-                            "id": 2198,
+                            "id": 2208,
                             "name": "Identifier",
                             "src": "1094:8:18"
                           },
@@ -1222,27 +1222,27 @@
                               "type": "bool",
                               "value": "true"
                             },
-                            "id": 2199,
+                            "id": 2209,
                             "name": "Literal",
                             "src": "1105:4:18"
                           }
                         ],
-                        "id": 2200,
+                        "id": 2210,
                         "name": "Assignment",
                         "src": "1094:15:18"
                       }
                     ],
-                    "id": 2201,
+                    "id": 2211,
                     "name": "ExpressionStatement",
                     "src": "1094:15:18"
                   }
                 ],
-                "id": 2202,
+                "id": 2212,
                 "name": "Block",
                 "src": "1088:26:18"
               }
             ],
-            "id": 2203,
+            "id": 2213,
             "name": "FunctionDefinition",
             "src": "938:176:18"
           },
@@ -1253,7 +1253,7 @@
               "isConstructor": false,
               "name": "test_unlock_after_action",
               "payable": false,
-              "scope": 2247,
+              "scope": 2257,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1265,7 +1265,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_mutex_id",
-                      "scope": 2218,
+                      "scope": 2228,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -1278,17 +1278,17 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2204,
+                        "id": 2214,
                         "name": "ElementaryTypeName",
                         "src": "1153:7:18"
                       }
                     ],
-                    "id": 2205,
+                    "id": 2215,
                     "name": "VariableDeclaration",
                     "src": "1153:17:18"
                   }
                 ],
-                "id": 2206,
+                "id": 2216,
                 "name": "ParameterList",
                 "src": "1152:19:18"
               },
@@ -1298,7 +1298,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_success",
-                      "scope": 2218,
+                      "scope": 2228,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1311,17 +1311,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 2210,
+                        "id": 2220,
                         "name": "ElementaryTypeName",
                         "src": "1253:4:18"
                       }
                     ],
-                    "id": 2211,
+                    "id": 2221,
                     "name": "VariableDeclaration",
                     "src": "1253:13:18"
                   }
                 ],
-                "id": 2212,
+                "id": 2222,
                 "name": "ParameterList",
                 "src": "1252:15:18"
               },
@@ -1337,7 +1337,7 @@
                       "type": "modifier (bytes32)",
                       "value": "unlock_after_action"
                     },
-                    "id": 2207,
+                    "id": 2217,
                     "name": "Identifier",
                     "src": "1183:19:18"
                   },
@@ -1347,16 +1347,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 2205,
+                      "referencedDeclaration": 2215,
                       "type": "bytes32",
                       "value": "_mutex_id"
                     },
-                    "id": 2208,
+                    "id": 2218,
                     "name": "Identifier",
                     "src": "1204:9:18"
                   }
                 ],
-                "id": 2209,
+                "id": 2219,
                 "name": "ModifierInvocation",
                 "src": "1183:31:18"
               },
@@ -1381,11 +1381,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2211,
+                              "referencedDeclaration": 2221,
                               "type": "bool",
                               "value": "_success"
                             },
-                            "id": 2213,
+                            "id": 2223,
                             "name": "Identifier",
                             "src": "1276:8:18"
                           },
@@ -1402,27 +1402,27 @@
                               "type": "bool",
                               "value": "true"
                             },
-                            "id": 2214,
+                            "id": 2224,
                             "name": "Literal",
                             "src": "1287:4:18"
                           }
                         ],
-                        "id": 2215,
+                        "id": 2225,
                         "name": "Assignment",
                         "src": "1276:15:18"
                       }
                     ],
-                    "id": 2216,
+                    "id": 2226,
                     "name": "ExpressionStatement",
                     "src": "1276:15:18"
                   }
                 ],
-                "id": 2217,
+                "id": 2227,
                 "name": "Block",
                 "src": "1270:26:18"
               }
             ],
-            "id": 2218,
+            "id": 2228,
             "name": "FunctionDefinition",
             "src": "1118:178:18"
           },
@@ -1436,7 +1436,7 @@
               ],
               "name": "test_lock_user_mutex",
               "payable": false,
-              "scope": 2247,
+              "scope": 2257,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1448,7 +1448,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_mutex_id",
-                      "scope": 2232,
+                      "scope": 2242,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -1461,17 +1461,17 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2219,
+                        "id": 2229,
                         "name": "ElementaryTypeName",
                         "src": "1331:7:18"
                       }
                     ],
-                    "id": 2220,
+                    "id": 2230,
                     "name": "VariableDeclaration",
                     "src": "1331:17:18"
                   }
                 ],
-                "id": 2221,
+                "id": 2231,
                 "name": "ParameterList",
                 "src": "1330:19:18"
               },
@@ -1481,7 +1481,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_success",
-                      "scope": 2232,
+                      "scope": 2242,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1494,17 +1494,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 2222,
+                        "id": 2232,
                         "name": "ElementaryTypeName",
                         "src": "1388:4:18"
                       }
                     ],
-                    "id": 2223,
+                    "id": 2233,
                     "name": "VariableDeclaration",
                     "src": "1388:13:18"
                   }
                 ],
-                "id": 2224,
+                "id": 2234,
                 "name": "ParameterList",
                 "src": "1387:15:18"
               },
@@ -1529,11 +1529,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2223,
+                              "referencedDeclaration": 2233,
                               "type": "bool",
                               "value": "_success"
                             },
-                            "id": 2225,
+                            "id": 2235,
                             "name": "Identifier",
                             "src": "1411:8:18"
                           },
@@ -1567,7 +1567,7 @@
                                   "type": "function (bytes32) returns (bool)",
                                   "value": "lock_user_mutex"
                                 },
-                                "id": 2226,
+                                "id": 2236,
                                 "name": "Identifier",
                                 "src": "1422:15:18"
                               },
@@ -1577,36 +1577,36 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 2220,
+                                  "referencedDeclaration": 2230,
                                   "type": "bytes32",
                                   "value": "_mutex_id"
                                 },
-                                "id": 2227,
+                                "id": 2237,
                                 "name": "Identifier",
                                 "src": "1438:9:18"
                               }
                             ],
-                            "id": 2228,
+                            "id": 2238,
                             "name": "FunctionCall",
                             "src": "1422:26:18"
                           }
                         ],
-                        "id": 2229,
+                        "id": 2239,
                         "name": "Assignment",
                         "src": "1411:37:18"
                       }
                     ],
-                    "id": 2230,
+                    "id": 2240,
                     "name": "ExpressionStatement",
                     "src": "1411:37:18"
                   }
                 ],
-                "id": 2231,
+                "id": 2241,
                 "name": "Block",
                 "src": "1405:48:18"
               }
             ],
-            "id": 2232,
+            "id": 2242,
             "name": "FunctionDefinition",
             "src": "1300:153:18"
           },
@@ -1620,7 +1620,7 @@
               ],
               "name": "test_unlock_user_mutex",
               "payable": false,
-              "scope": 2247,
+              "scope": 2257,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1632,7 +1632,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_mutex_id",
-                      "scope": 2246,
+                      "scope": 2256,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -1645,17 +1645,17 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2233,
+                        "id": 2243,
                         "name": "ElementaryTypeName",
                         "src": "1490:7:18"
                       }
                     ],
-                    "id": 2234,
+                    "id": 2244,
                     "name": "VariableDeclaration",
                     "src": "1490:17:18"
                   }
                 ],
-                "id": 2235,
+                "id": 2245,
                 "name": "ParameterList",
                 "src": "1489:19:18"
               },
@@ -1665,7 +1665,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_success",
-                      "scope": 2246,
+                      "scope": 2256,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1678,17 +1678,17 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 2236,
+                        "id": 2246,
                         "name": "ElementaryTypeName",
                         "src": "1547:4:18"
                       }
                     ],
-                    "id": 2237,
+                    "id": 2247,
                     "name": "VariableDeclaration",
                     "src": "1547:13:18"
                   }
                 ],
-                "id": 2238,
+                "id": 2248,
                 "name": "ParameterList",
                 "src": "1546:15:18"
               },
@@ -1713,11 +1713,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2237,
+                              "referencedDeclaration": 2247,
                               "type": "bool",
                               "value": "_success"
                             },
-                            "id": 2239,
+                            "id": 2249,
                             "name": "Identifier",
                             "src": "1570:8:18"
                           },
@@ -1751,7 +1751,7 @@
                                   "type": "function (bytes32) returns (bool)",
                                   "value": "unlock_user_mutex"
                                 },
-                                "id": 2240,
+                                "id": 2250,
                                 "name": "Identifier",
                                 "src": "1581:17:18"
                               },
@@ -1761,46 +1761,46 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 2234,
+                                  "referencedDeclaration": 2244,
                                   "type": "bytes32",
                                   "value": "_mutex_id"
                                 },
-                                "id": 2241,
+                                "id": 2251,
                                 "name": "Identifier",
                                 "src": "1599:9:18"
                               }
                             ],
-                            "id": 2242,
+                            "id": 2252,
                             "name": "FunctionCall",
                             "src": "1581:28:18"
                           }
                         ],
-                        "id": 2243,
+                        "id": 2253,
                         "name": "Assignment",
                         "src": "1570:39:18"
                       }
                     ],
-                    "id": 2244,
+                    "id": 2254,
                     "name": "ExpressionStatement",
                     "src": "1570:39:18"
                   }
                 ],
-                "id": 2245,
+                "id": 2255,
                 "name": "Block",
                 "src": "1564:50:18"
               }
             ],
-            "id": 2246,
+            "id": 2256,
             "name": "FunctionDefinition",
             "src": "1457:157:18"
           }
         ],
-        "id": 2247,
+        "id": 2257,
         "name": "ContractDefinition",
         "src": "129:1488:18"
       }
     ],
-    "id": 2248,
+    "id": 2258,
     "name": "SourceUnit",
     "src": "0:1618:18"
   },
@@ -1810,5 +1810,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-14T04:27:32.120Z"
+  "updatedAt": "2018-03-15T07:10:37.540Z"
 }

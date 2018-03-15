@@ -23,18 +23,6 @@ contract('ResolverClient', function (addresses) {
     });
   });
 
-
-  describe('is_locked', function () {
-    it('returns true if ContractResolver is locked', async function () {
-      await mockContractResolver.mock_set_locked(true);
-      assert.deepEqual(await mockResolverClient.is_locked.call(), true);
-    });
-    it('returns false if ContractResolver is unlocked', async function () {
-      await mockContractResolver.mock_set_locked(false);
-      assert.deepEqual(await mockResolverClient.is_locked.call(), false);
-    });
-  });
-
   describe('unless_resolver_is_locked', function () {
     it('throws if ContractResolver is locked', async function () {
       await mockContractResolver.mock_set_locked(true);
