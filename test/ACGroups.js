@@ -126,7 +126,7 @@ contract('ACGroups', function (addresses) {
       await mockACGroups.mock_add_user_to_group(addresses[0], 'test_group');
       assert.deepEqual(await mockACGroups.test_init_ac_groups.call(), true);
       await mockACGroups.test_init_ac_groups();
-      assert.deepEqual(await mockACGroups.is_owner.call(), true);
+      assert.deepEqual(await mockACGroups.test_if_owner.call(), true);
       await mockACGroups.change_owner(addresses[2]);
     });
     it('[ownership claimed by address who is not new_owner]: throw', async function () {
@@ -141,7 +141,7 @@ contract('ACGroups', function (addresses) {
       assert.deepEqual(await mockACGroups.claim_ownership.call({ from: addresses[2] }), true);
       await mockACGroups.claim_ownership({ from: addresses[2] });
 
-      assert.deepEqual(await mockACGroups.is_owner.call({ from: addresses[2] }), true);
+      assert.deepEqual(await mockACGroups.test_if_owner.call({ from: addresses[2] }), true);
       assert.deepEqual(await mockACGroups.is_group_member_of.call('admins', addresses[0]), false);
       assert.deepEqual(await mockACGroups.is_group_member_of.call('admins', addresses[2]), true);
     });

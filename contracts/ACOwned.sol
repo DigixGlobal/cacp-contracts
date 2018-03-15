@@ -27,7 +27,7 @@ contract ACOwned {
   }
 
   function is_owner()
-           public
+           private
            constant
            returns (bool _is_owner)
   {

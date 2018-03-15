@@ -20,18 +20,6 @@ contract('ACOwned', function (addresses) {
     });
   });
 
-  describe('is_owner', function () {
-    before(async function () {
-      await mockAcOwned.set_owner(addresses[0]);
-    });
-    it('returns true when sender is the owner', async function () {
-      assert.deepEqual(await mockAcOwned.is_owner.call({ from: addresses[0] }), true);
-    });
-    it('returns false when sender is not the owner', async function () {
-      assert.deepEqual(await mockAcOwned.is_owner.call({ from: addresses[1] }), false);
-    });
-  });
-
   describe('init_ac_owned', function () {
     before(async function () {
       mockAcOwned = await MockACOwned.new();
