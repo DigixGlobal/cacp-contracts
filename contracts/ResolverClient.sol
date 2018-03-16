@@ -6,7 +6,7 @@ import "./ACOwned.sol";
 /// @title Contract Resolver Interface
 /// @author DigixGlobal
 
-contract ResolverClient is ACOwned {
+contract ResolverClient {
 
   /// The address of the resolver contract for this project
   address public resolver;
@@ -40,7 +40,6 @@ contract ResolverClient is ACOwned {
       CONTRACT_ADDRESS = address(this);
       resolver = _resolver;
       key = _key;
-      require(init_ac_owned());
       require(ContractResolver(resolver).init_register_contract(key, CONTRACT_ADDRESS));
       _success = true;
     }  else {
@@ -49,23 +48,27 @@ contract ResolverClient is ACOwned {
   }
 
   /// @dev Destroy the contract and unregister self from the ContractResolver
+  /// @dev Can only be called by the owner of ContractResolver
   function destroy()
-           if_owner()
            public
            returns (bool _success)
   {
     bool _is_locked = ContractResolver(resolver).locked();
-    if (_is_locked == false) {
-      _success = ContractResolver(resolver).unregister_contract(key);
-      require(_success);
-      selfdestruct(tx.origin);
-    }
+    require(!_is_locked);
+
+    address _owner_of_contract_resolver = ContractResolver(resolver).owner();
+    require(msg.sender == _owner_of_contract_resolver);
+
+    _success = ContractResolver(resolver).unregister_contract(key);
+    require(_success);
+
+    selfdestruct(_owner_of_contract_resolver);
   }
 
   /// @dev Check if resolver is locked
   /// @return _locked if the resolver is currently locked
   function is_locked()
-           public
+           private
            constant
            returns (bool _locked)
   {
