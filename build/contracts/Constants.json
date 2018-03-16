@@ -306,6 +306,11 @@
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
   "networks": {},
+<<<<<<< HEAD
   "schemaVersion": "1.0.1",
   "updatedAt": "2018-03-16T03:08:38.883Z"
+=======
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-03-16T09:38:56.914Z"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
 }

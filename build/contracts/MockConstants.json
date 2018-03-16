@@ -31,6 +31,7 @@
   "source": "pragma solidity ^0.4.19;\nimport '../Constants.sol';\n/// @title Some useful constants\n/// @author DigixGlobal\n\ncontract MockConstants is Constants{\n  address constant NULL_ADDRESS = address(0x0);\n  uint256 constant ZERO = uint256(0);\n  bytes32 constant EMPTY = bytes32(0x0);\n\n  function test_constants() public pure returns (address, uint256, bytes32) {\n    return (NULL_ADDRESS, ZERO, EMPTY);\n  }\n\n}\n",
   "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/Mock/MockConstants.sol",
   "ast": {
+<<<<<<< HEAD
     "attributes": {
       "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Mock/MockConstants.sol",
       "exportedSymbols": {
@@ -101,6 +102,151 @@
                 "id": 2261,
                 "name": "UserDefinedTypeName",
                 "src": "136:9:19"
+=======
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockConstants.sol",
+    "exportedSymbols": {
+      "MockConstants": [
+        2293
+      ]
+    },
+    "id": 2294,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2259,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:19"
+      },
+      {
+        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Constants.sol",
+        "file": "../Constants.sol",
+        "id": 2260,
+        "nodeType": "ImportDirective",
+        "scope": 2294,
+        "sourceUnit": 986,
+        "src": "25:26:19",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 2261,
+              "name": "Constants",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 985,
+              "src": "136:9:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Constants_$985",
+                "typeString": "contract Constants"
+              }
+            },
+            "id": 2262,
+            "nodeType": "InheritanceSpecifier",
+            "src": "136:9:19"
+          }
+        ],
+        "contractDependencies": [
+          985
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Some useful constants\n @author DigixGlobal",
+        "fullyImplemented": true,
+        "id": 2293,
+        "linearizedBaseContracts": [
+          2293,
+          985
+        ],
+        "name": "MockConstants",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 2267,
+            "name": "NULL_ADDRESS",
+            "nodeType": "VariableDeclaration",
+            "scope": 2293,
+            "src": "149:44:19",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2263,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "149:7:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307830",
+                  "id": 2265,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "189:3:19",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  },
+                  "value": "0x0"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  }
+                ],
+                "id": 2264,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "181:7:19",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_address_$",
+                  "typeString": "type(address)"
+                },
+                "typeName": "address"
+              },
+              "id": 2266,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "181:12:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               }
             ],
             "id": 2262,
@@ -108,6 +254,7 @@
             "src": "136:9:19"
           },
           {
+<<<<<<< HEAD
             "attributes": {
               "constant": true,
               "name": "NULL_ADDRESS",
@@ -122,14 +269,126 @@
                 "attributes": {
                   "name": "address",
                   "type": "address"
+=======
+            "constant": true,
+            "id": 2272,
+            "name": "ZERO",
+            "nodeType": "VariableDeclaration",
+            "scope": 2293,
+            "src": "197:34:19",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2268,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "197:7:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "30",
+                  "id": 2270,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "229:1:19",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  },
+                  "value": "0"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  }
+                ],
+                "id": 2269,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "221:7:19",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_uint256_$",
+                  "typeString": "type(uint256)"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                 },
                 "id": 2263,
                 "name": "ElementaryTypeName",
                 "src": "149:7:19"
               },
+<<<<<<< HEAD
               {
                 "attributes": {
                   "argumentTypes": null,
+=======
+              "id": 2271,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "221:10:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 2277,
+            "name": "EMPTY",
+            "nodeType": "VariableDeclaration",
+            "scope": 2293,
+            "src": "235:37:19",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 2273,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "235:7:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307830",
+                  "id": 2275,
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -179,9 +438,37 @@
                     "src": "189:3:19"
                   }
                 ],
+<<<<<<< HEAD
                 "id": 2266,
                 "name": "FunctionCall",
                 "src": "181:12:19"
+=======
+                "id": 2274,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "260:7:19",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_bytes32_$",
+                  "typeString": "type(bytes32)"
+                },
+                "typeName": "bytes32"
+              },
+              "id": 2276,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "260:12:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               }
             ],
             "id": 2267,
@@ -189,6 +476,7 @@
             "src": "149:44:19"
           },
           {
+<<<<<<< HEAD
             "attributes": {
               "constant": true,
               "name": "ZERO",
@@ -211,6 +499,286 @@
               {
                 "attributes": {
                   "argumentTypes": null,
+=======
+            "body": {
+              "id": 2291,
+              "nodeType": "Block",
+              "src": "351:45:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2286,
+                        "name": "NULL_ADDRESS",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2267,
+                        "src": "365:12:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2287,
+                        "name": "ZERO",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2272,
+                        "src": "379:4:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2288,
+                        "name": "EMPTY",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2277,
+                        "src": "385:5:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "id": 2289,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "364:27:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_uint256_$_t_bytes32_$",
+                      "typeString": "tuple(address,uint256,bytes32)"
+                    }
+                  },
+                  "functionReturnParameters": 2285,
+                  "id": 2290,
+                  "nodeType": "Return",
+                  "src": "357:34:19"
+                }
+              ]
+            },
+            "id": 2292,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "test_constants",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2278,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "300:2:19"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2285,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2280,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2292,
+                  "src": "324:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2279,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "324:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2282,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2292,
+                  "src": "333:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2281,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "333:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2284,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2292,
+                  "src": "342:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2283,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "342:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "323:27:19"
+            },
+            "scope": 2293,
+            "src": "277:119:19",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2294,
+        "src": "110:289:19"
+      }
+    ],
+    "src": "0:400:19"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockConstants.sol",
+    "exportedSymbols": {
+      "MockConstants": [
+        2293
+      ]
+    },
+    "id": 2294,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2259,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:19"
+      },
+      {
+        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Constants.sol",
+        "file": "../Constants.sol",
+        "id": 2260,
+        "nodeType": "ImportDirective",
+        "scope": 2294,
+        "sourceUnit": 986,
+        "src": "25:26:19",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 2261,
+              "name": "Constants",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 985,
+              "src": "136:9:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Constants_$985",
+                "typeString": "contract Constants"
+              }
+            },
+            "id": 2262,
+            "nodeType": "InheritanceSpecifier",
+            "src": "136:9:19"
+          }
+        ],
+        "contractDependencies": [
+          985
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Some useful constants\n @author DigixGlobal",
+        "fullyImplemented": true,
+        "id": 2293,
+        "linearizedBaseContracts": [
+          2293,
+          985
+        ],
+        "name": "MockConstants",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 2267,
+            "name": "NULL_ADDRESS",
+            "nodeType": "VariableDeclaration",
+            "scope": 2293,
+            "src": "149:44:19",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2263,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "149:7:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307830",
+                  "id": 2265,
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -260,9 +828,37 @@
                     "src": "229:1:19"
                   }
                 ],
+<<<<<<< HEAD
                 "id": 2271,
                 "name": "FunctionCall",
                 "src": "221:10:19"
+=======
+                "id": 2264,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "181:7:19",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_address_$",
+                  "typeString": "type(address)"
+                },
+                "typeName": "address"
+              },
+              "id": 2266,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "181:12:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               }
             ],
             "id": 2272,
@@ -270,6 +866,7 @@
             "src": "197:34:19"
           },
           {
+<<<<<<< HEAD
             "attributes": {
               "constant": true,
               "name": "EMPTY",
@@ -278,6 +875,29 @@
               "storageLocation": "default",
               "type": "bytes32",
               "visibility": "internal"
+=======
+            "constant": true,
+            "id": 2272,
+            "name": "ZERO",
+            "nodeType": "VariableDeclaration",
+            "scope": 2293,
+            "src": "197:34:19",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2268,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "197:7:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
             },
             "children": [
               {
@@ -292,6 +912,11 @@
               {
                 "attributes": {
                   "argumentTypes": null,
+<<<<<<< HEAD
+=======
+                  "hexValue": "30",
+                  "id": 2270,
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -341,9 +966,37 @@
                     "src": "268:3:19"
                   }
                 ],
+<<<<<<< HEAD
                 "id": 2276,
                 "name": "FunctionCall",
                 "src": "260:12:19"
+=======
+                "id": 2269,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "221:7:19",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_uint256_$",
+                  "typeString": "type(uint256)"
+                },
+                "typeName": "uint256"
+              },
+              "id": 2271,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "221:10:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               }
             ],
             "id": 2277,
@@ -351,6 +1004,7 @@
             "src": "235:37:19"
           },
           {
+<<<<<<< HEAD
             "attributes": {
               "constant": true,
               "implemented": true,
@@ -430,6 +1084,48 @@
                     "id": 2282,
                     "name": "VariableDeclaration",
                     "src": "333:7:19"
+=======
+            "constant": true,
+            "id": 2277,
+            "name": "EMPTY",
+            "nodeType": "VariableDeclaration",
+            "scope": 2293,
+            "src": "235:37:19",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 2273,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "235:7:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307830",
+                  "id": 2275,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "268:3:19",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   },
                   {
                     "attributes": {
@@ -458,6 +1154,7 @@
                     "src": "342:7:19"
                   }
                 ],
+<<<<<<< HEAD
                 "id": 2285,
                 "name": "ParameterList",
                 "src": "323:27:19"
@@ -545,6 +1242,214 @@
         ],
         "id": 2293,
         "name": "ContractDefinition",
+=======
+                "id": 2274,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "260:7:19",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_bytes32_$",
+                  "typeString": "type(bytes32)"
+                },
+                "typeName": "bytes32"
+              },
+              "id": 2276,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "260:12:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2291,
+              "nodeType": "Block",
+              "src": "351:45:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2286,
+                        "name": "NULL_ADDRESS",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2267,
+                        "src": "365:12:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2287,
+                        "name": "ZERO",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2272,
+                        "src": "379:4:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2288,
+                        "name": "EMPTY",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2277,
+                        "src": "385:5:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "id": 2289,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "364:27:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_uint256_$_t_bytes32_$",
+                      "typeString": "tuple(address,uint256,bytes32)"
+                    }
+                  },
+                  "functionReturnParameters": 2285,
+                  "id": 2290,
+                  "nodeType": "Return",
+                  "src": "357:34:19"
+                }
+              ]
+            },
+            "id": 2292,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "test_constants",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2278,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "300:2:19"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2285,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2280,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2292,
+                  "src": "324:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2279,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "324:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2282,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2292,
+                  "src": "333:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2281,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "333:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2284,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2292,
+                  "src": "342:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2283,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "342:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "323:27:19"
+            },
+            "scope": 2293,
+            "src": "277:119:19",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2294,
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
         "src": "110:289:19"
       }
     ],
@@ -557,6 +1462,11 @@
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
   "networks": {},
+<<<<<<< HEAD
   "schemaVersion": "1.0.1",
   "updatedAt": "2018-03-16T03:08:38.886Z"
+=======
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-03-16T09:38:56.919Z"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
 }

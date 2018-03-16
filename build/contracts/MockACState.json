@@ -217,6 +217,7 @@
   "source": "pragma solidity ^0.4.19;\n\nimport \"../ACState.sol\";\n\ncontract MockACState is ACState {\n\n    function test_if_state(bytes32 _key, uint8 _state)\n             if_state(_key, _state)\n             public\n             constant\n             returns (bool _success)\n    {\n      return true;\n    }\n\n    function test_unless_state(bytes32 _key, uint8 _state)\n             unless_state(_key, _state)\n             public\n             constant\n             returns (bool _success)\n    {\n      return true;\n    }\n\n    function test_set_state_after(bytes32 _key, uint8 _state)\n             set_state_after(_key, _state)\n             public\n    {\n      states[_key] = _state + 100; //something that is not _state\n    }\n\n    function test_increment_state_after(bytes32 _key)\n             increment_state_after(_key)\n             public\n    {\n      states[_key] = 100; //fixed number\n    }\n\n    function test_decrement_state_after(bytes32 _key)\n             decrement_state_after(_key)\n             public\n    {\n      states[_key] = 100; //fixed number\n    }\n\n    function test_increment_state_before_set_100(bytes32 _key)\n             increment_state_before(_key)\n             public\n    {\n      states[_key] = 100; //set state = 100 in the function body\n    }\n\n    function test_increment_state_before_increment_100(bytes32 _key)\n             increment_state_before(_key)\n             public\n    {\n      states[_key] += 100; //increment by 100 in the function body\n    }\n\n\n    function test_decrement_state_before_increment_100(bytes32 _key)\n             decrement_state_before(_key)\n             public\n    {\n      states[_key] += 100; //always increment by 100 in the function body\n    }\n\n    function test_decrement_state_before_set_100(bytes32 _key)\n             decrement_state_before(_key)\n             public\n    {\n      states[_key] = 100; //always increment by 100 in the function body\n    }\n\n    function test_set_state(bytes32 _key, uint8 _state)\n             public\n             returns (bool _success)\n    {\n      _success = set_state(_key, _state);\n    }\n\n    function mock_setup_set_state(bytes32 _key, uint8 _state)\n             public\n    {\n      states[_key] = _state;\n    }\n\n    function get_state(bytes32 _key)\n             public\n             constant\n             returns (uint256 _state_value)\n    {\n      _state_value = states[_key];\n    }\n}\n",
   "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/Mock/MockACState.sol",
   "ast": {
+<<<<<<< HEAD
     "attributes": {
       "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Mock/MockACState.sol",
       "exportedSymbols": {
@@ -283,12 +284,160 @@
                   "name": "ACState",
                   "referencedDeclaration": 739,
                   "type": "contract ACState"
+=======
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockACState.sol",
+    "exportedSymbols": {
+      "MockACState": [
+        1997
+      ]
+    },
+    "id": 1998,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1806,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:16"
+      },
+      {
+        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACState.sol",
+        "file": "../ACState.sol",
+        "id": 1807,
+        "nodeType": "ImportDirective",
+        "scope": 1998,
+        "sourceUnit": 740,
+        "src": "26:24:16",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 1808,
+              "name": "ACState",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 739,
+              "src": "76:7:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ACState_$739",
+                "typeString": "contract ACState"
+              }
+            },
+            "id": 1809,
+            "nodeType": "InheritanceSpecifier",
+            "src": "76:7:16"
+          }
+        ],
+        "contractDependencies": [
+          739
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1997,
+        "linearizedBaseContracts": [
+          1997,
+          739
+        ],
+        "name": "MockACState",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1824,
+              "nodeType": "Block",
+              "src": "261:26:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1822,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "276:4:16",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1821,
+                  "id": 1823,
+                  "nodeType": "Return",
+                  "src": "269:11:16"
+                }
+              ]
+            },
+            "id": 1825,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1816,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1811,
+                    "src": "164:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1817,
+                    "name": "_state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1813,
+                    "src": "170:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  }
+                ],
+                "id": 1818,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1815,
+                  "name": "if_state",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 644,
+                  "src": "155:8:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$_t_uint8_$",
+                    "typeString": "modifier (bytes32,uint8)"
+                  }
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                 },
                 "id": 1808,
                 "name": "UserDefinedTypeName",
                 "src": "76:7:16"
               }
             ],
+<<<<<<< HEAD
             "id": 1809,
             "name": "InheritanceSpecifier",
             "src": "76:7:16"
@@ -306,9 +455,150 @@
               "visibility": "public"
             },
             "children": [
+=======
+            "name": "test_if_state",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1811,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1825,
+                  "src": "114:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1810,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "114:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1813,
+                  "name": "_state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1825,
+                  "src": "128:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1812,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "128:5:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "113:28:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1821,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1820,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1825,
+                  "src": "242:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1819,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "242:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "241:15:16"
+            },
+            "scope": 1997,
+            "src": "91:196:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1840,
+              "nodeType": "Block",
+              "src": "471:26:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1838,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "486:4:16",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1837,
+                  "id": 1839,
+                  "nodeType": "Return",
+                  "src": "479:11:16"
+                }
+              ]
+            },
+            "id": 1841,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               {
                 "children": [
                   {
+<<<<<<< HEAD
                     "attributes": {
                       "constant": false,
                       "name": "_key",
@@ -383,6 +673,250 @@
                         "attributes": {
                           "name": "bool",
                           "type": "bool"
+=======
+                    "argumentTypes": null,
+                    "id": 1832,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1827,
+                    "src": "374:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1833,
+                    "name": "_state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1829,
+                    "src": "380:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  }
+                ],
+                "id": 1834,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1831,
+                  "name": "unless_state",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 660,
+                  "src": "361:12:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$_t_uint8_$",
+                    "typeString": "modifier (bytes32,uint8)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "361:26:16"
+              }
+            ],
+            "name": "test_unless_state",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1830,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1827,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1841,
+                  "src": "320:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1826,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "320:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1829,
+                  "name": "_state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1841,
+                  "src": "334:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1828,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:5:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "319:28:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1837,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1836,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1841,
+                  "src": "452:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1835,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "452:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "451:15:16"
+            },
+            "scope": 1997,
+            "src": "293:204:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1860,
+              "nodeType": "Block",
+              "src": "628:73:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1858,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1852,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "636:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1854,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1853,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1843,
+                        "src": "643:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "636:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "id": 1857,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 1855,
+                        "name": "_state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1845,
+                        "src": "651:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "313030",
+                        "id": 1856,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "660:3:16",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_100_by_1",
+                          "typeString": "int_const 100"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                         },
                         "id": 1819,
                         "name": "ElementaryTypeName",
@@ -414,6 +948,7 @@
                     "name": "Identifier",
                     "src": "155:8:16"
                   },
+<<<<<<< HEAD
                   {
                     "attributes": {
                       "argumentTypes": null,
@@ -475,6 +1010,60 @@
                     "id": 1823,
                     "name": "Return",
                     "src": "269:11:16"
+=======
+                  "id": 1859,
+                  "nodeType": "ExpressionStatement",
+                  "src": "636:27:16"
+                }
+              ]
+            },
+            "id": 1861,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1848,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1843,
+                    "src": "590:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1849,
+                    "name": "_state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1845,
+                    "src": "596:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  }
+                ],
+                "id": 1850,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1847,
+                  "name": "set_state_after",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 674,
+                  "src": "574:15:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$_t_uint8_$",
+                    "typeString": "modifier (bytes32,uint8)"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   }
                 ],
                 "id": 1824,
@@ -482,6 +1071,7 @@
                 "src": "261:26:16"
               }
             ],
+<<<<<<< HEAD
             "id": 1825,
             "name": "FunctionDefinition",
             "src": "91:196:16"
@@ -511,6 +1101,155 @@
                       "type": "bytes32",
                       "value": null,
                       "visibility": "internal"
+=======
+            "name": "test_set_state_after",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1846,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1843,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1861,
+                  "src": "533:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1842,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "533:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1845,
+                  "name": "_state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1861,
+                  "src": "547:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1844,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:5:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "532:28:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1851,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "628:0:16"
+            },
+            "scope": 1997,
+            "src": "503:198:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1875,
+              "nodeType": "Block",
+              "src": "822:48:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1873,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1869,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "830:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1871,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1870,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1863,
+                        "src": "837:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "830:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "313030",
+                      "id": 1872,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "845:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "children": [
                       {
@@ -527,6 +1266,7 @@
                     "name": "VariableDeclaration",
                     "src": "320:12:16"
                   },
+<<<<<<< HEAD
                   {
                     "attributes": {
                       "constant": false,
@@ -602,6 +1342,154 @@
                       "referencedDeclaration": 660,
                       "type": "modifier (bytes32,uint8)",
                       "value": "unless_state"
+=======
+                  "id": 1874,
+                  "nodeType": "ExpressionStatement",
+                  "src": "830:18:16"
+                }
+              ]
+            },
+            "id": 1876,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1866,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1863,
+                    "src": "792:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1867,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1865,
+                  "name": "increment_state_after",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 685,
+                  "src": "770:21:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "770:27:16"
+              }
+            ],
+            "name": "test_increment_state_after",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1864,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1863,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1876,
+                  "src": "743:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1862,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "743:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "742:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1868,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "822:0:16"
+            },
+            "scope": 1997,
+            "src": "707:163:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1890,
+              "nodeType": "Block",
+              "src": "991:48:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1888,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1884,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "999:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1886,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1885,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1878,
+                        "src": "1006:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "999:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 1831,
                     "name": "Identifier",
@@ -610,17 +1498,36 @@
                   {
                     "attributes": {
                       "argumentTypes": null,
+<<<<<<< HEAD
                       "overloadedDeclarations": [
                         null
                       ],
                       "referencedDeclaration": 1827,
                       "type": "bytes32",
                       "value": "_key"
+=======
+                      "hexValue": "313030",
+                      "id": 1887,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1014:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 1832,
                     "name": "Identifier",
                     "src": "374:4:16"
                   },
+<<<<<<< HEAD
                   {
                     "attributes": {
                       "argumentTypes": null,
@@ -668,6 +1575,47 @@
                     "id": 1839,
                     "name": "Return",
                     "src": "479:11:16"
+=======
+                  "id": 1889,
+                  "nodeType": "ExpressionStatement",
+                  "src": "999:18:16"
+                }
+              ]
+            },
+            "id": 1891,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1881,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1878,
+                    "src": "961:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1882,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1880,
+                  "name": "decrement_state_after",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 696,
+                  "src": "939:21:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   }
                 ],
                 "id": 1840,
@@ -675,6 +1623,7 @@
                 "src": "471:26:16"
               }
             ],
+<<<<<<< HEAD
             "id": 1841,
             "name": "FunctionDefinition",
             "src": "293:204:16"
@@ -704,6 +1653,129 @@
                       "type": "bytes32",
                       "value": null,
                       "visibility": "internal"
+=======
+            "name": "test_decrement_state_after",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1879,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1878,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1891,
+                  "src": "912:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1877,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "912:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "911:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1883,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "991:0:16"
+            },
+            "scope": 1997,
+            "src": "876:163:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1905,
+              "nodeType": "Block",
+              "src": "1170:72:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1903,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1899,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "1178:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1901,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1900,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1893,
+                        "src": "1185:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1178:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "313030",
+                      "id": 1902,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1193:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "children": [
                       {
@@ -720,6 +1792,7 @@
                     "name": "VariableDeclaration",
                     "src": "533:12:16"
                   },
+<<<<<<< HEAD
                   {
                     "attributes": {
                       "constant": false,
@@ -773,6 +1846,154 @@
                       "referencedDeclaration": 674,
                       "type": "modifier (bytes32,uint8)",
                       "value": "set_state_after"
+=======
+                  "id": 1904,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1178:18:16"
+                }
+              ]
+            },
+            "id": 1906,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1896,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1893,
+                    "src": "1140:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1897,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1895,
+                  "name": "increment_state_before",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 707,
+                  "src": "1117:22:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1117:28:16"
+              }
+            ],
+            "name": "test_increment_state_before_set_100",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1893,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1906,
+                  "src": "1090:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1892,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1090:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1089:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1898,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1170:0:16"
+            },
+            "scope": 1997,
+            "src": "1045:197:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1920,
+              "nodeType": "Block",
+              "src": "1379:74:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1918,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1914,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "1387:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1916,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1915,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1908,
+                        "src": "1394:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1387:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 1847,
                     "name": "Identifier",
@@ -781,17 +2002,36 @@
                   {
                     "attributes": {
                       "argumentTypes": null,
+<<<<<<< HEAD
                       "overloadedDeclarations": [
                         null
                       ],
                       "referencedDeclaration": 1843,
                       "type": "bytes32",
                       "value": "_key"
+=======
+                      "hexValue": "313030",
+                      "id": 1917,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1403:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 1848,
                     "name": "Identifier",
                     "src": "590:4:16"
                   },
+<<<<<<< HEAD
                   {
                     "attributes": {
                       "argumentTypes": null,
@@ -929,6 +2169,47 @@
                     "id": 1859,
                     "name": "ExpressionStatement",
                     "src": "636:27:16"
+=======
+                  "id": 1919,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1387:19:16"
+                }
+              ]
+            },
+            "id": 1921,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1911,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1908,
+                    "src": "1349:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1912,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1910,
+                  "name": "increment_state_before",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 707,
+                  "src": "1326:22:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   }
                 ],
                 "id": 1860,
@@ -936,6 +2217,7 @@
                 "src": "628:73:16"
               }
             ],
+<<<<<<< HEAD
             "id": 1861,
             "name": "FunctionDefinition",
             "src": "503:198:16"
@@ -953,9 +2235,151 @@
               "visibility": "public"
             },
             "children": [
+=======
+            "name": "test_increment_state_before_increment_100",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1909,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1908,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1921,
+                  "src": "1299:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1907,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1299:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1298:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1913,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1379:0:16"
+            },
+            "scope": 1997,
+            "src": "1248:205:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1935,
+              "nodeType": "Block",
+              "src": "1591:81:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1933,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1929,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "1599:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1931,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1930,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1923,
+                        "src": "1606:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1599:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "313030",
+                      "id": 1932,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1615:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+                    },
+                    "src": "1599:19:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1934,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1599:19:16"
+                }
+              ]
+            },
+            "id": 1936,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               {
                 "children": [
                   {
+<<<<<<< HEAD
                     "attributes": {
                       "constant": false,
                       "name": "_key",
@@ -1008,11 +2432,166 @@
                       "referencedDeclaration": 685,
                       "type": "modifier (bytes32)",
                       "value": "increment_state_after"
+=======
+                    "argumentTypes": null,
+                    "id": 1926,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1923,
+                    "src": "1561:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1927,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1925,
+                  "name": "decrement_state_before",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 718,
+                  "src": "1538:22:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1538:28:16"
+              }
+            ],
+            "name": "test_decrement_state_before_increment_100",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1924,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1923,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1936,
+                  "src": "1511:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1922,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1511:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1510:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1928,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1591:0:16"
+            },
+            "scope": 1997,
+            "src": "1460:212:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1950,
+              "nodeType": "Block",
+              "src": "1803:80:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1948,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1944,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "1811:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1946,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1945,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1938,
+                        "src": "1818:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1811:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "313030",
+                      "id": 1947,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1826:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 1865,
                     "name": "Identifier",
                     "src": "770:21:16"
                   },
+<<<<<<< HEAD
                   {
                     "attributes": {
                       "argumentTypes": null,
@@ -1022,6 +2601,127 @@
                       "referencedDeclaration": 1863,
                       "type": "bytes32",
                       "value": "_key"
+=======
+                  "id": 1949,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1811:18:16"
+                }
+              ]
+            },
+            "id": 1951,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1941,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1938,
+                    "src": "1773:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1942,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1940,
+                  "name": "decrement_state_before",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 718,
+                  "src": "1750:22:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1750:28:16"
+              }
+            ],
+            "name": "test_decrement_state_before_set_100",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1939,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1938,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1951,
+                  "src": "1723:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1937,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1723:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1722:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1943,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1803:0:16"
+            },
+            "scope": 1997,
+            "src": "1678:205:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1967,
+              "nodeType": "Block",
+              "src": "2002:49:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1965,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1960,
+                      "name": "_success",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1958,
+                      "src": "2010:8:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 1866,
                     "name": "Identifier",
@@ -1039,6 +2739,7 @@
                       {
                         "attributes": {
                           "argumentTypes": null,
+<<<<<<< HEAD
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1047,6 +2748,35 @@
                           "type": "uint256"
                         },
                         "children": [
+=======
+                          "id": 1962,
+                          "name": "_key",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1953,
+                          "src": "2031:4:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 1963,
+                          "name": "_state",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1955,
+                          "src": "2037:6:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                           {
                             "attributes": {
                               "argumentTypes": null,
@@ -1108,6 +2838,7 @@
                             "src": "845:3:16"
                           }
                         ],
+<<<<<<< HEAD
                         "id": 1873,
                         "name": "Assignment",
                         "src": "830:18:16"
@@ -1184,9 +2915,587 @@
                 "name": "ParameterList",
                 "src": "991:0:16"
               },
+=======
+                        "id": 1961,
+                        "name": "set_state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 738,
+                        "src": "2021:9:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_uint8_$returns$_t_bool_$",
+                          "typeString": "function (bytes32,uint8) returns (bool)"
+                        }
+                      },
+                      "id": 1964,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2021:23:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "2010:34:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1966,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2010:34:16"
+                }
+              ]
+            },
+            "id": 1968,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "test_set_state",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1956,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1953,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1968,
+                  "src": "1913:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1952,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1913:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1955,
+                  "name": "_state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1968,
+                  "src": "1927:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1954,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1927:5:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1912:28:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1959,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1958,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1968,
+                  "src": "1983:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1957,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1983:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1982:15:16"
+            },
+            "scope": 1997,
+            "src": "1889:162:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1981,
+              "nodeType": "Block",
+              "src": "2139:36:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1979,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1975,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "2147:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1977,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1976,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1970,
+                        "src": "2154:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "2147:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1978,
+                      "name": "_state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1972,
+                      "src": "2162:6:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "2147:21:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1980,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2147:21:16"
+                }
+              ]
+            },
+            "id": 1982,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "mock_setup_set_state",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1973,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1970,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1982,
+                  "src": "2087:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1969,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2087:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1972,
+                  "name": "_state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1982,
+                  "src": "2101:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1971,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2101:5:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2086:28:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1974,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2139:0:16"
+            },
+            "scope": 1997,
+            "src": "2057:118:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1995,
+              "nodeType": "Block",
+              "src": "2304:42:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1993,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1989,
+                      "name": "_state_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1987,
+                      "src": "2312:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1990,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "2327:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1992,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1991,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1984,
+                        "src": "2334:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "2327:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2312:27:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1994,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2312:27:16"
+                }
+              ]
+            },
+            "id": 1996,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "get_state",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1985,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1984,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1996,
+                  "src": "2200:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1983,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2200:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2199:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1988,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1987,
+                  "name": "_state_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1996,
+                  "src": "2278:20:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1986,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2278:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2277:22:16"
+            },
+            "scope": 1997,
+            "src": "2181:165:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1998,
+        "src": "52:2296:16"
+      }
+    ],
+    "src": "0:2349:16"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockACState.sol",
+    "exportedSymbols": {
+      "MockACState": [
+        1997
+      ]
+    },
+    "id": 1998,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1806,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:16"
+      },
+      {
+        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACState.sol",
+        "file": "../ACState.sol",
+        "id": 1807,
+        "nodeType": "ImportDirective",
+        "scope": 1998,
+        "sourceUnit": 740,
+        "src": "26:24:16",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 1808,
+              "name": "ACState",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 739,
+              "src": "76:7:16",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ACState_$739",
+                "typeString": "contract ACState"
+              }
+            },
+            "id": 1809,
+            "nodeType": "InheritanceSpecifier",
+            "src": "76:7:16"
+          }
+        ],
+        "contractDependencies": [
+          739
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1997,
+        "linearizedBaseContracts": [
+          1997,
+          739
+        ],
+        "name": "MockACState",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1824,
+              "nodeType": "Block",
+              "src": "261:26:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1822,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "276:4:16",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1821,
+                  "id": 1823,
+                  "nodeType": "Return",
+                  "src": "269:11:16"
+                }
+              ]
+            },
+            "id": 1825,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               {
                 "children": [
                   {
+<<<<<<< HEAD
                     "attributes": {
                       "argumentTypes": null,
                       "overloadedDeclarations": [
@@ -1345,11 +3654,441 @@
                         "attributes": {
                           "name": "bytes32",
                           "type": "bytes32"
+=======
+                    "argumentTypes": null,
+                    "id": 1816,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1811,
+                    "src": "164:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1817,
+                    "name": "_state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1813,
+                    "src": "170:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  }
+                ],
+                "id": 1818,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1815,
+                  "name": "if_state",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 644,
+                  "src": "155:8:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$_t_uint8_$",
+                    "typeString": "modifier (bytes32,uint8)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "155:22:16"
+              }
+            ],
+            "name": "test_if_state",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1811,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1825,
+                  "src": "114:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1810,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "114:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1813,
+                  "name": "_state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1825,
+                  "src": "128:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1812,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "128:5:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "113:28:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1821,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1820,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1825,
+                  "src": "242:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1819,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "242:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "241:15:16"
+            },
+            "scope": 1997,
+            "src": "91:196:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1840,
+              "nodeType": "Block",
+              "src": "471:26:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1838,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "486:4:16",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1837,
+                  "id": 1839,
+                  "nodeType": "Return",
+                  "src": "479:11:16"
+                }
+              ]
+            },
+            "id": 1841,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1832,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1827,
+                    "src": "374:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1833,
+                    "name": "_state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1829,
+                    "src": "380:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  }
+                ],
+                "id": 1834,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1831,
+                  "name": "unless_state",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 660,
+                  "src": "361:12:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$_t_uint8_$",
+                    "typeString": "modifier (bytes32,uint8)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "361:26:16"
+              }
+            ],
+            "name": "test_unless_state",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1830,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1827,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1841,
+                  "src": "320:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1826,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "320:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1829,
+                  "name": "_state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1841,
+                  "src": "334:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1828,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:5:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "319:28:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1837,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1836,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1841,
+                  "src": "452:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1835,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "452:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "451:15:16"
+            },
+            "scope": 1997,
+            "src": "293:204:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1860,
+              "nodeType": "Block",
+              "src": "628:73:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1858,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1852,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "636:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1854,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1853,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1843,
+                        "src": "643:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "636:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "id": 1857,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 1855,
+                        "name": "_state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1845,
+                        "src": "651:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "313030",
+                        "id": 1856,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "660:3:16",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_100_by_1",
+                          "typeString": "int_const 100"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                         },
                         "id": 1892,
                         "name": "ElementaryTypeName",
                         "src": "1090:7:16"
                       }
+<<<<<<< HEAD
                     ],
                     "id": 1893,
                     "name": "VariableDeclaration",
@@ -1382,6 +4121,200 @@
                       "referencedDeclaration": 707,
                       "type": "modifier (bytes32)",
                       "value": "increment_state_before"
+=======
+                    },
+                    "src": "636:27:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1859,
+                  "nodeType": "ExpressionStatement",
+                  "src": "636:27:16"
+                }
+              ]
+            },
+            "id": 1861,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1848,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1843,
+                    "src": "590:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 1849,
+                    "name": "_state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1845,
+                    "src": "596:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  }
+                ],
+                "id": 1850,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1847,
+                  "name": "set_state_after",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 674,
+                  "src": "574:15:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$_t_uint8_$",
+                    "typeString": "modifier (bytes32,uint8)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "574:29:16"
+              }
+            ],
+            "name": "test_set_state_after",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1846,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1843,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1861,
+                  "src": "533:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1842,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "533:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1845,
+                  "name": "_state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1861,
+                  "src": "547:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1844,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:5:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "532:28:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1851,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "628:0:16"
+            },
+            "scope": 1997,
+            "src": "503:198:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1875,
+              "nodeType": "Block",
+              "src": "822:48:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1873,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1869,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "830:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1871,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1870,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1863,
+                        "src": "837:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "830:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 1895,
                     "name": "Identifier",
@@ -1390,6 +4323,7 @@
                   {
                     "attributes": {
                       "argumentTypes": null,
+<<<<<<< HEAD
                       "overloadedDeclarations": [
                         null
                       ],
@@ -1406,9 +4340,45 @@
                 "name": "ModifierInvocation",
                 "src": "1117:28:16"
               },
+=======
+                      "hexValue": "313030",
+                      "id": 1872,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "845:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+                    },
+                    "src": "830:18:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1874,
+                  "nodeType": "ExpressionStatement",
+                  "src": "830:18:16"
+                }
+              ]
+            },
+            "id": 1876,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               {
                 "children": [
                   {
+<<<<<<< HEAD
                     "children": [
                       {
                         "attributes": {
@@ -1514,9 +4484,182 @@
               "visibility": "public"
             },
             "children": [
+=======
+                    "argumentTypes": null,
+                    "id": 1866,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1863,
+                    "src": "792:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1867,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1865,
+                  "name": "increment_state_after",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 685,
+                  "src": "770:21:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "770:27:16"
+              }
+            ],
+            "name": "test_increment_state_after",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1864,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1863,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1876,
+                  "src": "743:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1862,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "743:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "742:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1868,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "822:0:16"
+            },
+            "scope": 1997,
+            "src": "707:163:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1890,
+              "nodeType": "Block",
+              "src": "991:48:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1888,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1884,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "999:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1886,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1885,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1878,
+                        "src": "1006:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "999:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "313030",
+                      "id": 1887,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1014:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+                    },
+                    "src": "999:18:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1889,
+                  "nodeType": "ExpressionStatement",
+                  "src": "999:18:16"
+                }
+              ]
+            },
+            "id": 1891,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               {
                 "children": [
                   {
+<<<<<<< HEAD
                     "attributes": {
                       "constant": false,
                       "name": "_key",
@@ -1569,6 +4712,140 @@
                       "referencedDeclaration": 707,
                       "type": "modifier (bytes32)",
                       "value": "increment_state_before"
+=======
+                    "argumentTypes": null,
+                    "id": 1881,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1878,
+                    "src": "961:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1882,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1880,
+                  "name": "decrement_state_after",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 696,
+                  "src": "939:21:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "939:27:16"
+              }
+            ],
+            "name": "test_decrement_state_after",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1879,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1878,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1891,
+                  "src": "912:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1877,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "912:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "911:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1883,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "991:0:16"
+            },
+            "scope": 1997,
+            "src": "876:163:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1905,
+              "nodeType": "Block",
+              "src": "1170:72:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1903,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1899,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "1178:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1901,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1900,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1893,
+                        "src": "1185:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1178:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 1910,
                     "name": "Identifier",
@@ -1577,6 +4854,7 @@
                   {
                     "attributes": {
                       "argumentTypes": null,
+<<<<<<< HEAD
                       "overloadedDeclarations": [
                         null
                       ],
@@ -1593,9 +4871,45 @@
                 "name": "ModifierInvocation",
                 "src": "1326:28:16"
               },
+=======
+                      "hexValue": "313030",
+                      "id": 1902,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1193:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+                    },
+                    "src": "1178:18:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1904,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1178:18:16"
+                }
+              ]
+            },
+            "id": 1906,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               {
                 "children": [
                   {
+<<<<<<< HEAD
                     "children": [
                       {
                         "attributes": {
@@ -1713,6 +5027,140 @@
                       "type": "bytes32",
                       "value": null,
                       "visibility": "internal"
+=======
+                    "argumentTypes": null,
+                    "id": 1896,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1893,
+                    "src": "1140:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1897,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1895,
+                  "name": "increment_state_before",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 707,
+                  "src": "1117:22:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1117:28:16"
+              }
+            ],
+            "name": "test_increment_state_before_set_100",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1893,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1906,
+                  "src": "1090:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1892,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1090:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1089:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1898,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1170:0:16"
+            },
+            "scope": 1997,
+            "src": "1045:197:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1920,
+              "nodeType": "Block",
+              "src": "1379:74:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1918,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1914,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "1387:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1916,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1915,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1908,
+                        "src": "1394:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1387:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "children": [
                       {
@@ -1750,17 +5198,36 @@
                   {
                     "attributes": {
                       "argumentTypes": null,
+<<<<<<< HEAD
                       "overloadedDeclarations": [
                         null
                       ],
                       "referencedDeclaration": 718,
                       "type": "modifier (bytes32)",
                       "value": "decrement_state_before"
+=======
+                      "hexValue": "313030",
+                      "id": 1917,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1403:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 1925,
                     "name": "Identifier",
                     "src": "1538:22:16"
                   },
+<<<<<<< HEAD
                   {
                     "attributes": {
                       "argumentTypes": null,
@@ -1864,6 +5331,47 @@
                     "id": 1934,
                     "name": "ExpressionStatement",
                     "src": "1599:19:16"
+=======
+                  "id": 1919,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1387:19:16"
+                }
+              ]
+            },
+            "id": 1921,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1911,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1908,
+                    "src": "1349:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1912,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1910,
+                  "name": "increment_state_before",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 707,
+                  "src": "1326:22:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   }
                 ],
                 "id": 1935,
@@ -1871,6 +5379,7 @@
                 "src": "1591:81:16"
               }
             ],
+<<<<<<< HEAD
             "id": 1936,
             "name": "FunctionDefinition",
             "src": "1460:212:16"
@@ -1900,6 +5409,109 @@
                       "type": "bytes32",
                       "value": null,
                       "visibility": "internal"
+=======
+            "name": "test_increment_state_before_increment_100",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1909,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1908,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1921,
+                  "src": "1299:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1907,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1299:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1298:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1913,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1379:0:16"
+            },
+            "scope": 1997,
+            "src": "1248:205:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1935,
+              "nodeType": "Block",
+              "src": "1591:81:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1933,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1929,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "1599:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1931,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1930,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1923,
+                        "src": "1606:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1599:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "children": [
                       {
@@ -1937,17 +5549,36 @@
                   {
                     "attributes": {
                       "argumentTypes": null,
+<<<<<<< HEAD
                       "overloadedDeclarations": [
                         null
                       ],
                       "referencedDeclaration": 718,
                       "type": "modifier (bytes32)",
                       "value": "decrement_state_before"
+=======
+                      "hexValue": "313030",
+                      "id": 1932,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1615:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 1940,
                     "name": "Identifier",
                     "src": "1750:22:16"
                   },
+<<<<<<< HEAD
                   {
                     "attributes": {
                       "argumentTypes": null,
@@ -2051,6 +5682,47 @@
                     "id": 1949,
                     "name": "ExpressionStatement",
                     "src": "1811:18:16"
+=======
+                  "id": 1934,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1599:19:16"
+                }
+              ]
+            },
+            "id": 1936,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1926,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1923,
+                    "src": "1561:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1927,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1925,
+                  "name": "decrement_state_before",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 718,
+                  "src": "1538:22:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   }
                 ],
                 "id": 1950,
@@ -2058,6 +5730,7 @@
                 "src": "1803:80:16"
               }
             ],
+<<<<<<< HEAD
             "id": 1951,
             "name": "FunctionDefinition",
             "src": "1678:205:16"
@@ -2090,6 +5763,129 @@
                       "type": "bytes32",
                       "value": null,
                       "visibility": "internal"
+=======
+            "name": "test_decrement_state_before_increment_100",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1924,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1923,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1936,
+                  "src": "1511:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1922,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1511:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1510:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1928,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1591:0:16"
+            },
+            "scope": 1997,
+            "src": "1460:212:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1950,
+              "nodeType": "Block",
+              "src": "1803:80:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1948,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1944,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "1811:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1946,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1945,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1938,
+                        "src": "1818:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1811:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "313030",
+                      "id": 1947,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1826:3:16",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100_by_1",
+                        "typeString": "int_const 100"
+                      },
+                      "value": "100"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "children": [
                       {
@@ -2106,6 +5902,7 @@
                     "name": "VariableDeclaration",
                     "src": "1913:12:16"
                   },
+<<<<<<< HEAD
                   {
                     "attributes": {
                       "constant": false,
@@ -2137,9 +5934,23 @@
                 "name": "ParameterList",
                 "src": "1912:28:16"
               },
+=======
+                  "id": 1949,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1811:18:16"
+                }
+              ]
+            },
+            "id": 1951,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
               {
                 "children": [
                   {
+<<<<<<< HEAD
                     "attributes": {
                       "constant": false,
                       "name": "_success",
@@ -2279,6 +6090,33 @@
                     "id": 1966,
                     "name": "ExpressionStatement",
                     "src": "2010:34:16"
+=======
+                    "argumentTypes": null,
+                    "id": 1941,
+                    "name": "_key",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1938,
+                    "src": "1773:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 1942,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1940,
+                  "name": "decrement_state_before",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 718,
+                  "src": "1750:22:16",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   }
                 ],
                 "id": 1967,
@@ -2286,6 +6124,7 @@
                 "src": "2002:49:16"
               }
             ],
+<<<<<<< HEAD
             "id": 1968,
             "name": "FunctionDefinition",
             "src": "1889:162:16"
@@ -2328,6 +6167,81 @@
                         "id": 1969,
                         "name": "ElementaryTypeName",
                         "src": "2087:7:16"
+=======
+            "name": "test_decrement_state_before_set_100",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1939,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1938,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1951,
+                  "src": "1723:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1937,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1723:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1722:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1943,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1803:0:16"
+            },
+            "scope": 1997,
+            "src": "1678:205:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1967,
+              "nodeType": "Block",
+              "src": "2002:49:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1965,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1960,
+                      "name": "_success",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1958,
+                      "src": "2010:8:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                       }
                     ],
                     "id": 1970,
@@ -2345,11 +6259,31 @@
                       "value": null,
                       "visibility": "internal"
                     },
+<<<<<<< HEAD
                     "children": [
                       {
                         "attributes": {
                           "name": "uint8",
                           "type": "uint8"
+=======
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 1962,
+                          "name": "_key",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1953,
+                          "src": "2031:4:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                         },
                         "id": 1971,
                         "name": "ElementaryTypeName",
@@ -2383,6 +6317,7 @@
                       {
                         "attributes": {
                           "argumentTypes": null,
+<<<<<<< HEAD
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2391,6 +6326,22 @@
                           "type": "uint256"
                         },
                         "children": [
+=======
+                          "id": 1963,
+                          "name": "_state",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1955,
+                          "src": "2037:6:16",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                           {
                             "attributes": {
                               "argumentTypes": null,
@@ -2449,6 +6400,7 @@
                             "src": "2162:6:16"
                           }
                         ],
+<<<<<<< HEAD
                         "id": 1979,
                         "name": "Assignment",
                         "src": "2147:21:16"
@@ -2645,6 +6597,474 @@
         ],
         "id": 1997,
         "name": "ContractDefinition",
+=======
+                        "id": 1961,
+                        "name": "set_state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 738,
+                        "src": "2021:9:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_uint8_$returns$_t_bool_$",
+                          "typeString": "function (bytes32,uint8) returns (bool)"
+                        }
+                      },
+                      "id": 1964,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2021:23:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "2010:34:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1966,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2010:34:16"
+                }
+              ]
+            },
+            "id": 1968,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "test_set_state",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1956,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1953,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1968,
+                  "src": "1913:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1952,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1913:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1955,
+                  "name": "_state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1968,
+                  "src": "1927:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1954,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1927:5:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1912:28:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1959,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1958,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1968,
+                  "src": "1983:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1957,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1983:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1982:15:16"
+            },
+            "scope": 1997,
+            "src": "1889:162:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1981,
+              "nodeType": "Block",
+              "src": "2139:36:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1979,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1975,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "2147:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1977,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1976,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1970,
+                        "src": "2154:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "2147:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1978,
+                      "name": "_state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1972,
+                      "src": "2162:6:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "2147:21:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1980,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2147:21:16"
+                }
+              ]
+            },
+            "id": 1982,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "mock_setup_set_state",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1973,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1970,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1982,
+                  "src": "2087:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1969,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2087:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1972,
+                  "name": "_state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1982,
+                  "src": "2101:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1971,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2101:5:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2086:28:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1974,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2139:0:16"
+            },
+            "scope": 1997,
+            "src": "2057:118:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1995,
+              "nodeType": "Block",
+              "src": "2304:42:16",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1993,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1989,
+                      "name": "_state_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1987,
+                      "src": "2312:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1990,
+                        "name": "states",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 628,
+                        "src": "2327:6:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                          "typeString": "mapping(bytes32 => uint256)"
+                        }
+                      },
+                      "id": 1992,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1991,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1984,
+                        "src": "2334:4:16",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "2327:12:16",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2312:27:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1994,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2312:27:16"
+                }
+              ]
+            },
+            "id": 1996,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "get_state",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1985,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1984,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1996,
+                  "src": "2200:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1983,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2200:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2199:14:16"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1988,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1987,
+                  "name": "_state_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1996,
+                  "src": "2278:20:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1986,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2278:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2277:22:16"
+            },
+            "scope": 1997,
+            "src": "2181:165:16",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1998,
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
         "src": "52:2296:16"
       }
     ],
@@ -2657,6 +7077,11 @@
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
   "networks": {},
+<<<<<<< HEAD
   "schemaVersion": "1.0.1",
   "updatedAt": "2018-03-16T03:08:38.885Z"
+=======
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-03-16T09:38:56.917Z"
+>>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
 }
