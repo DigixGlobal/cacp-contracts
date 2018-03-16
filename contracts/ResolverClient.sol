@@ -49,6 +49,7 @@ contract ResolverClient is ACOwned {
   }
 
   /// @dev Destroy the contract and unregister self from the ContractResolver
+  /// @dev So technically, this ResolverClient can be owned by a contract C, and when some account A calls C to destroy this ResolverClient, the funds goes back to A
   function destroy()
            if_owner()
            public

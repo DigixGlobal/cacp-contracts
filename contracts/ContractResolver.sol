@@ -55,6 +55,7 @@ contract ContractResolver is ACGroups, Constants {
     locked = false;
   }
 
+  /// TODO: this function can basically do everything register_contract can do (except for emitting an event). Maybe we should require that this function can only be called by a contract?
   /// @dev Called at contract initialization
   /// @param _key bytestring for CACP name
   /// @param _contract_address The address of the contract to be registered
