@@ -161,1647 +161,3076 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b6107218061001e6000396000f30060606040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063150a5cd014610093578063167ee22c146100d257806389cdb1ab146101115780639db7000c1461016f578063a521f29d146101ae578063d0dd72f9146101ed578063daccaf011461022c578063f7d3d5021461026b575b600080fd5b341561009e57600080fd5b6100b86004808035600019169060200190919050506102bc565b604051808215151515815260200191505060405180910390f35b34156100dd57600080fd5b6100f76004808035600019169060200190919050506102ce565b604051808215151515815260200191505060405180910390f35b341561011c57600080fd5b610155600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803560001916906020019091905050610352565b604051808215151515815260200191505060405180910390f35b341561017a57600080fd5b6101946004808035600019169060200190919050506103c1565b604051808215151515815260200191505060405180910390f35b34156101b957600080fd5b6101d36004808035600019169060200190919050506103e2565b604051808215151515815260200191505060405180910390f35b34156101f857600080fd5b610212600480803560001916906020019091905050610466565b604051808215151515815260200191505060405180910390f35b341561023757600080fd5b610251600480803560001916906020019091905050610478565b604051808215151515815260200191505060405180910390f35b341561027657600080fd5b6102ba600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035600019169060200190919080351515906020019091905050610499565b005b60006102c78261050d565b9050919050565b600081600015156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561034857600080fd5b6001915050919050565b60008060008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16905092915050565b600081600191506103d181610601565b15156103dc57600080fd5b50919050565b600081600115156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561045c57600080fd5b6001915050919050565b600061047182610601565b9050919050565b6000816104848161050d565b151561048f57600080fd5b6001915050919050565b806000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000846000191660001916815260200190815260200160002060006101000a81548160ff021916908315150217905550505050565b600081600015156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561058757600080fd5b60016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000856000191660001916815260200190815260200160002060006101000a81548160ff0219169083151502179055506001915050919050565b600081600115156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561067b57600080fd5b60008060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000856000191660001916815260200190815260200160002060006101000a81548160ff02191690831515021790555060019150509190505600a165627a7a72305820a85c3336a1155165e624aa6f92fcd2802dafa55c14a0aa3a51c63bb10aec9f570029",
-  "deployedBytecode": "0x60606040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063150a5cd014610093578063167ee22c146100d257806389cdb1ab146101115780639db7000c1461016f578063a521f29d146101ae578063d0dd72f9146101ed578063daccaf011461022c578063f7d3d5021461026b575b600080fd5b341561009e57600080fd5b6100b86004808035600019169060200190919050506102bc565b604051808215151515815260200191505060405180910390f35b34156100dd57600080fd5b6100f76004808035600019169060200190919050506102ce565b604051808215151515815260200191505060405180910390f35b341561011c57600080fd5b610155600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803560001916906020019091905050610352565b604051808215151515815260200191505060405180910390f35b341561017a57600080fd5b6101946004808035600019169060200190919050506103c1565b604051808215151515815260200191505060405180910390f35b34156101b957600080fd5b6101d36004808035600019169060200190919050506103e2565b604051808215151515815260200191505060405180910390f35b34156101f857600080fd5b610212600480803560001916906020019091905050610466565b604051808215151515815260200191505060405180910390f35b341561023757600080fd5b610251600480803560001916906020019091905050610478565b604051808215151515815260200191505060405180910390f35b341561027657600080fd5b6102ba600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035600019169060200190919080351515906020019091905050610499565b005b60006102c78261050d565b9050919050565b600081600015156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561034857600080fd5b6001915050919050565b60008060008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16905092915050565b600081600191506103d181610601565b15156103dc57600080fd5b50919050565b600081600115156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561045c57600080fd5b6001915050919050565b600061047182610601565b9050919050565b6000816104848161050d565b151561048f57600080fd5b6001915050919050565b806000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000846000191660001916815260200190815260200160002060006101000a81548160ff021916908315150217905550505050565b600081600015156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561058757600080fd5b60016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000856000191660001916815260200190815260200160002060006101000a81548160ff0219169083151502179055506001915050919050565b600081600115156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561067b57600080fd5b60008060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000856000191660001916815260200190815260200160002060006101000a81548160ff02191690831515021790555060019150509190505600a165627a7a72305820a85c3336a1155165e624aa6f92fcd2802dafa55c14a0aa3a51c63bb10aec9f570029",
+  "bytecode": "0x6060604052341561000f57600080fd5b6107218061001e6000396000f30060606040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063150a5cd014610093578063167ee22c146100d257806389cdb1ab146101115780639db7000c1461016f578063a521f29d146101ae578063d0dd72f9146101ed578063daccaf011461022c578063f7d3d5021461026b575b600080fd5b341561009e57600080fd5b6100b86004808035600019169060200190919050506102bc565b604051808215151515815260200191505060405180910390f35b34156100dd57600080fd5b6100f76004808035600019169060200190919050506102ce565b604051808215151515815260200191505060405180910390f35b341561011c57600080fd5b610155600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803560001916906020019091905050610352565b604051808215151515815260200191505060405180910390f35b341561017a57600080fd5b6101946004808035600019169060200190919050506103c1565b604051808215151515815260200191505060405180910390f35b34156101b957600080fd5b6101d36004808035600019169060200190919050506103e2565b604051808215151515815260200191505060405180910390f35b34156101f857600080fd5b610212600480803560001916906020019091905050610466565b604051808215151515815260200191505060405180910390f35b341561023757600080fd5b610251600480803560001916906020019091905050610478565b604051808215151515815260200191505060405180910390f35b341561027657600080fd5b6102ba600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035600019169060200190919080351515906020019091905050610499565b005b60006102c78261050d565b9050919050565b600081600015156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561034857600080fd5b6001915050919050565b60008060008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16905092915050565b600081600191506103d181610601565b15156103dc57600080fd5b50919050565b600081600115156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561045c57600080fd5b6001915050919050565b600061047182610601565b9050919050565b6000816104848161050d565b151561048f57600080fd5b6001915050919050565b806000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000846000191660001916815260200190815260200160002060006101000a81548160ff021916908315150217905550505050565b600081600015156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561058757600080fd5b60016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000856000191660001916815260200190815260200160002060006101000a81548160ff0219169083151502179055506001915050919050565b600081600115156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561067b57600080fd5b60008060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000856000191660001916815260200190815260200160002060006101000a81548160ff02191690831515021790555060019150509190505600a165627a7a7230582017e37f222405f6391599d400c16ed277dd3f56db676557a27c0c76ab694abe090029",
+  "deployedBytecode": "0x60606040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063150a5cd014610093578063167ee22c146100d257806389cdb1ab146101115780639db7000c1461016f578063a521f29d146101ae578063d0dd72f9146101ed578063daccaf011461022c578063f7d3d5021461026b575b600080fd5b341561009e57600080fd5b6100b86004808035600019169060200190919050506102bc565b604051808215151515815260200191505060405180910390f35b34156100dd57600080fd5b6100f76004808035600019169060200190919050506102ce565b604051808215151515815260200191505060405180910390f35b341561011c57600080fd5b610155600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803560001916906020019091905050610352565b604051808215151515815260200191505060405180910390f35b341561017a57600080fd5b6101946004808035600019169060200190919050506103c1565b604051808215151515815260200191505060405180910390f35b34156101b957600080fd5b6101d36004808035600019169060200190919050506103e2565b604051808215151515815260200191505060405180910390f35b34156101f857600080fd5b610212600480803560001916906020019091905050610466565b604051808215151515815260200191505060405180910390f35b341561023757600080fd5b610251600480803560001916906020019091905050610478565b604051808215151515815260200191505060405180910390f35b341561027657600080fd5b6102ba600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035600019169060200190919080351515906020019091905050610499565b005b60006102c78261050d565b9050919050565b600081600015156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561034857600080fd5b6001915050919050565b60008060008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16905092915050565b600081600191506103d181610601565b15156103dc57600080fd5b50919050565b600081600115156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561045c57600080fd5b6001915050919050565b600061047182610601565b9050919050565b6000816104848161050d565b151561048f57600080fd5b6001915050919050565b806000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000846000191660001916815260200190815260200160002060006101000a81548160ff021916908315150217905550505050565b600081600015156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561058757600080fd5b60016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000856000191660001916815260200190815260200160002060006101000a81548160ff0219169083151502179055506001915050919050565b600081600115156000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561067b57600080fd5b60008060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000856000191660001916815260200190815260200160002060006101000a81548160ff02191690831515021790555060019150509190505600a165627a7a7230582017e37f222405f6391599d400c16ed277dd3f56db676557a27c0c76ab694abe090029",
   "sourceMap": "129:1488:18:-;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "129:1488:18:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1300:153;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;726:208;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;331:187;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1118:178;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;522:200;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1457:157;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;938:176;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;174:153;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1300;1388:13;1422:26;1438:9;1422:15;:26::i;:::-;1411:37;;1300:153;;;:::o;726:208::-;891:13;822:9;419:5:7;380:44;;:12;:24;393:10;380:24;;;;;;;;;;;;;;;:35;405:9;380:35;;;;;;;;;;;;;;;;;;;;;;;;;;;:44;;;372:53;;;;;;;;925:4:18;914:15;;726:208;;;;:::o;331:187::-;453:11;483:12;:19;496:5;483:19;;;;;;;;;;;;;;;:30;503:9;483:30;;;;;;;;;;;;;;;;;;;;;;;;;;;474:39;;331:187;;;;:::o;1118:178::-;1253:13;1204:9;1287:4;1276:15;;614:28:7;632:9;614:17;:28::i;:::-;606:37;;;;;;;;1118:178:18;;;;:::o;522:200::-;679:13;610:9;292:4:7;253:43;;:12;:24;266:10;253:24;;;;;;;;;;;;;;;:35;278:9;253:35;;;;;;;;;;;;;;;;;;;;;;;;;;;:43;;;245:52;;;;;;;;713:4:18;702:15;;522:200;;;;:::o;1457:157::-;1547:13;1581:28;1599:9;1581:17;:28::i;:::-;1570:39;;1457:157;;;:::o;938:176::-;1071:13;1022:9;502:26:7;518:9;502:15;:26::i;:::-;494:35;;;;;;;;1105:4:18;1094:15;;938:176;;;;:::o;174:153::-;316:6;283:12;:19;296:5;283:19;;;;;;;;;;;;;;;:30;303:9;283:30;;;;;;;;;;;;;;;;;;:39;;;;;;;;;;;;;;;;;;174:153;;;:::o;652:222:7:-;783:13;732:9;419:5;380:44;;:12;:24;393:10;380:24;;;;;;;;;;;;;;;:35;405:9;380:35;;;;;;;;;;;;;;;;;;;;;;;;;;;:44;;;372:53;;;;;;;;844:4;806:12;:24;819:10;806:24;;;;;;;;;;;;;;;:35;831:9;806:35;;;;;;;;;;;;;;;;;;:42;;;;;;;;;;;;;;;;;;865:4;854:15;;652:222;;;;:::o;878:221::-;1007:13;956:9;292:4;253:43;;:12;:24;266:10;253:24;;;;;;;;;;;;;;;:35;278:9;253:35;;;;;;;;;;;;;;;;;;;;;;;;;;;:43;;;245:52;;;;;;;;1068:5;1030:12;:24;1043:10;1030:24;;;;;;;;;;;;;;;:35;1055:9;1030:35;;;;;;;;;;;;;;;;;;:43;;;;;;;;;;;;;;;;;;1090:4;1079:15;;878:221;;;;:::o",
   "source": "pragma solidity ^0.4.19;\n\n/// @title Per user locking based access control\n/// @author DigixGlobal\nimport '../ACUserMutex.sol';\n\ncontract MockACUserMutex is ACUserMutex {\n\n  function mock_setup_set_user_mutex (address _user, bytes32 _mutex_id, bool _value)\n           public\n  {\n    user_mutexes[_user][_mutex_id] = _value;\n  }\n\n  function mock_get_user_mutex (address _user, bytes32 _mutex_id)\n           public\n           constant\n           returns (bool _value)\n  {\n    _value = user_mutexes[_user][_mutex_id];\n  }\n\n  function test_if_user_mutex_locked (bytes32 _mutex_id)\n           if_user_mutex_locked (_mutex_id)\n           public\n           constant\n           returns (bool _success)\n  {\n    _success = true;\n  }\n\n  function test_unless_user_mutex_locked (bytes32 _mutex_id)\n           unless_user_mutex_locked (_mutex_id)\n           public\n           constant\n           returns (bool _success)\n  {\n    _success = true;\n  }\n\n  function test_lock_before_action (bytes32 _mutex_id)\n           lock_before_action (_mutex_id)\n           public\n           returns (bool _success)\n  {\n    _success = true;\n  }\n\n  function test_unlock_after_action (bytes32 _mutex_id)\n           unlock_after_action (_mutex_id)\n           public\n           returns (bool _success)\n  {\n    _success = true;\n  }\n\n  function test_lock_user_mutex (bytes32 _mutex_id)\n           public\n           returns (bool _success)\n  {\n    _success = lock_user_mutex(_mutex_id);\n  }\n\n  function test_unlock_user_mutex (bytes32 _mutex_id)\n           public\n           returns (bool _success)\n  {\n    _success = unlock_user_mutex(_mutex_id);\n  }\n\n}\n",
-  "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/Mock/MockACUserMutex.sol",
+  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockACUserMutex.sol",
   "ast": {
-    "attributes": {
-      "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Mock/MockACUserMutex.sol",
-      "exportedSymbols": {
-        "MockACUserMutex": [
-          2257
-        ]
-      }
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockACUserMutex.sol",
+    "exportedSymbols": {
+      "MockACUserMutex": [
+        2257
+      ]
     },
-    "children": [
+    "id": 2258,
+    "nodeType": "SourceUnit",
+    "nodes": [
       {
-        "attributes": {
-          "literals": [
-            "solidity",
-            "^",
-            "0.4",
-            ".19"
-          ]
-        },
         "id": 2129,
-        "name": "PragmaDirective",
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
         "src": "0:24:18"
       },
       {
-        "attributes": {
-          "SourceUnit": 968,
-          "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACUserMutex.sol",
-          "file": "../ACUserMutex.sol",
-          "scope": 2258,
-          "symbolAliases": [
-            null
-          ],
-          "unitAlias": ""
-        },
+        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACUserMutex.sol",
+        "file": "../ACUserMutex.sol",
         "id": 2130,
-        "name": "ImportDirective",
-        "src": "99:28:18"
+        "nodeType": "ImportDirective",
+        "scope": 2258,
+        "sourceUnit": 968,
+        "src": "99:28:18",
+        "symbolAliases": [],
+        "unitAlias": ""
       },
       {
-        "attributes": {
-          "contractDependencies": [
-            967
-          ],
-          "contractKind": "contract",
-          "documentation": null,
-          "fullyImplemented": true,
-          "linearizedBaseContracts": [
-            2257,
-            967
-          ],
-          "name": "MockACUserMutex",
-          "scope": 2258
-        },
-        "children": [
+        "baseContracts": [
           {
-            "attributes": {
-              "arguments": [
-                null
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 2131,
+              "name": "ACUserMutex",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 967,
+              "src": "157:11:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ACUserMutex_$967",
+                "typeString": "contract ACUserMutex"
+              }
+            },
+            "id": 2132,
+            "nodeType": "InheritanceSpecifier",
+            "src": "157:11:18"
+          }
+        ],
+        "contractDependencies": [
+          967
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2257,
+        "linearizedBaseContracts": [
+          2257,
+          967
+        ],
+        "name": "MockACUserMutex",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2149,
+              "nodeType": "Block",
+              "src": "277:50:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2147,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 2141,
+                          "name": "user_mutexes",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 860,
+                          "src": "283:12:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$",
+                            "typeString": "mapping(address => mapping(bytes32 => bool))"
+                          }
+                        },
+                        "id": 2144,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 2142,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2134,
+                          "src": "296:5:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "283:19:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                          "typeString": "mapping(bytes32 => bool)"
+                        }
+                      },
+                      "id": 2145,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 2143,
+                        "name": "_mutex_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2136,
+                        "src": "303:9:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "283:30:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2146,
+                      "name": "_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2138,
+                      "src": "316:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "283:39:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2148,
+                  "nodeType": "ExpressionStatement",
+                  "src": "283:39:18"
+                }
               ]
             },
-            "children": [
-              {
-                "attributes": {
-                  "contractScope": null,
-                  "name": "ACUserMutex",
-                  "referencedDeclaration": 967,
-                  "type": "contract ACUserMutex"
-                },
-                "id": 2131,
-                "name": "UserDefinedTypeName",
-                "src": "157:11:18"
-              }
-            ],
-            "id": 2132,
-            "name": "InheritanceSpecifier",
-            "src": "157:11:18"
-          },
-          {
-            "attributes": {
-              "constant": false,
-              "implemented": true,
-              "isConstructor": false,
-              "modifiers": [
-                null
-              ],
-              "name": "mock_setup_set_user_mutex",
-              "payable": false,
-              "scope": 2257,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_user",
-                      "scope": 2150,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "type": "address"
-                        },
-                        "id": 2133,
-                        "name": "ElementaryTypeName",
-                        "src": "210:7:18"
-                      }
-                    ],
-                    "id": 2134,
-                    "name": "VariableDeclaration",
-                    "src": "210:13:18"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_mutex_id",
-                      "scope": 2150,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bytes32",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
-                        },
-                        "id": 2135,
-                        "name": "ElementaryTypeName",
-                        "src": "225:7:18"
-                      }
-                    ],
-                    "id": 2136,
-                    "name": "VariableDeclaration",
-                    "src": "225:17:18"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_value",
-                      "scope": 2150,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 2137,
-                        "name": "ElementaryTypeName",
-                        "src": "244:4:18"
-                      }
-                    ],
-                    "id": 2138,
-                    "name": "VariableDeclaration",
-                    "src": "244:11:18"
-                  }
-                ],
-                "id": 2139,
-                "name": "ParameterList",
-                "src": "209:47:18"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 2140,
-                "name": "ParameterList",
-                "src": "277:0:18"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "bool"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": true,
-                              "isPure": false,
-                              "lValueRequested": true,
-                              "type": "bool"
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "isConstant": false,
-                                  "isLValue": true,
-                                  "isPure": false,
-                                  "lValueRequested": false,
-                                  "type": "mapping(bytes32 => bool)"
-                                },
-                                "children": [
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 860,
-                                      "type": "mapping(address => mapping(bytes32 => bool))",
-                                      "value": "user_mutexes"
-                                    },
-                                    "id": 2141,
-                                    "name": "Identifier",
-                                    "src": "283:12:18"
-                                  },
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 2134,
-                                      "type": "address",
-                                      "value": "_user"
-                                    },
-                                    "id": 2142,
-                                    "name": "Identifier",
-                                    "src": "296:5:18"
-                                  }
-                                ],
-                                "id": 2144,
-                                "name": "IndexAccess",
-                                "src": "283:19:18"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 2136,
-                                  "type": "bytes32",
-                                  "value": "_mutex_id"
-                                },
-                                "id": 2143,
-                                "name": "Identifier",
-                                "src": "303:9:18"
-                              }
-                            ],
-                            "id": 2145,
-                            "name": "IndexAccess",
-                            "src": "283:30:18"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 2138,
-                              "type": "bool",
-                              "value": "_value"
-                            },
-                            "id": 2146,
-                            "name": "Identifier",
-                            "src": "316:6:18"
-                          }
-                        ],
-                        "id": 2147,
-                        "name": "Assignment",
-                        "src": "283:39:18"
-                      }
-                    ],
-                    "id": 2148,
-                    "name": "ExpressionStatement",
-                    "src": "283:39:18"
-                  }
-                ],
-                "id": 2149,
-                "name": "Block",
-                "src": "277:50:18"
-              }
-            ],
             "id": 2150,
-            "name": "FunctionDefinition",
-            "src": "174:153:18"
-          },
-          {
-            "attributes": {
-              "constant": true,
-              "implemented": true,
-              "isConstructor": false,
-              "modifiers": [
-                null
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "mock_setup_set_user_mutex",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2139,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2134,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2150,
+                  "src": "210:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2133,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "210:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2136,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2150,
+                  "src": "225:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2135,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "225:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2138,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2150,
+                  "src": "244:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2137,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "244:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
               ],
-              "name": "mock_get_user_mutex",
-              "payable": false,
-              "scope": 2257,
-              "stateMutability": "view",
-              "superFunction": null,
-              "visibility": "public"
+              "src": "209:47:18"
             },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_user",
-                      "scope": 2168,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "type": "address"
-                        },
-                        "id": 2151,
-                        "name": "ElementaryTypeName",
-                        "src": "361:7:18"
-                      }
-                    ],
-                    "id": 2152,
-                    "name": "VariableDeclaration",
-                    "src": "361:13:18"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_mutex_id",
-                      "scope": 2168,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bytes32",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
-                        },
-                        "id": 2153,
-                        "name": "ElementaryTypeName",
-                        "src": "376:7:18"
-                      }
-                    ],
-                    "id": 2154,
-                    "name": "VariableDeclaration",
-                    "src": "376:17:18"
-                  }
-                ],
-                "id": 2155,
-                "name": "ParameterList",
-                "src": "360:34:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_value",
-                      "scope": 2168,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 2156,
-                        "name": "ElementaryTypeName",
-                        "src": "453:4:18"
-                      }
-                    ],
-                    "id": 2157,
-                    "name": "VariableDeclaration",
-                    "src": "453:11:18"
-                  }
-                ],
-                "id": 2158,
-                "name": "ParameterList",
-                "src": "452:13:18"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "bool"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 2157,
-                              "type": "bool",
-                              "value": "_value"
-                            },
-                            "id": 2159,
-                            "name": "Identifier",
-                            "src": "474:6:18"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": true,
-                              "isPure": false,
-                              "lValueRequested": false,
-                              "type": "bool"
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "isConstant": false,
-                                  "isLValue": true,
-                                  "isPure": false,
-                                  "lValueRequested": false,
-                                  "type": "mapping(bytes32 => bool)"
-                                },
-                                "children": [
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 860,
-                                      "type": "mapping(address => mapping(bytes32 => bool))",
-                                      "value": "user_mutexes"
-                                    },
-                                    "id": 2160,
-                                    "name": "Identifier",
-                                    "src": "483:12:18"
-                                  },
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 2152,
-                                      "type": "address",
-                                      "value": "_user"
-                                    },
-                                    "id": 2161,
-                                    "name": "Identifier",
-                                    "src": "496:5:18"
-                                  }
-                                ],
-                                "id": 2162,
-                                "name": "IndexAccess",
-                                "src": "483:19:18"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 2154,
-                                  "type": "bytes32",
-                                  "value": "_mutex_id"
-                                },
-                                "id": 2163,
-                                "name": "Identifier",
-                                "src": "503:9:18"
-                              }
-                            ],
-                            "id": 2164,
-                            "name": "IndexAccess",
-                            "src": "483:30:18"
-                          }
-                        ],
-                        "id": 2165,
-                        "name": "Assignment",
-                        "src": "474:39:18"
-                      }
-                    ],
-                    "id": 2166,
-                    "name": "ExpressionStatement",
-                    "src": "474:39:18"
-                  }
-                ],
-                "id": 2167,
-                "name": "Block",
-                "src": "468:50:18"
-              }
-            ],
-            "id": 2168,
-            "name": "FunctionDefinition",
-            "src": "331:187:18"
+            "payable": false,
+            "returnParameters": {
+              "id": 2140,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "277:0:18"
+            },
+            "scope": 2257,
+            "src": "174:153:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
           },
           {
-            "attributes": {
-              "constant": true,
-              "implemented": true,
-              "isConstructor": false,
-              "name": "test_if_user_mutex_locked",
-              "payable": false,
-              "scope": 2257,
-              "stateMutability": "view",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_mutex_id",
-                      "scope": 2183,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bytes32",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
-                        },
-                        "id": 2169,
-                        "name": "ElementaryTypeName",
-                        "src": "558:7:18"
-                      }
-                    ],
-                    "id": 2170,
-                    "name": "VariableDeclaration",
-                    "src": "558:17:18"
-                  }
-                ],
-                "id": 2171,
-                "name": "ParameterList",
-                "src": "557:19:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_success",
-                      "scope": 2183,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 2175,
-                        "name": "ElementaryTypeName",
-                        "src": "679:4:18"
-                      }
-                    ],
-                    "id": 2176,
-                    "name": "VariableDeclaration",
-                    "src": "679:13:18"
-                  }
-                ],
-                "id": 2177,
-                "name": "ParameterList",
-                "src": "678:15:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
+            "body": {
+              "id": 2167,
+              "nodeType": "Block",
+              "src": "468:50:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2165,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
                       "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
-                      "referencedDeclaration": 877,
-                      "type": "modifier (bytes32)",
-                      "value": "if_user_mutex_locked"
+                      "id": 2159,
+                      "name": "_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2157,
+                      "src": "474:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
                     },
-                    "id": 2172,
-                    "name": "Identifier",
-                    "src": "588:20:18"
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 2160,
+                          "name": "user_mutexes",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 860,
+                          "src": "483:12:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$",
+                            "typeString": "mapping(address => mapping(bytes32 => bool))"
+                          }
+                        },
+                        "id": 2162,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 2161,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2152,
+                          "src": "496:5:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "483:19:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                          "typeString": "mapping(bytes32 => bool)"
+                        }
+                      },
+                      "id": 2164,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 2163,
+                        "name": "_mutex_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2154,
+                        "src": "503:9:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "483:30:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "474:39:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
                   },
-                  {
-                    "attributes": {
+                  "id": 2166,
+                  "nodeType": "ExpressionStatement",
+                  "src": "474:39:18"
+                }
+              ]
+            },
+            "id": 2168,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "mock_get_user_mutex",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2155,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2152,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2168,
+                  "src": "361:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2151,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "361:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2154,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2168,
+                  "src": "376:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2153,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "376:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "360:34:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2157,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2168,
+                  "src": "453:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2156,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "453:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "452:13:18"
+            },
+            "scope": 2257,
+            "src": "331:187:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2182,
+              "nodeType": "Block",
+              "src": "696:26:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2180,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
                       "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
-                      "referencedDeclaration": 2170,
-                      "type": "bytes32",
-                      "value": "_mutex_id"
+                      "id": 2178,
+                      "name": "_success",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2176,
+                      "src": "702:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
                     },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 2179,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "713:4:18",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "702:15:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2181,
+                  "nodeType": "ExpressionStatement",
+                  "src": "702:15:18"
+                }
+              ]
+            },
+            "id": 2183,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
                     "id": 2173,
-                    "name": "Identifier",
-                    "src": "610:9:18"
+                    "name": "_mutex_id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2170,
+                    "src": "610:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
                   }
                 ],
                 "id": 2174,
-                "name": "ModifierInvocation",
-                "src": "588:32:18"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "bool"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 2176,
-                              "type": "bool",
-                              "value": "_success"
-                            },
-                            "id": 2178,
-                            "name": "Identifier",
-                            "src": "702:8:18"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "hexvalue": "74727565",
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "lValueRequested": false,
-                              "subdenomination": null,
-                              "token": "bool",
-                              "type": "bool",
-                              "value": "true"
-                            },
-                            "id": 2179,
-                            "name": "Literal",
-                            "src": "713:4:18"
-                          }
-                        ],
-                        "id": 2180,
-                        "name": "Assignment",
-                        "src": "702:15:18"
-                      }
-                    ],
-                    "id": 2181,
-                    "name": "ExpressionStatement",
-                    "src": "702:15:18"
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2172,
+                  "name": "if_user_mutex_locked",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 877,
+                  "src": "588:20:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
                   }
-                ],
-                "id": 2182,
-                "name": "Block",
-                "src": "696:26:18"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "588:32:18"
               }
             ],
-            "id": 2183,
-            "name": "FunctionDefinition",
-            "src": "522:200:18"
+            "name": "test_if_user_mutex_locked",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2171,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2170,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2183,
+                  "src": "558:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2169,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "558:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "557:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2177,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2176,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2183,
+                  "src": "679:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2175,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "679:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "678:15:18"
+            },
+            "scope": 2257,
+            "src": "522:200:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
           },
           {
-            "attributes": {
-              "constant": true,
-              "implemented": true,
-              "isConstructor": false,
-              "name": "test_unless_user_mutex_locked",
-              "payable": false,
-              "scope": 2257,
-              "stateMutability": "view",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_mutex_id",
-                      "scope": 2198,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bytes32",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
-                        },
-                        "id": 2184,
-                        "name": "ElementaryTypeName",
-                        "src": "766:7:18"
-                      }
-                    ],
-                    "id": 2185,
-                    "name": "VariableDeclaration",
-                    "src": "766:17:18"
-                  }
-                ],
-                "id": 2186,
-                "name": "ParameterList",
-                "src": "765:19:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
+            "body": {
+              "id": 2197,
+              "nodeType": "Block",
+              "src": "908:26:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2195,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2193,
                       "name": "_success",
-                      "scope": 2198,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 2190,
-                        "name": "ElementaryTypeName",
-                        "src": "891:4:18"
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2191,
+                      "src": "914:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
                       }
-                    ],
-                    "id": 2191,
-                    "name": "VariableDeclaration",
-                    "src": "891:13:18"
-                  }
-                ],
-                "id": 2192,
-                "name": "ParameterList",
-                "src": "890:15:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
-                      "referencedDeclaration": 894,
-                      "type": "modifier (bytes32)",
-                      "value": "unless_user_mutex_locked"
                     },
-                    "id": 2187,
-                    "name": "Identifier",
-                    "src": "796:24:18"
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 2194,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "925:4:18",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "914:15:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
                   },
+                  "id": 2196,
+                  "nodeType": "ExpressionStatement",
+                  "src": "914:15:18"
+                }
+              ]
+            },
+            "id": 2198,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": [
                   {
-                    "attributes": {
-                      "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
-                      "referencedDeclaration": 2185,
-                      "type": "bytes32",
-                      "value": "_mutex_id"
-                    },
+                    "argumentTypes": null,
                     "id": 2188,
-                    "name": "Identifier",
-                    "src": "822:9:18"
+                    "name": "_mutex_id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2185,
+                    "src": "822:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
                   }
                 ],
                 "id": 2189,
-                "name": "ModifierInvocation",
-                "src": "796:36:18"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "bool"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 2191,
-                              "type": "bool",
-                              "value": "_success"
-                            },
-                            "id": 2193,
-                            "name": "Identifier",
-                            "src": "914:8:18"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "hexvalue": "74727565",
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "lValueRequested": false,
-                              "subdenomination": null,
-                              "token": "bool",
-                              "type": "bool",
-                              "value": "true"
-                            },
-                            "id": 2194,
-                            "name": "Literal",
-                            "src": "925:4:18"
-                          }
-                        ],
-                        "id": 2195,
-                        "name": "Assignment",
-                        "src": "914:15:18"
-                      }
-                    ],
-                    "id": 2196,
-                    "name": "ExpressionStatement",
-                    "src": "914:15:18"
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2187,
+                  "name": "unless_user_mutex_locked",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 894,
+                  "src": "796:24:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
                   }
-                ],
-                "id": 2197,
-                "name": "Block",
-                "src": "908:26:18"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "796:36:18"
               }
             ],
-            "id": 2198,
-            "name": "FunctionDefinition",
-            "src": "726:208:18"
+            "name": "test_unless_user_mutex_locked",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2186,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2185,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2198,
+                  "src": "766:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2184,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "766:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "765:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2192,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2191,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2198,
+                  "src": "891:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2190,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "891:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "890:15:18"
+            },
+            "scope": 2257,
+            "src": "726:208:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
           },
           {
-            "attributes": {
-              "constant": false,
-              "implemented": true,
-              "isConstructor": false,
-              "name": "test_lock_before_action",
-              "payable": false,
-              "scope": 2257,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_mutex_id",
-                      "scope": 2213,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bytes32",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
-                        },
-                        "id": 2199,
-                        "name": "ElementaryTypeName",
-                        "src": "972:7:18"
-                      }
-                    ],
-                    "id": 2200,
-                    "name": "VariableDeclaration",
-                    "src": "972:17:18"
-                  }
-                ],
-                "id": 2201,
-                "name": "ParameterList",
-                "src": "971:19:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
+            "body": {
+              "id": 2212,
+              "nodeType": "Block",
+              "src": "1088:26:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2210,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2208,
                       "name": "_success",
-                      "scope": 2213,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 2205,
-                        "name": "ElementaryTypeName",
-                        "src": "1071:4:18"
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2206,
+                      "src": "1094:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
                       }
-                    ],
-                    "id": 2206,
-                    "name": "VariableDeclaration",
-                    "src": "1071:13:18"
-                  }
-                ],
-                "id": 2207,
-                "name": "ParameterList",
-                "src": "1070:15:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
-                      "referencedDeclaration": 906,
-                      "type": "modifier (bytes32)",
-                      "value": "lock_before_action"
                     },
-                    "id": 2202,
-                    "name": "Identifier",
-                    "src": "1002:18:18"
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 2209,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1105:4:18",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1094:15:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
                   },
+                  "id": 2211,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1094:15:18"
+                }
+              ]
+            },
+            "id": 2213,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
                   {
-                    "attributes": {
-                      "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
-                      "referencedDeclaration": 2200,
-                      "type": "bytes32",
-                      "value": "_mutex_id"
-                    },
+                    "argumentTypes": null,
                     "id": 2203,
-                    "name": "Identifier",
-                    "src": "1022:9:18"
+                    "name": "_mutex_id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2200,
+                    "src": "1022:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
                   }
                 ],
                 "id": 2204,
-                "name": "ModifierInvocation",
-                "src": "1002:30:18"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "bool"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 2206,
-                              "type": "bool",
-                              "value": "_success"
-                            },
-                            "id": 2208,
-                            "name": "Identifier",
-                            "src": "1094:8:18"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "hexvalue": "74727565",
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "lValueRequested": false,
-                              "subdenomination": null,
-                              "token": "bool",
-                              "type": "bool",
-                              "value": "true"
-                            },
-                            "id": 2209,
-                            "name": "Literal",
-                            "src": "1105:4:18"
-                          }
-                        ],
-                        "id": 2210,
-                        "name": "Assignment",
-                        "src": "1094:15:18"
-                      }
-                    ],
-                    "id": 2211,
-                    "name": "ExpressionStatement",
-                    "src": "1094:15:18"
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2202,
+                  "name": "lock_before_action",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 906,
+                  "src": "1002:18:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
                   }
-                ],
-                "id": 2212,
-                "name": "Block",
-                "src": "1088:26:18"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1002:30:18"
               }
             ],
-            "id": 2213,
-            "name": "FunctionDefinition",
-            "src": "938:176:18"
+            "name": "test_lock_before_action",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2201,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2200,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2213,
+                  "src": "972:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2199,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "972:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "971:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2207,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2206,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2213,
+                  "src": "1071:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2205,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1071:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1070:15:18"
+            },
+            "scope": 2257,
+            "src": "938:176:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
           },
           {
-            "attributes": {
-              "constant": false,
-              "implemented": true,
-              "isConstructor": false,
-              "name": "test_unlock_after_action",
-              "payable": false,
-              "scope": 2257,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_mutex_id",
-                      "scope": 2228,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bytes32",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
-                        },
-                        "id": 2214,
-                        "name": "ElementaryTypeName",
-                        "src": "1153:7:18"
-                      }
-                    ],
-                    "id": 2215,
-                    "name": "VariableDeclaration",
-                    "src": "1153:17:18"
-                  }
-                ],
-                "id": 2216,
-                "name": "ParameterList",
-                "src": "1152:19:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
+            "body": {
+              "id": 2227,
+              "nodeType": "Block",
+              "src": "1270:26:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2225,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2223,
                       "name": "_success",
-                      "scope": 2228,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 2220,
-                        "name": "ElementaryTypeName",
-                        "src": "1253:4:18"
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2221,
+                      "src": "1276:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
                       }
-                    ],
-                    "id": 2221,
-                    "name": "VariableDeclaration",
-                    "src": "1253:13:18"
-                  }
-                ],
-                "id": 2222,
-                "name": "ParameterList",
-                "src": "1252:15:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
-                      "referencedDeclaration": 918,
-                      "type": "modifier (bytes32)",
-                      "value": "unlock_after_action"
                     },
-                    "id": 2217,
-                    "name": "Identifier",
-                    "src": "1183:19:18"
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 2224,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1287:4:18",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1276:15:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
                   },
+                  "id": 2226,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1276:15:18"
+                }
+              ]
+            },
+            "id": 2228,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
                   {
-                    "attributes": {
-                      "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
-                      "referencedDeclaration": 2215,
-                      "type": "bytes32",
-                      "value": "_mutex_id"
-                    },
+                    "argumentTypes": null,
                     "id": 2218,
-                    "name": "Identifier",
-                    "src": "1204:9:18"
+                    "name": "_mutex_id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2215,
+                    "src": "1204:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
                   }
                 ],
                 "id": 2219,
-                "name": "ModifierInvocation",
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2217,
+                  "name": "unlock_after_action",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 918,
+                  "src": "1183:19:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
                 "src": "1183:31:18"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "bool"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 2221,
-                              "type": "bool",
-                              "value": "_success"
-                            },
-                            "id": 2223,
-                            "name": "Identifier",
-                            "src": "1276:8:18"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "hexvalue": "74727565",
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "lValueRequested": false,
-                              "subdenomination": null,
-                              "token": "bool",
-                              "type": "bool",
-                              "value": "true"
-                            },
-                            "id": 2224,
-                            "name": "Literal",
-                            "src": "1287:4:18"
-                          }
-                        ],
-                        "id": 2225,
-                        "name": "Assignment",
-                        "src": "1276:15:18"
-                      }
-                    ],
-                    "id": 2226,
-                    "name": "ExpressionStatement",
-                    "src": "1276:15:18"
-                  }
-                ],
-                "id": 2227,
-                "name": "Block",
-                "src": "1270:26:18"
               }
             ],
-            "id": 2228,
-            "name": "FunctionDefinition",
-            "src": "1118:178:18"
+            "name": "test_unlock_after_action",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2216,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2215,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2228,
+                  "src": "1153:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2214,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1153:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1152:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2222,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2221,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2228,
+                  "src": "1253:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2220,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1253:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1252:15:18"
+            },
+            "scope": 2257,
+            "src": "1118:178:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
           },
           {
-            "attributes": {
-              "constant": false,
-              "implemented": true,
-              "isConstructor": false,
-              "modifiers": [
-                null
-              ],
-              "name": "test_lock_user_mutex",
-              "payable": false,
-              "scope": 2257,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_mutex_id",
-                      "scope": 2242,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bytes32",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
-                        },
-                        "id": 2229,
-                        "name": "ElementaryTypeName",
-                        "src": "1331:7:18"
-                      }
-                    ],
-                    "id": 2230,
-                    "name": "VariableDeclaration",
-                    "src": "1331:17:18"
-                  }
-                ],
-                "id": 2231,
-                "name": "ParameterList",
-                "src": "1330:19:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
+            "body": {
+              "id": 2241,
+              "nodeType": "Block",
+              "src": "1405:48:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2239,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2235,
                       "name": "_success",
-                      "scope": 2242,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 2232,
-                        "name": "ElementaryTypeName",
-                        "src": "1388:4:18"
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2233,
+                      "src": "1411:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
                       }
-                    ],
-                    "id": 2233,
-                    "name": "VariableDeclaration",
-                    "src": "1388:13:18"
-                  }
-                ],
-                "id": 2234,
-                "name": "ParameterList",
-                "src": "1387:15:18"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
                           "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "bool"
-                        },
-                        "children": [
+                          "id": 2237,
+                          "name": "_mutex_id",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2230,
+                          "src": "1438:9:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
                           {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 2233,
-                              "type": "bool",
-                              "value": "_success"
-                            },
-                            "id": 2235,
-                            "name": "Identifier",
-                            "src": "1411:8:18"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": false,
-                              "isStructConstructorCall": false,
-                              "lValueRequested": false,
-                              "names": [
-                                null
-                              ],
-                              "type": "bool",
-                              "type_conversion": false
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": [
-                                    {
-                                      "typeIdentifier": "t_bytes32",
-                                      "typeString": "bytes32"
-                                    }
-                                  ],
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 942,
-                                  "type": "function (bytes32) returns (bool)",
-                                  "value": "lock_user_mutex"
-                                },
-                                "id": 2236,
-                                "name": "Identifier",
-                                "src": "1422:15:18"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 2230,
-                                  "type": "bytes32",
-                                  "value": "_mutex_id"
-                                },
-                                "id": 2237,
-                                "name": "Identifier",
-                                "src": "1438:9:18"
-                              }
-                            ],
-                            "id": 2238,
-                            "name": "FunctionCall",
-                            "src": "1422:26:18"
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
                           }
                         ],
-                        "id": 2239,
-                        "name": "Assignment",
-                        "src": "1411:37:18"
+                        "id": 2236,
+                        "name": "lock_user_mutex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 942,
+                        "src": "1422:15:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$returns$_t_bool_$",
+                          "typeString": "function (bytes32) returns (bool)"
+                        }
+                      },
+                      "id": 2238,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1422:26:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
                       }
-                    ],
-                    "id": 2240,
-                    "name": "ExpressionStatement",
-                    "src": "1411:37:18"
-                  }
-                ],
-                "id": 2241,
-                "name": "Block",
-                "src": "1405:48:18"
-              }
-            ],
+                    },
+                    "src": "1411:37:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2240,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1411:37:18"
+                }
+              ]
+            },
             "id": 2242,
-            "name": "FunctionDefinition",
-            "src": "1300:153:18"
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "test_lock_user_mutex",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2231,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2230,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2242,
+                  "src": "1331:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2229,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1331:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1330:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2234,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2233,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2242,
+                  "src": "1388:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2232,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1388:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1387:15:18"
+            },
+            "scope": 2257,
+            "src": "1300:153:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
           },
           {
-            "attributes": {
-              "constant": false,
-              "implemented": true,
-              "isConstructor": false,
-              "modifiers": [
-                null
-              ],
-              "name": "test_unlock_user_mutex",
-              "payable": false,
-              "scope": 2257,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_mutex_id",
-                      "scope": 2256,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bytes32",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes32",
-                          "type": "bytes32"
-                        },
-                        "id": 2243,
-                        "name": "ElementaryTypeName",
-                        "src": "1490:7:18"
-                      }
-                    ],
-                    "id": 2244,
-                    "name": "VariableDeclaration",
-                    "src": "1490:17:18"
-                  }
-                ],
-                "id": 2245,
-                "name": "ParameterList",
-                "src": "1489:19:18"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
+            "body": {
+              "id": 2255,
+              "nodeType": "Block",
+              "src": "1564:50:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2253,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2249,
                       "name": "_success",
-                      "scope": 2256,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 2246,
-                        "name": "ElementaryTypeName",
-                        "src": "1547:4:18"
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2247,
+                      "src": "1570:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
                       }
-                    ],
-                    "id": 2247,
-                    "name": "VariableDeclaration",
-                    "src": "1547:13:18"
-                  }
-                ],
-                "id": 2248,
-                "name": "ParameterList",
-                "src": "1546:15:18"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
                           "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "bool"
-                        },
-                        "children": [
+                          "id": 2251,
+                          "name": "_mutex_id",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2244,
+                          "src": "1599:9:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
                           {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 2247,
-                              "type": "bool",
-                              "value": "_success"
-                            },
-                            "id": 2249,
-                            "name": "Identifier",
-                            "src": "1570:8:18"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": false,
-                              "isStructConstructorCall": false,
-                              "lValueRequested": false,
-                              "names": [
-                                null
-                              ],
-                              "type": "bool",
-                              "type_conversion": false
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": [
-                                    {
-                                      "typeIdentifier": "t_bytes32",
-                                      "typeString": "bytes32"
-                                    }
-                                  ],
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 966,
-                                  "type": "function (bytes32) returns (bool)",
-                                  "value": "unlock_user_mutex"
-                                },
-                                "id": 2250,
-                                "name": "Identifier",
-                                "src": "1581:17:18"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 2244,
-                                  "type": "bytes32",
-                                  "value": "_mutex_id"
-                                },
-                                "id": 2251,
-                                "name": "Identifier",
-                                "src": "1599:9:18"
-                              }
-                            ],
-                            "id": 2252,
-                            "name": "FunctionCall",
-                            "src": "1581:28:18"
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
                           }
                         ],
-                        "id": 2253,
-                        "name": "Assignment",
-                        "src": "1570:39:18"
+                        "id": 2250,
+                        "name": "unlock_user_mutex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 966,
+                        "src": "1581:17:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$returns$_t_bool_$",
+                          "typeString": "function (bytes32) returns (bool)"
+                        }
+                      },
+                      "id": 2252,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1581:28:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
                       }
-                    ],
-                    "id": 2254,
-                    "name": "ExpressionStatement",
-                    "src": "1570:39:18"
-                  }
-                ],
-                "id": 2255,
-                "name": "Block",
-                "src": "1564:50:18"
-              }
-            ],
+                    },
+                    "src": "1570:39:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2254,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1570:39:18"
+                }
+              ]
+            },
             "id": 2256,
-            "name": "FunctionDefinition",
-            "src": "1457:157:18"
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "test_unlock_user_mutex",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2245,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2244,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2256,
+                  "src": "1490:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2243,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1490:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1489:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2248,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2247,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2256,
+                  "src": "1547:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2246,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1547:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1546:15:18"
+            },
+            "scope": 2257,
+            "src": "1457:157:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
           }
         ],
-        "id": 2257,
-        "name": "ContractDefinition",
+        "scope": 2258,
         "src": "129:1488:18"
       }
     ],
+    "src": "0:1618:18"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockACUserMutex.sol",
+    "exportedSymbols": {
+      "MockACUserMutex": [
+        2257
+      ]
+    },
     "id": 2258,
-    "name": "SourceUnit",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2129,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:18"
+      },
+      {
+        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACUserMutex.sol",
+        "file": "../ACUserMutex.sol",
+        "id": 2130,
+        "nodeType": "ImportDirective",
+        "scope": 2258,
+        "sourceUnit": 968,
+        "src": "99:28:18",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 2131,
+              "name": "ACUserMutex",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 967,
+              "src": "157:11:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ACUserMutex_$967",
+                "typeString": "contract ACUserMutex"
+              }
+            },
+            "id": 2132,
+            "nodeType": "InheritanceSpecifier",
+            "src": "157:11:18"
+          }
+        ],
+        "contractDependencies": [
+          967
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2257,
+        "linearizedBaseContracts": [
+          2257,
+          967
+        ],
+        "name": "MockACUserMutex",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2149,
+              "nodeType": "Block",
+              "src": "277:50:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2147,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 2141,
+                          "name": "user_mutexes",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 860,
+                          "src": "283:12:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$",
+                            "typeString": "mapping(address => mapping(bytes32 => bool))"
+                          }
+                        },
+                        "id": 2144,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 2142,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2134,
+                          "src": "296:5:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "283:19:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                          "typeString": "mapping(bytes32 => bool)"
+                        }
+                      },
+                      "id": 2145,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 2143,
+                        "name": "_mutex_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2136,
+                        "src": "303:9:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "283:30:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2146,
+                      "name": "_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2138,
+                      "src": "316:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "283:39:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2148,
+                  "nodeType": "ExpressionStatement",
+                  "src": "283:39:18"
+                }
+              ]
+            },
+            "id": 2150,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "mock_setup_set_user_mutex",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2139,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2134,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2150,
+                  "src": "210:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2133,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "210:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2136,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2150,
+                  "src": "225:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2135,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "225:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2138,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2150,
+                  "src": "244:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2137,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "244:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "209:47:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2140,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "277:0:18"
+            },
+            "scope": 2257,
+            "src": "174:153:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2167,
+              "nodeType": "Block",
+              "src": "468:50:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2165,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2159,
+                      "name": "_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2157,
+                      "src": "474:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 2160,
+                          "name": "user_mutexes",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 860,
+                          "src": "483:12:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$",
+                            "typeString": "mapping(address => mapping(bytes32 => bool))"
+                          }
+                        },
+                        "id": 2162,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 2161,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2152,
+                          "src": "496:5:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "483:19:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                          "typeString": "mapping(bytes32 => bool)"
+                        }
+                      },
+                      "id": 2164,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 2163,
+                        "name": "_mutex_id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2154,
+                        "src": "503:9:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "483:30:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "474:39:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2166,
+                  "nodeType": "ExpressionStatement",
+                  "src": "474:39:18"
+                }
+              ]
+            },
+            "id": 2168,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "mock_get_user_mutex",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2155,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2152,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2168,
+                  "src": "361:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2151,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "361:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2154,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2168,
+                  "src": "376:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2153,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "376:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "360:34:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2157,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2168,
+                  "src": "453:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2156,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "453:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "452:13:18"
+            },
+            "scope": 2257,
+            "src": "331:187:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2182,
+              "nodeType": "Block",
+              "src": "696:26:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2180,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2178,
+                      "name": "_success",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2176,
+                      "src": "702:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 2179,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "713:4:18",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "702:15:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2181,
+                  "nodeType": "ExpressionStatement",
+                  "src": "702:15:18"
+                }
+              ]
+            },
+            "id": 2183,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2173,
+                    "name": "_mutex_id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2170,
+                    "src": "610:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 2174,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2172,
+                  "name": "if_user_mutex_locked",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 877,
+                  "src": "588:20:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "588:32:18"
+              }
+            ],
+            "name": "test_if_user_mutex_locked",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2171,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2170,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2183,
+                  "src": "558:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2169,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "558:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "557:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2177,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2176,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2183,
+                  "src": "679:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2175,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "679:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "678:15:18"
+            },
+            "scope": 2257,
+            "src": "522:200:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2197,
+              "nodeType": "Block",
+              "src": "908:26:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2195,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2193,
+                      "name": "_success",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2191,
+                      "src": "914:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 2194,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "925:4:18",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "914:15:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2196,
+                  "nodeType": "ExpressionStatement",
+                  "src": "914:15:18"
+                }
+              ]
+            },
+            "id": 2198,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2188,
+                    "name": "_mutex_id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2185,
+                    "src": "822:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 2189,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2187,
+                  "name": "unless_user_mutex_locked",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 894,
+                  "src": "796:24:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "796:36:18"
+              }
+            ],
+            "name": "test_unless_user_mutex_locked",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2186,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2185,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2198,
+                  "src": "766:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2184,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "766:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "765:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2192,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2191,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2198,
+                  "src": "891:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2190,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "891:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "890:15:18"
+            },
+            "scope": 2257,
+            "src": "726:208:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2212,
+              "nodeType": "Block",
+              "src": "1088:26:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2210,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2208,
+                      "name": "_success",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2206,
+                      "src": "1094:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 2209,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1105:4:18",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1094:15:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2211,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1094:15:18"
+                }
+              ]
+            },
+            "id": 2213,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2203,
+                    "name": "_mutex_id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2200,
+                    "src": "1022:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 2204,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2202,
+                  "name": "lock_before_action",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 906,
+                  "src": "1002:18:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1002:30:18"
+              }
+            ],
+            "name": "test_lock_before_action",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2201,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2200,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2213,
+                  "src": "972:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2199,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "972:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "971:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2207,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2206,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2213,
+                  "src": "1071:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2205,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1071:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1070:15:18"
+            },
+            "scope": 2257,
+            "src": "938:176:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2227,
+              "nodeType": "Block",
+              "src": "1270:26:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2225,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2223,
+                      "name": "_success",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2221,
+                      "src": "1276:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 2224,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1287:4:18",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1276:15:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2226,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1276:15:18"
+                }
+              ]
+            },
+            "id": 2228,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2218,
+                    "name": "_mutex_id",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2215,
+                    "src": "1204:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 2219,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2217,
+                  "name": "unlock_after_action",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 918,
+                  "src": "1183:19:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bytes32_$",
+                    "typeString": "modifier (bytes32)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1183:31:18"
+              }
+            ],
+            "name": "test_unlock_after_action",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2216,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2215,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2228,
+                  "src": "1153:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2214,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1153:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1152:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2222,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2221,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2228,
+                  "src": "1253:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2220,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1253:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1252:15:18"
+            },
+            "scope": 2257,
+            "src": "1118:178:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2241,
+              "nodeType": "Block",
+              "src": "1405:48:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2239,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2235,
+                      "name": "_success",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2233,
+                      "src": "1411:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 2237,
+                          "name": "_mutex_id",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2230,
+                          "src": "1438:9:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 2236,
+                        "name": "lock_user_mutex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 942,
+                        "src": "1422:15:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$returns$_t_bool_$",
+                          "typeString": "function (bytes32) returns (bool)"
+                        }
+                      },
+                      "id": 2238,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1422:26:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1411:37:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2240,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1411:37:18"
+                }
+              ]
+            },
+            "id": 2242,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "test_lock_user_mutex",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2231,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2230,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2242,
+                  "src": "1331:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2229,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1331:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1330:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2234,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2233,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2242,
+                  "src": "1388:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2232,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1388:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1387:15:18"
+            },
+            "scope": 2257,
+            "src": "1300:153:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2255,
+              "nodeType": "Block",
+              "src": "1564:50:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2253,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2249,
+                      "name": "_success",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2247,
+                      "src": "1570:8:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 2251,
+                          "name": "_mutex_id",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2244,
+                          "src": "1599:9:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 2250,
+                        "name": "unlock_user_mutex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 966,
+                        "src": "1581:17:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$returns$_t_bool_$",
+                          "typeString": "function (bytes32) returns (bool)"
+                        }
+                      },
+                      "id": 2252,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1581:28:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1570:39:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2254,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1570:39:18"
+                }
+              ]
+            },
+            "id": 2256,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "test_unlock_user_mutex",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2245,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2244,
+                  "name": "_mutex_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2256,
+                  "src": "1490:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 2243,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1490:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1489:19:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2248,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2247,
+                  "name": "_success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2256,
+                  "src": "1547:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2246,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1547:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1546:15:18"
+            },
+            "scope": 2257,
+            "src": "1457:157:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2258,
+        "src": "129:1488:18"
+      }
+    ],
     "src": "0:1618:18"
   },
   "compiler": {
@@ -1809,6 +3238,6 @@
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-16T03:08:38.886Z"
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-03-19T06:36:08.586Z"
 }
