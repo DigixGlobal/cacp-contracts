@@ -49,4 +49,12 @@ contract MockResolverClient is ResolverClient {
   {
     _contract = ContractResolver(resolver).get_contract(_key);
   }
+
+  function test_add_ether()
+           public
+           payable
+           returns (bool _success)
+  {
+    _success = true;
+  }
 }
