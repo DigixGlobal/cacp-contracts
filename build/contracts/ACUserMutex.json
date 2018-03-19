@@ -181,7 +181,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2729,
+                              "referencedDeclaration": 2734,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -192,24 +192,9 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-<<<<<<< HEAD
                               "commonType": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
-=======
-                              "expression": {
-                                "argumentTypes": null,
-                                "id": 866,
-                                "name": "msg",
-                                "nodeType": "Identifier",
-                                "overloadedDeclarations": [],
-                                "referencedDeclaration": 2731,
-                                "src": "266:3:7",
-                                "typeDescriptions": {
-                                  "typeIdentifier": "t_magic_message",
-                                  "typeString": "msg"
-                                }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                               },
                               "isConstant": false,
                               "isLValue": false,
@@ -271,7 +256,7 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 2726,
+                                              "referencedDeclaration": 2731,
                                               "type": "msg",
                                               "value": "msg"
                                             },
@@ -336,43 +321,9 @@
                         "src": "245:52:7"
                       }
                     ],
-<<<<<<< HEAD
                     "id": 874,
                     "name": "ExpressionStatement",
                     "src": "245:52:7"
-=======
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 864,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "245:7:7",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 873,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "245:52:7",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   },
                   {
                     "id": 875,
@@ -458,7 +409,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2729,
+                              "referencedDeclaration": 2734,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -469,24 +420,9 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-<<<<<<< HEAD
                               "commonType": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
-=======
-                              "expression": {
-                                "argumentTypes": null,
-                                "id": 883,
-                                "name": "msg",
-                                "nodeType": "Identifier",
-                                "overloadedDeclarations": [],
-                                "referencedDeclaration": 2731,
-                                "src": "393:3:7",
-                                "typeDescriptions": {
-                                  "typeIdentifier": "t_magic_message",
-                                  "typeString": "msg"
-                                }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                               },
                               "isConstant": false,
                               "isLValue": false,
@@ -548,7 +484,7 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 2726,
+                                              "referencedDeclaration": 2731,
                                               "type": "msg",
                                               "value": "msg"
                                             },
@@ -613,43 +549,9 @@
                         "src": "372:53:7"
                       }
                     ],
-<<<<<<< HEAD
                     "id": 891,
                     "name": "ExpressionStatement",
                     "src": "372:53:7"
-=======
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 881,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "372:7:7",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 890,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "372:53:7",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   },
                   {
                     "id": 892,
@@ -667,149 +569,9 @@
             "src": "313:124:7"
           },
           {
-<<<<<<< HEAD
             "attributes": {
               "name": "lock_before_action",
               "visibility": "internal"
-=======
-            "body": {
-              "id": 905,
-              "nodeType": "Block",
-              "src": "488:53:7",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "arguments": [
-                          {
-                            "argumentTypes": null,
-                            "id": 900,
-                            "name": "_mutex_id",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 896,
-                            "src": "518:9:7",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_bytes32",
-                              "typeString": "bytes32"
-                            }
-                          }
-                        ],
-                        "expression": {
-                          "argumentTypes": [
-                            {
-                              "typeIdentifier": "t_bytes32",
-                              "typeString": "bytes32"
-                            }
-                          ],
-                          "id": 899,
-                          "name": "lock_user_mutex",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 942,
-                          "src": "502:15:7",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$returns$_t_bool_$",
-                            "typeString": "function (bytes32) returns (bool)"
-                          }
-                        },
-                        "id": 901,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "kind": "functionCall",
-                        "lValueRequested": false,
-                        "names": [],
-                        "nodeType": "FunctionCall",
-                        "src": "502:26:7",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 898,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "494:7:7",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 902,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "494:35:7",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 903,
-                  "nodeType": "ExpressionStatement",
-                  "src": "494:35:7"
-                },
-                {
-                  "id": 904,
-                  "nodeType": "PlaceholderStatement",
-                  "src": "535:1:7"
-                }
-              ]
-            },
-            "id": 906,
-            "name": "lock_before_action",
-            "nodeType": "ModifierDefinition",
-            "parameters": {
-              "id": 897,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 896,
-                  "name": "_mutex_id",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 906,
-                  "src": "469:17:7",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
-                  },
-                  "typeName": {
-                    "id": 895,
-                    "name": "bytes32",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "469:7:7",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "468:19:7"
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
             },
             "children": [
               {
@@ -836,7 +598,6 @@
                         "src": "469:7:7"
                       }
                     ],
-<<<<<<< HEAD
                     "id": 896,
                     "name": "VariableDeclaration",
                     "src": "469:17:7"
@@ -853,133 +614,6 @@
                       {
                         "attributes": {
                           "argumentTypes": null,
-=======
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 911,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "606:7:7",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 915,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "606:37:7",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 916,
-                  "nodeType": "ExpressionStatement",
-                  "src": "606:37:7"
-                }
-              ]
-            },
-            "id": 918,
-            "name": "unlock_after_action",
-            "nodeType": "ModifierDefinition",
-            "parameters": {
-              "id": 909,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 908,
-                  "name": "_mutex_id",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 918,
-                  "src": "574:17:7",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
-                  },
-                  "typeName": {
-                    "id": 907,
-                    "name": "bytes32",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "574:7:7",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "573:19:7"
-            },
-            "src": "545:103:7",
-            "visibility": "internal"
-          },
-          {
-            "body": {
-              "id": 941,
-              "nodeType": "Block",
-              "src": "800:74:7",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 935,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "baseExpression": {
-                        "argumentTypes": null,
-                        "baseExpression": {
-                          "argumentTypes": null,
-                          "id": 928,
-                          "name": "user_mutexes",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 860,
-                          "src": "806:12:7",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_bool_$_$",
-                            "typeString": "mapping(address => mapping(bytes32 => bool))"
-                          }
-                        },
-                        "id": 932,
-                        "indexExpression": {
-                          "argumentTypes": null,
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 929,
-                            "name": "msg",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 2731,
-                            "src": "819:3:7",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_magic_message",
-                              "typeString": "msg"
-                            }
-                          },
-                          "id": 930,
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1003,7 +637,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2729,
+                              "referencedDeclaration": 2734,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1140,23 +774,6 @@
                       {
                         "attributes": {
                           "argumentTypes": null,
-<<<<<<< HEAD
-=======
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 953,
-                            "name": "msg",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 2731,
-                            "src": "1043:3:7",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_magic_message",
-                              "typeString": "msg"
-                            }
-                          },
-                          "id": 954,
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1180,7 +797,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2729,
+                              "referencedDeclaration": 2734,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1399,7 +1016,6 @@
                               "lValueRequested": true,
                               "type": "bool"
                             },
-<<<<<<< HEAD
                             "children": [
                               {
                                 "attributes": {
@@ -1443,7 +1059,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 2726,
+                                          "referencedDeclaration": 2731,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -1460,23 +1076,6 @@
                                 "id": 932,
                                 "name": "IndexAccess",
                                 "src": "806:24:7"
-=======
-                            "id": 868,
-                            "indexExpression": {
-                              "argumentTypes": null,
-                              "expression": {
-                                "argumentTypes": null,
-                                "id": 866,
-                                "name": "msg",
-                                "nodeType": "Identifier",
-                                "overloadedDeclarations": [],
-                                "referencedDeclaration": 2731,
-                                "src": "266:3:7",
-                                "typeDescriptions": {
-                                  "typeIdentifier": "t_magic_message",
-                                  "typeString": "msg"
-                                }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                               },
                               {
                                 "attributes": {
@@ -1520,84 +1119,9 @@
                         "src": "806:42:7"
                       }
                     ],
-<<<<<<< HEAD
                     "id": 936,
                     "name": "ExpressionStatement",
                     "src": "806:42:7"
-=======
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 864,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "245:7:7",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 873,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "245:52:7",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 874,
-                  "nodeType": "ExpressionStatement",
-                  "src": "245:52:7"
-                },
-                {
-                  "id": 875,
-                  "nodeType": "PlaceholderStatement",
-                  "src": "303:1:7"
-                }
-              ]
-            },
-            "id": 877,
-            "name": "if_user_mutex_locked",
-            "nodeType": "ModifierDefinition",
-            "parameters": {
-              "id": 863,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 862,
-                  "name": "_mutex_id",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 877,
-                  "src": "220:17:7",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
-                  },
-                  "typeName": {
-                    "id": 861,
-                    "name": "bytes32",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "220:7:7",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
-                    }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   },
                   {
                     "children": [
@@ -1629,24 +1153,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-<<<<<<< HEAD
                               "hexvalue": "74727565",
-=======
-                              "expression": {
-                                "argumentTypes": null,
-                                "id": 883,
-                                "name": "msg",
-                                "nodeType": "Identifier",
-                                "overloadedDeclarations": [],
-                                "referencedDeclaration": 2731,
-                                "src": "393:3:7",
-                                "typeDescriptions": {
-                                  "typeIdentifier": "t_magic_message",
-                                  "typeString": "msg"
-                                }
-                              },
-                              "id": 884,
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1666,7 +1173,6 @@
                         "src": "854:15:7"
                       }
                     ],
-<<<<<<< HEAD
                     "id": 940,
                     "name": "ExpressionStatement",
                     "src": "854:15:7"
@@ -1680,89 +1186,6 @@
             "id": 942,
             "name": "FunctionDefinition",
             "src": "652:222:7"
-=======
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 881,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "372:7:7",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 890,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "372:53:7",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 891,
-                  "nodeType": "ExpressionStatement",
-                  "src": "372:53:7"
-                },
-                {
-                  "id": 892,
-                  "nodeType": "PlaceholderStatement",
-                  "src": "431:1:7"
-                }
-              ]
-            },
-            "id": 894,
-            "name": "unless_user_mutex_locked",
-            "nodeType": "ModifierDefinition",
-            "parameters": {
-              "id": 880,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 879,
-                  "name": "_mutex_id",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 894,
-                  "src": "347:17:7",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
-                  },
-                  "typeName": {
-                    "id": 878,
-                    "name": "bytes32",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "347:7:7",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "346:19:7"
-            },
-            "src": "313:124:7",
-            "visibility": "internal"
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
           },
           {
             "attributes": {
@@ -1801,7 +1224,6 @@
                         "src": "905:7:7"
                       }
                     ],
-<<<<<<< HEAD
                     "id": 944,
                     "name": "VariableDeclaration",
                     "src": "905:17:7"
@@ -1823,25 +1245,6 @@
                       "type": "bool",
                       "value": null,
                       "visibility": "internal"
-=======
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 898,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "494:7:7",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "children": [
                       {
@@ -1871,22 +1274,9 @@
                       "overloadedDeclarations": [
                         null
                       ],
-<<<<<<< HEAD
                       "referencedDeclaration": 877,
                       "type": "modifier (bytes32)",
                       "value": "if_user_mutex_locked"
-=======
-                      "id": 911,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "606:7:7",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                     },
                     "id": 946,
                     "name": "Identifier",
@@ -1918,23 +1308,6 @@
                       {
                         "attributes": {
                           "argumentTypes": null,
-<<<<<<< HEAD
-=======
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 929,
-                            "name": "msg",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 2731,
-                            "src": "819:3:7",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_magic_message",
-                              "typeString": "msg"
-                            }
-                          },
-                          "id": 930,
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1995,7 +1368,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 2726,
+                                          "referencedDeclaration": 2731,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -2064,23 +1437,6 @@
                       {
                         "attributes": {
                           "argumentTypes": null,
-<<<<<<< HEAD
-=======
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 953,
-                            "name": "msg",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 2731,
-                            "src": "1043:3:7",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_magic_message",
-                              "typeString": "msg"
-                            }
-                          },
-                          "id": 954,
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2155,11 +1511,6 @@
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
   "networks": {},
-<<<<<<< HEAD
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-16T03:08:38.883Z"
-=======
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-16T09:38:56.913Z"
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
+  "updatedAt": "2018-03-16T10:51:21.810Z"
 }

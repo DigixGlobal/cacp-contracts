@@ -49,109 +49,9 @@
         },
         "children": [
           {
-<<<<<<< HEAD
             "attributes": {
               "name": "if_before",
               "visibility": "internal"
-=======
-            "body": {
-              "id": 198,
-              "nodeType": "Block",
-              "src": "149:38:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "commonType": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        },
-                        "id": 194,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "leftExpression": {
-                          "argumentTypes": null,
-                          "id": 192,
-                          "name": "now",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 2733,
-                          "src": "163:3:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "nodeType": "BinaryOperation",
-                        "operator": "<",
-                        "rightExpression": {
-                          "argumentTypes": null,
-                          "id": 193,
-                          "name": "_date",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 189,
-                          "src": "169:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "src": "163:11:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 191,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "155:7:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 195,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "155:20:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 196,
-                  "nodeType": "ExpressionStatement",
-                  "src": "155:20:1"
-                },
-                {
-                  "id": 197,
-                  "nodeType": "PlaceholderStatement",
-                  "src": "181:1:1"
-                }
-              ]
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
             },
             "children": [
               {
@@ -169,56 +69,15 @@
                     },
                     "children": [
                       {
-<<<<<<< HEAD
                         "attributes": {
                           "name": "uint256",
                           "type": "uint256"
-=======
-                        "argumentTypes": null,
-                        "commonType": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        },
-                        "id": 206,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "leftExpression": {
-                          "argumentTypes": null,
-                          "id": 204,
-                          "name": "now",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 2733,
-                          "src": "238:3:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "nodeType": "BinaryOperation",
-                        "operator": ">",
-                        "rightExpression": {
-                          "argumentTypes": null,
-                          "id": 205,
-                          "name": "_date",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 201,
-                          "src": "244:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                         },
                         "id": 188,
                         "name": "ElementaryTypeName",
                         "src": "134:7:1"
                       }
                     ],
-<<<<<<< HEAD
                     "id": 189,
                     "name": "VariableDeclaration",
                     "src": "134:13:1"
@@ -232,145 +91,9 @@
                 "children": [
                   {
                     "children": [
-=======
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 203,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "230:7:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 207,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "230:20:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 208,
-                  "nodeType": "ExpressionStatement",
-                  "src": "230:20:1"
-                },
-                {
-                  "id": 209,
-                  "nodeType": "PlaceholderStatement",
-                  "src": "256:1:1"
-                }
-              ]
-            },
-            "id": 211,
-            "name": "if_after",
-            "nodeType": "ModifierDefinition",
-            "parameters": {
-              "id": 202,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 201,
-                  "name": "_date",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 211,
-                  "src": "209:13:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 200,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "209:7:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "208:15:1"
-            },
-            "src": "191:71:1",
-            "visibility": "internal"
-          }
-        ],
-        "scope": 213,
-        "src": "93:171:1"
-      }
-    ],
-    "src": "0:265:1"
-  },
-  "legacyAST": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACDates.sol",
-    "exportedSymbols": {
-      "ACDates": [
-        212
-      ]
-    },
-    "id": 213,
-    "nodeType": "SourceUnit",
-    "nodes": [
-      {
-        "id": 187,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".19"
-        ],
-        "nodeType": "PragmaDirective",
-        "src": "0:24:1"
-      },
-      {
-        "baseContracts": [],
-        "contractDependencies": [],
-        "contractKind": "contract",
-        "documentation": "@title Blocktime based access control\n @author DigixGlobal",
-        "fullyImplemented": true,
-        "id": 212,
-        "linearizedBaseContracts": [
-          212
-        ],
-        "name": "ACDates",
-        "nodeType": "ContractDefinition",
-        "nodes": [
-          {
-            "body": {
-              "id": 198,
-              "nodeType": "Block",
-              "src": "149:38:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                       {
                         "attributes": {
                           "argumentTypes": null,
-<<<<<<< HEAD
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -381,18 +104,6 @@
                           ],
                           "type": "tuple()",
                           "type_conversion": false
-=======
-                          "id": 192,
-                          "name": "now",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 2733,
-                          "src": "163:3:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                         },
                         "children": [
                           {
@@ -406,7 +117,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2729,
+                              "referencedDeclaration": 2734,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -435,7 +146,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 2728,
+                                  "referencedDeclaration": 2733,
                                   "type": "uint256",
                                   "value": "now"
                                 },
@@ -468,43 +179,9 @@
                         "src": "155:20:1"
                       }
                     ],
-<<<<<<< HEAD
                     "id": 196,
                     "name": "ExpressionStatement",
                     "src": "155:20:1"
-=======
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 191,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "155:7:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 195,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "155:20:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   },
                   {
                     "id": 197,
@@ -567,7 +244,6 @@
                       {
                         "attributes": {
                           "argumentTypes": null,
-<<<<<<< HEAD
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -578,18 +254,6 @@
                           ],
                           "type": "tuple()",
                           "type_conversion": false
-=======
-                          "id": 204,
-                          "name": "now",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 2733,
-                          "src": "238:3:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                         },
                         "children": [
                           {
@@ -603,7 +267,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2729,
+                              "referencedDeclaration": 2734,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -632,7 +296,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 2728,
+                                  "referencedDeclaration": 2733,
                                   "type": "uint256",
                                   "value": "now"
                                 },
@@ -665,43 +329,9 @@
                         "src": "230:20:1"
                       }
                     ],
-<<<<<<< HEAD
                     "id": 208,
                     "name": "ExpressionStatement",
                     "src": "230:20:1"
-=======
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 203,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2734,
-                      "src": "230:7:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 207,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "230:20:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
                   },
                   {
                     "id": 209,
@@ -733,11 +363,6 @@
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
   "networks": {},
-<<<<<<< HEAD
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-16T03:08:38.881Z"
-=======
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-16T09:38:56.911Z"
->>>>>>> 4f42391... [feat] owner of ContractResolver can destroy ResolverClients
+  "updatedAt": "2018-03-16T10:51:21.809Z"
 }
