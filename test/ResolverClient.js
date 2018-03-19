@@ -23,18 +23,6 @@ contract('ResolverClient', function (addresses) {
     });
   });
 
-
-  describe('is_locked', function () {
-    it('returns true if ContractResolver is locked', async function () {
-      await mockContractResolver.mock_set_locked(true);
-      assert.deepEqual(await mockResolverClient.is_locked.call(), true);
-    });
-    it('returns false if ContractResolver is unlocked', async function () {
-      await mockContractResolver.mock_set_locked(false);
-      assert.deepEqual(await mockResolverClient.is_locked.call(), false);
-    });
-  });
-
   describe('unless_resolver_is_locked', function () {
     it('throws if ContractResolver is locked', async function () {
       await mockContractResolver.mock_set_locked(true);
@@ -78,16 +66,26 @@ contract('ResolverClient', function (addresses) {
   });
 
   describe('destroy', function () {
+    const etherAmount = 1000;
+    before(async function () {
+      await mockResolverClient.test_add_ether({ from: addresses[0], value: web3.toWei(etherAmount, 'ether') });
+      assert.deepEqual(web3.eth.getBalance(mockResolverClient.address), bN(web3.toWei(etherAmount, 'ether')));
+    });
     it('[change ownership, not yet claimed, new_owner try to destroy]: throw', async function () {
       assert.deepEqual(await mockContractResolver.change_owner.call(addresses[2]), true);
       await mockContractResolver.change_owner(addresses[2]);
       assert.ok(await a.failure(mockResolverClient.destroy.call({ from: addresses[2] })));
     });
-    it('[claim ownership, destroy (previous owner cannot destroy)]: success', async function () {
+    it('[claim ownership, destroy (previous owner cannot destroy)]: success, owner receives the ResolverClient ether balance', async function () {
       assert.deepEqual(await mockContractResolver.claim_ownership.call({ from: addresses[2] }), true);
       await mockContractResolver.claim_ownership({ from: addresses[2] });
       assert.ok(await a.failure(mockResolverClient.destroy()));
-      assert.ok(await mockResolverClient.destroy({ from: addresses[2] }));
+
+      const ownerBalanceBeforeDestroying = web3.eth.getBalance(addresses[2]);
+      const tx = await mockResolverClient.destroy({ from: addresses[2] });
+      const ownerBalanceAfterDestroying = web3.eth.getBalance(addresses[2]);
+      const weiUsed = bN(tx.receipt.gasUsed * 21 * (10 ** 9)); // add `gasPrice` to 'truffle.js'
+      assert.deepEqual(ownerBalanceAfterDestroying, ownerBalanceBeforeDestroying.plus(web3.toWei(etherAmount, 'ether')).minus(weiUsed));
     });
   });
 });

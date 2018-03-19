@@ -3,8 +3,8 @@
   "abi": [],
   "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a723058203b8f6239cb82257bb414d4c7a982a7914a88caecb62170acfbade6efcd7d08790029",
   "deployedBytecode": "0x6060604052600080fd00a165627a7a723058203b8f6239cb82257bb414d4c7a982a7914a88caecb62170acfbade6efcd7d08790029",
-  "sourceMap": "84:149:8:-;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "84:149:8:-;;;;;",
+  "sourceMap": "84:149:2:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "84:149:2:-;;;;;",
   "source": "pragma solidity ^0.4.19;\n\n/// @title Some useful constants\n/// @author DigixGlobal\n\ncontract Constants {\n  address constant NULL_ADDRESS = address(0x0);\n  uint256 constant ZERO = uint256(0);\n  bytes32 constant EMPTY = bytes32(0x0);\n}\n",
   "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/Constants.sol",
   "ast": {
@@ -12,7 +12,7 @@
       "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Constants.sol",
       "exportedSymbols": {
         "Constants": [
-          985
+          342
         ]
       }
     },
@@ -26,9 +26,9 @@
             ".19"
           ]
         },
-        "id": 969,
+        "id": 326,
         "name": "PragmaDirective",
-        "src": "0:24:8"
+        "src": "0:24:2"
       },
       {
         "attributes": {
@@ -42,17 +42,17 @@
           "documentation": "@title Some useful constants\n @author DigixGlobal",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            985
+            342
           ],
           "name": "Constants",
-          "scope": 986
+          "scope": 343
         },
         "children": [
           {
             "attributes": {
               "constant": true,
               "name": "NULL_ADDRESS",
-              "scope": 985,
+              "scope": 342,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -64,9 +64,9 @@
                   "name": "address",
                   "type": "address"
                 },
-                "id": 970,
+                "id": 327,
                 "name": "ElementaryTypeName",
-                "src": "107:7:8"
+                "src": "107:7:2"
               },
               {
                 "attributes": {
@@ -98,9 +98,9 @@
                       "type": "type(address)",
                       "value": "address"
                     },
-                    "id": 971,
+                    "id": 328,
                     "name": "ElementaryTypeNameExpression",
-                    "src": "139:7:8"
+                    "src": "139:7:2"
                   },
                   {
                     "attributes": {
@@ -115,25 +115,25 @@
                       "type": "int_const 0",
                       "value": "0x0"
                     },
-                    "id": 972,
+                    "id": 329,
                     "name": "Literal",
-                    "src": "147:3:8"
+                    "src": "147:3:2"
                   }
                 ],
-                "id": 973,
+                "id": 330,
                 "name": "FunctionCall",
-                "src": "139:12:8"
+                "src": "139:12:2"
               }
             ],
-            "id": 974,
+            "id": 331,
             "name": "VariableDeclaration",
-            "src": "107:44:8"
+            "src": "107:44:2"
           },
           {
             "attributes": {
               "constant": true,
               "name": "ZERO",
-              "scope": 985,
+              "scope": 342,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -145,9 +145,9 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 975,
+                "id": 332,
                 "name": "ElementaryTypeName",
-                "src": "155:7:8"
+                "src": "155:7:2"
               },
               {
                 "attributes": {
@@ -179,9 +179,9 @@
                       "type": "type(uint256)",
                       "value": "uint256"
                     },
-                    "id": 976,
+                    "id": 333,
                     "name": "ElementaryTypeNameExpression",
-                    "src": "179:7:8"
+                    "src": "179:7:2"
                   },
                   {
                     "attributes": {
@@ -196,25 +196,25 @@
                       "type": "int_const 0",
                       "value": "0"
                     },
-                    "id": 977,
+                    "id": 334,
                     "name": "Literal",
-                    "src": "187:1:8"
+                    "src": "187:1:2"
                   }
                 ],
-                "id": 978,
+                "id": 335,
                 "name": "FunctionCall",
-                "src": "179:10:8"
+                "src": "179:10:2"
               }
             ],
-            "id": 979,
+            "id": 336,
             "name": "VariableDeclaration",
-            "src": "155:34:8"
+            "src": "155:34:2"
           },
           {
             "attributes": {
               "constant": true,
               "name": "EMPTY",
-              "scope": 985,
+              "scope": 342,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "bytes32",
@@ -226,9 +226,9 @@
                   "name": "bytes32",
                   "type": "bytes32"
                 },
-                "id": 980,
+                "id": 337,
                 "name": "ElementaryTypeName",
-                "src": "193:7:8"
+                "src": "193:7:2"
               },
               {
                 "attributes": {
@@ -260,9 +260,9 @@
                       "type": "type(bytes32)",
                       "value": "bytes32"
                     },
-                    "id": 981,
+                    "id": 338,
                     "name": "ElementaryTypeNameExpression",
-                    "src": "218:7:8"
+                    "src": "218:7:2"
                   },
                   {
                     "attributes": {
@@ -277,29 +277,29 @@
                       "type": "int_const 0",
                       "value": "0x0"
                     },
-                    "id": 982,
+                    "id": 339,
                     "name": "Literal",
-                    "src": "226:3:8"
+                    "src": "226:3:2"
                   }
                 ],
-                "id": 983,
+                "id": 340,
                 "name": "FunctionCall",
-                "src": "218:12:8"
+                "src": "218:12:2"
               }
             ],
-            "id": 984,
+            "id": 341,
             "name": "VariableDeclaration",
-            "src": "193:37:8"
+            "src": "193:37:2"
           }
         ],
-        "id": 985,
+        "id": 342,
         "name": "ContractDefinition",
-        "src": "84:149:8"
+        "src": "84:149:2"
       }
     ],
-    "id": 986,
+    "id": 343,
     "name": "SourceUnit",
-    "src": "0:234:8"
+    "src": "0:234:2"
   },
   "compiler": {
     "name": "solc",
@@ -307,5 +307,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-19T02:59:12.428Z"
+  "updatedAt": "2018-03-19T06:11:47.551Z"
 }
