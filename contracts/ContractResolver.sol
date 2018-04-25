@@ -129,7 +129,7 @@ contract ContractResolver is ACGroups, Constants {
   /// this must also be originated from the owner of this ContractResolver as well.
   /// @param _key the bytestring of the contract name
   /// @return _success if the operation is successful
-  function unregister_contract(bytes32 _key)
+  /* function unregister_contract(bytes32 _key)
            locked_after_period()
            if_owner_origin()
            if_not_locked()
@@ -140,7 +140,7 @@ contract ContractResolver is ACGroups, Constants {
     delete contracts[_key];
     UnRegisterEvent(_key);
     _success = true;
-  }
+  } */
 
   /// @dev Get address of a contract
   /// @param _key the bytestring name of the contract to look up

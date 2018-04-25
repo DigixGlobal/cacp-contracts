@@ -49,7 +49,7 @@ contract ResolverClient {
 
   /// @dev Destroy the contract and unregister self from the ContractResolver
   /// @dev Can only be called by the owner of ContractResolver
-  function destroy()
+  /* function destroy()
            public
            returns (bool _success)
   {
@@ -63,7 +63,7 @@ contract ResolverClient {
     require(_success);
 
     selfdestruct(_owner_of_contract_resolver);
-  }
+  } */
 
   /// @dev Check if resolver is locked
   /// @return _locked if the resolver is currently locked
