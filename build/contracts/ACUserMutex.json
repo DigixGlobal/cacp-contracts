@@ -1,14 +1,14 @@
 {
   "contractName": "ACUserMutex",
   "abi": [],
-  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820b5b68af6557f0be0b05c9b794bb118d8ae7f6c6bb48fb133f3e2ab2cd8c4fd760029",
-  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820b5b68af6557f0be0b05c9b794bb118d8ae7f6c6bb48fb133f3e2ab2cd8c4fd760029",
-  "sourceMap": "100:1002:7:-;;;;;;;;;;;;;;;;;",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820bedf7000b143e95b20be5cba4b0b4e907fc69d7f5c9304d4ff34701e4cdd5e3f0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820bedf7000b143e95b20be5cba4b0b4e907fc69d7f5c9304d4ff34701e4cdd5e3f0029",
+  "sourceMap": "100:1002:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;100:1002:7;;;;;;;",
   "deployedSourceMap": "100:1002:7:-;;;;;",
   "source": "pragma solidity ^0.4.19;\n\n/// @title Per user locking based access control\n/// @author DigixGlobal\n\ncontract ACUserMutex {\n\n  mapping (address => mapping (bytes32 => bool)) user_mutexes;\n\n  modifier if_user_mutex_locked(bytes32 _mutex_id) {\n    require(user_mutexes[msg.sender][_mutex_id] == true);\n    _;\n  }\n\n  modifier unless_user_mutex_locked(bytes32 _mutex_id) {\n    require(user_mutexes[msg.sender][_mutex_id] == false);\n    _;\n  }\n\n  modifier lock_before_action(bytes32 _mutex_id) {\n    require(lock_user_mutex(_mutex_id));\n    _;\n  }\n\n  modifier unlock_after_action(bytes32 _mutex_id) {\n    _;\n    require(unlock_user_mutex(_mutex_id));\n  }\n\n  function lock_user_mutex(bytes32 _mutex_id)\n           unless_user_mutex_locked(_mutex_id)\n           internal\n           returns (bool _success)\n  {\n    user_mutexes[msg.sender][_mutex_id] = true;\n    _success = true;\n  }\n\n  function unlock_user_mutex(bytes32 _mutex_id)\n           if_user_mutex_locked(_mutex_id)\n           internal\n           returns (bool _success)\n  {\n    user_mutexes[msg.sender][_mutex_id] = false;\n    _success = true;\n  }\n\n}\n",
-  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/ACUserMutex.sol",
+  "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/ACUserMutex.sol",
   "ast": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACUserMutex.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACUserMutex.sol",
     "exportedSymbols": {
       "ACUserMutex": [
         967
@@ -152,7 +152,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2741,
+                                "referencedDeclaration": 2728,
                                 "src": "266:3:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -246,8 +246,11 @@
                       "id": 864,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "245:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -279,6 +282,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 877,
             "name": "if_user_mutex_locked",
             "nodeType": "ModifierDefinition",
@@ -365,7 +369,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2741,
+                                "referencedDeclaration": 2728,
                                 "src": "393:3:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -459,8 +463,11 @@
                       "id": 881,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "372:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -492,6 +499,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 894,
             "name": "unless_user_mutex_locked",
             "nodeType": "ModifierDefinition",
@@ -601,8 +609,11 @@
                       "id": 898,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "494:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -634,6 +645,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 906,
             "name": "lock_before_action",
             "nodeType": "ModifierDefinition",
@@ -748,8 +760,11 @@
                       "id": 911,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "606:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -776,6 +791,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 918,
             "name": "unlock_after_action",
             "nodeType": "ModifierDefinition",
@@ -855,7 +871,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2741,
+                            "referencedDeclaration": 2728,
                             "src": "819:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -995,6 +1011,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 942,
             "implemented": true,
             "isConstructor": false,
@@ -1149,7 +1166,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2741,
+                            "referencedDeclaration": 2728,
                             "src": "1043:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1289,6 +1306,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 966,
             "implemented": true,
             "isConstructor": false,
@@ -1411,7 +1429,7 @@
     "src": "0:1103:7"
   },
   "legacyAST": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACUserMutex.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACUserMutex.sol",
     "exportedSymbols": {
       "ACUserMutex": [
         967
@@ -1555,7 +1573,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2741,
+                                "referencedDeclaration": 2728,
                                 "src": "266:3:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -1649,8 +1667,11 @@
                       "id": 864,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "245:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1682,6 +1703,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 877,
             "name": "if_user_mutex_locked",
             "nodeType": "ModifierDefinition",
@@ -1768,7 +1790,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2741,
+                                "referencedDeclaration": 2728,
                                 "src": "393:3:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -1862,8 +1884,11 @@
                       "id": 881,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "372:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1895,6 +1920,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 894,
             "name": "unless_user_mutex_locked",
             "nodeType": "ModifierDefinition",
@@ -2004,8 +2030,11 @@
                       "id": 898,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "494:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2037,6 +2066,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 906,
             "name": "lock_before_action",
             "nodeType": "ModifierDefinition",
@@ -2151,8 +2181,11 @@
                       "id": 911,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "606:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2179,6 +2212,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 918,
             "name": "unlock_after_action",
             "nodeType": "ModifierDefinition",
@@ -2258,7 +2292,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2741,
+                            "referencedDeclaration": 2728,
                             "src": "819:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2398,6 +2432,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 942,
             "implemented": true,
             "isConstructor": false,
@@ -2552,7 +2587,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2741,
+                            "referencedDeclaration": 2728,
                             "src": "1043:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2692,6 +2727,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 966,
             "implemented": true,
             "isConstructor": false,
@@ -2815,9 +2851,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-19T06:36:08.581Z"
+  "updatedAt": "2018-05-30T02:43:30.981Z"
 }

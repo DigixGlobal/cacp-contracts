@@ -21,14 +21,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b60e68061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063649c07d5146044575b600080fd5b3415604e57600080fd5b6078600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506092565b604051808215151515815260200191505060405180910390f35b600080823b905060018163ffffffff16111560af576001915060b4565b600091505b509190505600a165627a7a723058209d24c4022c6e8de511f841d0b4d8dadd2bc0172ea1c74e9a138d4dc1699b18220029",
-  "deployedBytecode": "0x606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063649c07d5146044575b600080fd5b3415604e57600080fd5b6078600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506092565b604051808215151515815260200191505060405180910390f35b600080823b905060018163ffffffff16111560af576001915060b4565b600091505b509190505600a165627a7a723058209d24c4022c6e8de511f841d0b4d8dadd2bc0172ea1c74e9a138d4dc1699b18220029",
-  "sourceMap": "120:1431:0:-;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "120:1431:0:-;;;;;;;;;;;;;;;;;;;;;;;;1023:318;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1121:17;1148:19;1219:9;1207:11;1191:38;;1259:1;1244:12;:16;;;1241:96;;;1285:4;1270:19;;1241:96;;;1325:5;1310:20;;1241:96;1023:318;;;;:::o",
+  "bytecode": "0x608060405234801561001057600080fd5b5060f08061001f6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063649c07d5146044575b600080fd5b348015604f57600080fd5b506082600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050609c565b604051808215151515815260200191505060405180910390f35b600080823b905060018163ffffffff16111560b9576001915060be565b600091505b509190505600a165627a7a723058200b55c40bd5f8c001f3ed2bd9f96c38374e0e5854f7c1a9ec471432b829209fac0029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063649c07d5146044575b600080fd5b348015604f57600080fd5b506082600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050609c565b604051808215151515815260200191505060405180910390f35b600080823b905060018163ffffffff16111560b9576001915060be565b600091505b509190505600a165627a7a723058200b55c40bd5f8c001f3ed2bd9f96c38374e0e5854f7c1a9ec471432b829209fac0029",
+  "sourceMap": "120:1431:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;120:1431:0;;;;;;;",
+  "deployedSourceMap": "120:1431:0:-;;;;;;;;;;;;;;;;;;;;;;;;1023:318;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1023:318:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1121:17;1148:19;1219:9;1207:22;1191:38;;1259:1;1244:12;:16;;;1241:96;;;1285:4;1270:19;;1241:96;;;1325:5;1310:20;;1241:96;1023:318;;;;:::o",
   "source": "pragma solidity ^0.4.19;\n\nimport \"./Constants.sol\";\n\n/// @title Condition based access control\n/// @author DigixGlobal\n\ncontract ACConditions is Constants {\n\n  modifier not_null_address(address _item) {\n    require(_item != NULL_ADDRESS);\n    _;\n  }\n\n  modifier if_null_address(address _item) {\n    require(_item == NULL_ADDRESS);\n    _;\n  }\n\n  modifier not_null_uint(uint256 _item) {\n    require(_item != ZERO);\n    _;\n  }\n\n  modifier if_null_uint(uint256 _item) {\n    require(_item == ZERO);\n    _;\n  }\n\n  modifier not_empty_bytes(bytes32 _item) {\n    require(_item != EMPTY);\n    _;\n  }\n\n  modifier if_empty_bytes(bytes32 _item) {\n    require(_item == EMPTY);\n    _;\n  }\n\n  modifier not_null_string(string _item) {\n    bytes memory _i = bytes(_item);\n    require(_i.length > 0);\n    _;\n  }\n\n  modifier if_null_string(string _item) {\n    bytes memory _i = bytes(_item);\n    require(_i.length == 0);\n    _;\n  }\n\n  modifier require_gas(uint256 _requiredgas) {\n    require(msg.gas  >= (_requiredgas - 22000));\n    _;\n  }\n\n  function is_contract(address _contract)\n           public\n           constant\n           returns (bool _is_contract)\n  {\n    uint32 _code_length;\n\n    assembly {\n      _code_length := extcodesize(_contract)\n    }\n\n    if(_code_length > 1) {\n      _is_contract = true;\n    } else {\n      _is_contract = false;\n    }\n  }\n\n  modifier if_contract(address _contract) {\n    require(is_contract(_contract) == true);\n    _;\n  }\n\n  modifier unless_contract(address _contract) {\n    require(is_contract(_contract) == false);\n    _;\n  }\n\n}\n",
-  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/ACConditions.sol",
+  "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/ACConditions.sol",
   "ast": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACConditions.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACConditions.sol",
     "exportedSymbols": {
       "ACConditions": [
         185
@@ -49,7 +49,7 @@
         "src": "0:24:0"
       },
       {
-        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Constants.sol",
+        "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Constants.sol",
         "file": "./Constants.sol",
         "id": 2,
         "nodeType": "ImportDirective",
@@ -62,7 +62,7 @@
       {
         "baseContracts": [
           {
-            "arguments": [],
+            "arguments": null,
             "baseName": {
               "contractScope": null,
               "id": 3,
@@ -160,8 +160,11 @@
                       "id": 8,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "207:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -193,6 +196,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 16,
             "name": "not_null_address",
             "nodeType": "ModifierDefinition",
@@ -298,8 +302,11 @@
                       "id": 20,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "299:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -331,6 +338,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 28,
             "name": "if_null_address",
             "nodeType": "ModifierDefinition",
@@ -436,8 +444,11 @@
                       "id": 32,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "389:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -469,6 +480,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 40,
             "name": "not_null_uint",
             "nodeType": "ModifierDefinition",
@@ -574,8 +586,11 @@
                       "id": 44,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "470:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -607,6 +622,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 52,
             "name": "if_null_uint",
             "nodeType": "ModifierDefinition",
@@ -712,8 +728,11 @@
                       "id": 56,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "554:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -745,6 +764,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 64,
             "name": "not_empty_bytes",
             "nodeType": "ModifierDefinition",
@@ -850,8 +870,11 @@
                       "id": 68,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "638:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -883,6 +906,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 76,
             "name": "if_empty_bytes",
             "nodeType": "ModifierDefinition",
@@ -944,7 +968,7 @@
                       "storageLocation": "memory",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_memory_ptr",
-                        "typeString": "bytes memory"
+                        "typeString": "bytes"
                       },
                       "typeName": {
                         "id": 80,
@@ -953,7 +977,7 @@
                         "src": "722:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_storage_ptr",
-                          "typeString": "bytes storage pointer"
+                          "typeString": "bytes"
                         }
                       },
                       "value": null,
@@ -1096,8 +1120,11 @@
                       "id": 86,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "758:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1129,6 +1156,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 95,
             "name": "not_null_string",
             "nodeType": "ModifierDefinition",
@@ -1147,7 +1175,7 @@
                   "storageLocation": "default",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string memory"
+                    "typeString": "string"
                   },
                   "typeName": {
                     "id": 77,
@@ -1156,7 +1184,7 @@
                     "src": "702:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string storage pointer"
+                      "typeString": "string"
                     }
                   },
                   "value": null,
@@ -1190,7 +1218,7 @@
                       "storageLocation": "memory",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_memory_ptr",
-                        "typeString": "bytes memory"
+                        "typeString": "bytes"
                       },
                       "typeName": {
                         "id": 99,
@@ -1199,7 +1227,7 @@
                         "src": "840:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_storage_ptr",
-                          "typeString": "bytes storage pointer"
+                          "typeString": "bytes"
                         }
                       },
                       "value": null,
@@ -1342,8 +1370,11 @@
                       "id": 105,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "876:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1375,6 +1406,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 114,
             "name": "if_null_string",
             "nodeType": "ModifierDefinition",
@@ -1393,7 +1425,7 @@
                   "storageLocation": "default",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string memory"
+                    "typeString": "string"
                   },
                   "typeName": {
                     "id": 96,
@@ -1402,7 +1434,7 @@
                     "src": "820:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string storage pointer"
+                      "typeString": "string"
                     }
                   },
                   "value": null,
@@ -1443,7 +1475,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2741,
+                            "referencedDeclaration": 2728,
                             "src": "972:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1550,8 +1582,11 @@
                       "id": 118,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "964:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1583,6 +1618,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 130,
             "name": "require_gas",
             "nodeType": "ModifierDefinition",
@@ -1862,6 +1898,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 156,
             "implemented": true,
             "isConstructor": false,
@@ -2049,8 +2086,11 @@
                       "id": 160,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "1391:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2082,6 +2122,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 170,
             "name": "if_contract",
             "nodeType": "ModifierDefinition",
@@ -2228,8 +2269,11 @@
                       "id": 174,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "1496:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2261,6 +2305,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 184,
             "name": "unless_contract",
             "nodeType": "ModifierDefinition",
@@ -2308,7 +2353,7 @@
     "src": "0:1552:0"
   },
   "legacyAST": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACConditions.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACConditions.sol",
     "exportedSymbols": {
       "ACConditions": [
         185
@@ -2329,7 +2374,7 @@
         "src": "0:24:0"
       },
       {
-        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Constants.sol",
+        "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Constants.sol",
         "file": "./Constants.sol",
         "id": 2,
         "nodeType": "ImportDirective",
@@ -2342,7 +2387,7 @@
       {
         "baseContracts": [
           {
-            "arguments": [],
+            "arguments": null,
             "baseName": {
               "contractScope": null,
               "id": 3,
@@ -2440,8 +2485,11 @@
                       "id": 8,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "207:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2473,6 +2521,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 16,
             "name": "not_null_address",
             "nodeType": "ModifierDefinition",
@@ -2578,8 +2627,11 @@
                       "id": 20,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "299:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2611,6 +2663,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 28,
             "name": "if_null_address",
             "nodeType": "ModifierDefinition",
@@ -2716,8 +2769,11 @@
                       "id": 32,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "389:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2749,6 +2805,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 40,
             "name": "not_null_uint",
             "nodeType": "ModifierDefinition",
@@ -2854,8 +2911,11 @@
                       "id": 44,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "470:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2887,6 +2947,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 52,
             "name": "if_null_uint",
             "nodeType": "ModifierDefinition",
@@ -2992,8 +3053,11 @@
                       "id": 56,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "554:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3025,6 +3089,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 64,
             "name": "not_empty_bytes",
             "nodeType": "ModifierDefinition",
@@ -3130,8 +3195,11 @@
                       "id": 68,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "638:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3163,6 +3231,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 76,
             "name": "if_empty_bytes",
             "nodeType": "ModifierDefinition",
@@ -3224,7 +3293,7 @@
                       "storageLocation": "memory",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_memory_ptr",
-                        "typeString": "bytes memory"
+                        "typeString": "bytes"
                       },
                       "typeName": {
                         "id": 80,
@@ -3233,7 +3302,7 @@
                         "src": "722:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_storage_ptr",
-                          "typeString": "bytes storage pointer"
+                          "typeString": "bytes"
                         }
                       },
                       "value": null,
@@ -3376,8 +3445,11 @@
                       "id": 86,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "758:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3409,6 +3481,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 95,
             "name": "not_null_string",
             "nodeType": "ModifierDefinition",
@@ -3427,7 +3500,7 @@
                   "storageLocation": "default",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string memory"
+                    "typeString": "string"
                   },
                   "typeName": {
                     "id": 77,
@@ -3436,7 +3509,7 @@
                     "src": "702:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string storage pointer"
+                      "typeString": "string"
                     }
                   },
                   "value": null,
@@ -3470,7 +3543,7 @@
                       "storageLocation": "memory",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_memory_ptr",
-                        "typeString": "bytes memory"
+                        "typeString": "bytes"
                       },
                       "typeName": {
                         "id": 99,
@@ -3479,7 +3552,7 @@
                         "src": "840:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_storage_ptr",
-                          "typeString": "bytes storage pointer"
+                          "typeString": "bytes"
                         }
                       },
                       "value": null,
@@ -3622,8 +3695,11 @@
                       "id": 105,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "876:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3655,6 +3731,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 114,
             "name": "if_null_string",
             "nodeType": "ModifierDefinition",
@@ -3673,7 +3750,7 @@
                   "storageLocation": "default",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string memory"
+                    "typeString": "string"
                   },
                   "typeName": {
                     "id": 96,
@@ -3682,7 +3759,7 @@
                     "src": "820:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string storage pointer"
+                      "typeString": "string"
                     }
                   },
                   "value": null,
@@ -3723,7 +3800,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2741,
+                            "referencedDeclaration": 2728,
                             "src": "972:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -3830,8 +3907,11 @@
                       "id": 118,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "964:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3863,6 +3943,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 130,
             "name": "require_gas",
             "nodeType": "ModifierDefinition",
@@ -4142,6 +4223,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 156,
             "implemented": true,
             "isConstructor": false,
@@ -4329,8 +4411,11 @@
                       "id": 160,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "1391:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -4362,6 +4447,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 170,
             "name": "if_contract",
             "nodeType": "ModifierDefinition",
@@ -4508,8 +4594,11 @@
                       "id": 174,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "1496:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -4541,6 +4630,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 184,
             "name": "unless_contract",
             "nodeType": "ModifierDefinition",
@@ -4589,9 +4679,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-19T06:36:08.578Z"
+  "updatedAt": "2018-05-30T02:43:30.974Z"
 }

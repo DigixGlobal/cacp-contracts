@@ -1,14 +1,14 @@
 {
   "contractName": "ACDates",
   "abi": [],
-  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a7230582023ff36d118138261c363702c7eab2ca1b83f9a02baa9d6ff7a9a7f7a98c99e310029",
-  "deployedBytecode": "0x6060604052600080fd00a165627a7a7230582023ff36d118138261c363702c7eab2ca1b83f9a02baa9d6ff7a9a7f7a98c99e310029",
-  "sourceMap": "93:171:1:-;;;;;;;;;;;;;;;;;",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058205ae23f7c2871c97f72acb02d736e73326323f6bc3c4e33711c5cfddcc21a290c0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058205ae23f7c2871c97f72acb02d736e73326323f6bc3c4e33711c5cfddcc21a290c0029",
+  "sourceMap": "93:171:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;93:171:1;;;;;;;",
   "deployedSourceMap": "93:171:1:-;;;;;",
   "source": "pragma solidity ^0.4.19;\n\n/// @title Blocktime based access control\n/// @author DigixGlobal\n\ncontract ACDates {\n\n  modifier if_before(uint256 _date) {\n    require(now < _date);\n    _;\n  }\n\n  modifier if_after(uint256 _date) {\n    require(now > _date);\n    _;\n  }\n}\n",
-  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/ACDates.sol",
+  "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/ACDates.sol",
   "ast": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACDates.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACDates.sol",
     "exportedSymbols": {
       "ACDates": [
         212
@@ -68,7 +68,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2743,
+                          "referencedDeclaration": 2730,
                           "src": "163:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -107,8 +107,11 @@
                       "id": 191,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "155:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -140,6 +143,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 199,
             "name": "if_before",
             "nodeType": "ModifierDefinition",
@@ -206,7 +210,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2743,
+                          "referencedDeclaration": 2730,
                           "src": "238:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -245,8 +249,11 @@
                       "id": 203,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "230:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -278,6 +285,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 211,
             "name": "if_after",
             "nodeType": "ModifierDefinition",
@@ -325,7 +333,7 @@
     "src": "0:265:1"
   },
   "legacyAST": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACDates.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACDates.sol",
     "exportedSymbols": {
       "ACDates": [
         212
@@ -385,7 +393,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2743,
+                          "referencedDeclaration": 2730,
                           "src": "163:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -424,8 +432,11 @@
                       "id": 191,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "155:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -457,6 +468,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 199,
             "name": "if_before",
             "nodeType": "ModifierDefinition",
@@ -523,7 +535,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2743,
+                          "referencedDeclaration": 2730,
                           "src": "238:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -562,8 +574,11 @@
                       "id": 203,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "230:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -595,6 +610,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 211,
             "name": "if_after",
             "nodeType": "ModifierDefinition",
@@ -643,9 +659,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-19T06:36:08.579Z"
+  "updatedAt": "2018-05-30T02:43:30.977Z"
 }

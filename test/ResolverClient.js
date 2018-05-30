@@ -12,6 +12,8 @@ contract('ResolverClient', function (addresses) {
     mockContractResolver = await MockContractResolver.new();
     await mockResolverClient.mock_set_resolver(mockContractResolver.address);
     await mockContractResolver.mock_register_contract(addresses[0], 'test_key');
+    await mockContractResolver.mock_register_contract(addresses[1], 'test_key_one_more');
+    await mockContractResolver.mock_register_contract(addresses[2], 'test_key_another');
   });
 
   describe('if_sender_is', function () {
@@ -20,6 +22,21 @@ contract('ResolverClient', function (addresses) {
     });
     it('does not throw if sender is registered correctly in the ContractResolver', async function () {
       assert.deepEqual(await mockResolverClient.test_if_sender_is.call('test_key'), true);
+    });
+  });
+
+  describe('if_sender_is_from', function () {
+    it('throw if not from any', async function () {
+      assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['random_key', 'another_random_key'])));
+    });
+    it('success if any one of them', async function () {
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key'], { from: addresses[0] }), true);
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key'], { from: addresses[1] }), true);
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key_another'], { from: addresses[2] }), true);
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key', 'test_key_another'], { from: addresses[2] }), true);
+      assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key'], { from: addresses[2] })));
+      assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['test_key_another', 'test_key'], { from: addresses[1] })));
+      assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['test_key_another', 'test_key_one_more'], { from: addresses[0] })));
     });
   });
 
@@ -64,28 +81,4 @@ contract('ResolverClient', function (addresses) {
       assert.deepEqual(await mockResolverClient.get_contract.call('init_key_2'), mockResolverClient.address);
     });
   });
-
-  // describe('destroy', function () {
-  //   const etherAmount = 1000;
-  //   before(async function () {
-  //     await mockResolverClient.test_add_ether({ from: addresses[0], value: web3.toWei(etherAmount, 'ether') });
-  //     assert.deepEqual(web3.eth.getBalance(mockResolverClient.address), bN(web3.toWei(etherAmount, 'ether')));
-  //   });
-  //   it('[change ownership, not yet claimed, new_owner try to destroy]: throw', async function () {
-  //     assert.deepEqual(await mockContractResolver.change_owner.call(addresses[2]), true);
-  //     await mockContractResolver.change_owner(addresses[2]);
-  //     assert.ok(await a.failure(mockResolverClient.destroy.call({ from: addresses[2] })));
-  //   });
-  //   it('[claim ownership, destroy (previous owner cannot destroy)]: success, owner receives the ResolverClient ether balance', async function () {
-  //     assert.deepEqual(await mockContractResolver.claim_ownership.call({ from: addresses[2] }), true);
-  //     await mockContractResolver.claim_ownership({ from: addresses[2] });
-  //     assert.ok(await a.failure(mockResolverClient.destroy()));
-  //
-  //     const ownerBalanceBeforeDestroying = web3.eth.getBalance(addresses[2]);
-  //     const tx = await mockResolverClient.destroy({ from: addresses[2] });
-  //     const ownerBalanceAfterDestroying = web3.eth.getBalance(addresses[2]);
-  //     const weiUsed = bN(tx.receipt.gasUsed * 21 * (10 ** 9)); // add `gasPrice` to 'truffle.js'
-  //     assert.deepEqual(ownerBalanceAfterDestroying, ownerBalanceBeforeDestroying.plus(web3.toWei(etherAmount, 'ether')).minus(weiUsed));
-  //   });
-  // });
 });

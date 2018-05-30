@@ -1,14 +1,14 @@
 {
   "contractName": "ACState",
   "abi": [],
-  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820d7df2ff4b95fbce37ed1f012ded9df99e369cccc97686914d2d580fb182241ed0029",
-  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820d7df2ff4b95fbce37ed1f012ded9df99e369cccc97686914d2d580fb182241ed0029",
-  "sourceMap": "91:846:5:-;;;;;;;;;;;;;;;;;",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058205d46d441f616410a279d03e572663832ffb5cb5f84d2eb9989c0d0047ee5acfc0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058205d46d441f616410a279d03e572663832ffb5cb5f84d2eb9989c0d0047ee5acfc0029",
+  "sourceMap": "91:846:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;91:846:5;;;;;;;",
   "deployedSourceMap": "91:846:5:-;;;;;",
   "source": "pragma solidity ^0.4.19;\n\n/// @title State machine access control\n/// @author DigixGlobal\n\ncontract ACState {\n\n  mapping (bytes32 => uint256) states;\n\n  modifier if_state(bytes32 _key, uint8 _state) {\n    require(states[_key] == _state);\n    _;\n  }\n\n  modifier unless_state(bytes32 _key, uint8 _state) {\n    require(states[_key] != _state);\n    _;\n  }\n\n  modifier set_state_after(bytes32 _key, uint8 _state) {\n    _;\n    states[_key] = _state;\n  }\n\n  modifier increment_state_after(bytes32 _key) {\n    _;\n    states[_key]++;\n  }\n\n  modifier decrement_state_after(bytes32 _key) {\n    _;\n    states[_key]--;\n  }\n\n  modifier increment_state_before(bytes32 _key) {\n    states[_key]++;\n    _;\n  }\n\n  modifier decrement_state_before(bytes32 _key) {\n    states[_key]--;\n    _;\n  }\n\n  function set_state(bytes32 _key, uint8 _state)\n           internal\n           returns (bool _success)\n  {\n    states[_key] = _state;\n    _success = true;\n  }\n\n}\n",
-  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/ACState.sol",
+  "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/ACState.sol",
   "ast": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACState.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACState.sol",
     "exportedSymbols": {
       "ACState": [
         739
@@ -179,8 +179,11 @@
                       "id": 634,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "205:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -212,6 +215,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 644,
             "name": "if_state",
             "nodeType": "ModifierDefinition",
@@ -370,8 +374,11 @@
                       "id": 650,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "308:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -403,6 +410,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 660,
             "name": "unless_state",
             "nodeType": "ModifierDefinition",
@@ -554,6 +562,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 674,
             "name": "set_state_after",
             "nodeType": "ModifierDefinition",
@@ -693,6 +702,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 685,
             "name": "increment_state_after",
             "nodeType": "ModifierDefinition",
@@ -806,6 +816,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 696,
             "name": "decrement_state_after",
             "nodeType": "ModifierDefinition",
@@ -919,6 +930,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 707,
             "name": "increment_state_before",
             "nodeType": "ModifierDefinition",
@@ -1032,6 +1044,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 718,
             "name": "decrement_state_before",
             "nodeType": "ModifierDefinition",
@@ -1203,6 +1216,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 738,
             "implemented": true,
             "isConstructor": false,
@@ -1317,7 +1331,7 @@
     "src": "0:938:5"
   },
   "legacyAST": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACState.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACState.sol",
     "exportedSymbols": {
       "ACState": [
         739
@@ -1488,8 +1502,11 @@
                       "id": 634,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "205:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1521,6 +1538,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 644,
             "name": "if_state",
             "nodeType": "ModifierDefinition",
@@ -1679,8 +1697,11 @@
                       "id": 650,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 2744,
+                      "overloadedDeclarations": [
+                        2731,
+                        2732
+                      ],
+                      "referencedDeclaration": 2731,
                       "src": "308:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1712,6 +1733,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 660,
             "name": "unless_state",
             "nodeType": "ModifierDefinition",
@@ -1863,6 +1885,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 674,
             "name": "set_state_after",
             "nodeType": "ModifierDefinition",
@@ -2002,6 +2025,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 685,
             "name": "increment_state_after",
             "nodeType": "ModifierDefinition",
@@ -2115,6 +2139,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 696,
             "name": "decrement_state_after",
             "nodeType": "ModifierDefinition",
@@ -2228,6 +2253,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 707,
             "name": "increment_state_before",
             "nodeType": "ModifierDefinition",
@@ -2341,6 +2367,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 718,
             "name": "decrement_state_before",
             "nodeType": "ModifierDefinition",
@@ -2512,6 +2539,7 @@
                 }
               ]
             },
+            "documentation": null,
             "id": 738,
             "implemented": true,
             "isConstructor": false,
@@ -2627,9 +2655,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-19T06:36:08.580Z"
+  "updatedAt": "2018-05-30T02:43:30.979Z"
 }

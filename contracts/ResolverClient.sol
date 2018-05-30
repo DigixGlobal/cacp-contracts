@@ -22,6 +22,18 @@ contract ResolverClient {
     _;
   }
 
+  modifier if_sender_is_from(bytes32[] _contracts) {
+    bool _valid = false;
+    uint256 _n = _contracts.length;
+    for (uint256 i = 0; i < _n; i++) {
+      if (msg.sender == ContractResolver(resolver).get_contract(_contracts[i])) {
+        _valid = true;
+      }
+    }
+    require(_valid);
+    _;
+  }
+
   /// Function modifier to check resolver's locking status.
   modifier unless_resolver_is_locked() {
     require(is_locked() == false);
