@@ -30,13 +30,16 @@ contract('ResolverClient', function (addresses) {
       assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['random_key', 'another_random_key'])));
     });
     it('success if any one of them', async function () {
-      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key'], { from: addresses[0] }), true);
-      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key'], { from: addresses[1] }), true);
-      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key_another'], { from: addresses[2] }), true);
-      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key', 'test_key_another'], { from: addresses[2] }), true);
-      assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key'], { from: addresses[2] })));
-      assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['test_key_another', 'test_key'], { from: addresses[1] })));
-      assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['test_key_another', 'test_key_one_more'], { from: addresses[0] })));
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key', '0x0'], { from: addresses[0] }), true);
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key', '0x0'], { from: addresses[1] }), true);
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key_another', '0x0'], { from: addresses[2] }), true);
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key', 'test_key_another', '0x0'], { from: addresses[2] }), true);
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key', 'test_key_another', 'test_key_one_more'], { from: addresses[0] }), true);
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key', 'test_key_another', 'test_key_one_more'], { from: addresses[1] }), true);
+      assert.deepEqual(await mockResolverClient.test_if_sender_is_from.call(['test_key', 'test_key_another', 'test_key_one_more'], { from: addresses[2] }), true);
+      assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['test_key_one_more', 'test_key', '0x0'], { from: addresses[2] })));
+      assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['test_key_another', 'test_key', '0x0'], { from: addresses[1] })));
+      assert(await a.failure(mockResolverClient.test_if_sender_is_from.call(['test_key_another', 'test_key_one_more', '0x0'], { from: addresses[0] })));
     });
   });
 

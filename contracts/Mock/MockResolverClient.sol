@@ -23,7 +23,7 @@ contract MockResolverClient is ResolverClient {
     _success = true;
   }
 
-  function test_if_sender_is_from(bytes32[] _contracts)
+  function test_if_sender_is_from(bytes32[3] _contracts)
            if_sender_is_from(_contracts)
            public
            constant

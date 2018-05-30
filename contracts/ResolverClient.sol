@@ -22,10 +22,11 @@ contract ResolverClient {
     _;
   }
 
-  modifier if_sender_is_from(bytes32[] _contracts) {
+  modifier if_sender_is_from(bytes32[3] _contracts) {
     bool _valid = false;
     uint256 _n = _contracts.length;
     for (uint256 i = 0; i < _n; i++) {
+      if (_contracts[i] == bytes32(0x0)) continue;
       if (msg.sender == ContractResolver(resolver).get_contract(_contracts[i])) {
         _valid = true;
       }
