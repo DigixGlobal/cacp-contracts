@@ -21,14 +21,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b5060e78061001f6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806327379aa7146044575b600080fd5b348015604f57600080fd5b5060706004803603810190808035600019169060200190929190505050608a565b604051808215151515815260200191505060405180910390f35b6000806000836000191660001916815260200190815260200160002060009054906101000a900460ff1690509190505600a165627a7a7230582065a194c3a38480f861a74a8cf8a131b3ce81e56208ca0d90bd3db4b91f0c7dc20029",
-  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806327379aa7146044575b600080fd5b348015604f57600080fd5b5060706004803603810190808035600019169060200190929190505050608a565b604051808215151515815260200191505060405180910390f35b6000806000836000191660001916815260200190815260200160002060009054906101000a900460ff1690509190505600a165627a7a7230582065a194c3a38480f861a74a8cf8a131b3ce81e56208ca0d90bd3db4b91f0c7dc20029",
+  "bytecode": "0x608060405234801561001057600080fd5b5060e78061001f6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806327379aa7146044575b600080fd5b348015604f57600080fd5b5060706004803603810190808035600019169060200190929190505050608a565b604051808215151515815260200191505060405180910390f35b6000806000836000191660001916815260200190815260200160002060009054906101000a900460ff1690509190505600a165627a7a72305820a26d5d9b8b428561ece15fbba526635e2634fe742c44240b02fedbac700cfb180029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806327379aa7146044575b600080fd5b348015604f57600080fd5b5060706004803603810190808035600019169060200190929190505050608a565b604051808215151515815260200191505060405180910390f35b6000806000836000191660001916815260200190815260200160002060009054906101000a900460ff1690509190505600a165627a7a72305820a26d5d9b8b428561ece15fbba526635e2634fe742c44240b02fedbac700cfb180029",
   "sourceMap": "91:813:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;91:813:4;;;;;;;",
   "deployedSourceMap": "91:813:4:-;;;;;;;;;;;;;;;;;;;;;;;;739:162;;8:9:-1;5:2;;;30:1;27;20:12;5:2;739:162:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;848:12;880:5;:16;886:9;880:16;;;;;;;;;;;;;;;;;;;;;;;;;;;870:26;;739:162;;;:::o",
   "source": "pragma solidity ^0.4.19;\n\n/// @title Locking based access control\n/// @author DigixGlobal\n\ncontract ACSimpleMutex {\n\n  mapping (bytes32 => bool) locks;\n\n  modifier if_simple_mutex_is_locked(bytes32 _mutex_id) {\n    require(is_simple_mutex_locked(_mutex_id) == true);\n    _;\n  }\n\n  modifier unless_simple_mutex_is_locked(bytes32 _mutex_id) {\n    require(is_simple_mutex_locked(_mutex_id) == false);\n    _;\n  }\n\n  function lock_simple_mutex(bytes32 _mutex_id)\n           internal\n           returns (bool _success)\n  {\n    locks[_mutex_id] = true;\n    _success = true;\n  }\n\n  function unlock_simple_mutex(bytes32 _mutex_id)\n           internal\n           returns (bool _success)\n  {\n    locks[_mutex_id] = false;\n    _success = true;\n  }\n\n  function is_simple_mutex_locked(bytes32 _mutex_id)\n           public\n           constant\n           returns (bool _locked)\n  {\n    _locked = locks[_mutex_id];\n  }\n\n}\n",
-  "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/ACSimpleMutex.sol",
+  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/ACSimpleMutex.sol",
   "ast": {
-    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACSimpleMutex.sol",
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACSimpleMutex.sol",
     "exportedSymbols": {
       "ACSimpleMutex": [
         622
@@ -214,10 +214,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "215:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -397,10 +397,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "345:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1078,7 +1078,7 @@
     "src": "0:905:4"
   },
   "legacyAST": {
-    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACSimpleMutex.sol",
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACSimpleMutex.sol",
     "exportedSymbols": {
       "ACSimpleMutex": [
         622
@@ -1264,10 +1264,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "215:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1447,10 +1447,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "345:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2129,9 +2129,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-30T03:27:23.385Z"
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-08-01T06:55:27.709Z"
 }

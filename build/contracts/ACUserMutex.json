@@ -1,14 +1,14 @@
 {
   "contractName": "ACUserMutex",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820bedf7000b143e95b20be5cba4b0b4e907fc69d7f5c9304d4ff34701e4cdd5e3f0029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820bedf7000b143e95b20be5cba4b0b4e907fc69d7f5c9304d4ff34701e4cdd5e3f0029",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058201412b99da7407c90e23406b69924217cd90d6facb6eaaf6ddcefcc4724f9c3d20029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058201412b99da7407c90e23406b69924217cd90d6facb6eaaf6ddcefcc4724f9c3d20029",
   "sourceMap": "100:1002:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;100:1002:7;;;;;;;",
   "deployedSourceMap": "100:1002:7:-;;;;;",
   "source": "pragma solidity ^0.4.19;\n\n/// @title Per user locking based access control\n/// @author DigixGlobal\n\ncontract ACUserMutex {\n\n  mapping (address => mapping (bytes32 => bool)) user_mutexes;\n\n  modifier if_user_mutex_locked(bytes32 _mutex_id) {\n    require(user_mutexes[msg.sender][_mutex_id] == true);\n    _;\n  }\n\n  modifier unless_user_mutex_locked(bytes32 _mutex_id) {\n    require(user_mutexes[msg.sender][_mutex_id] == false);\n    _;\n  }\n\n  modifier lock_before_action(bytes32 _mutex_id) {\n    require(lock_user_mutex(_mutex_id));\n    _;\n  }\n\n  modifier unlock_after_action(bytes32 _mutex_id) {\n    _;\n    require(unlock_user_mutex(_mutex_id));\n  }\n\n  function lock_user_mutex(bytes32 _mutex_id)\n           unless_user_mutex_locked(_mutex_id)\n           internal\n           returns (bool _success)\n  {\n    user_mutexes[msg.sender][_mutex_id] = true;\n    _success = true;\n  }\n\n  function unlock_user_mutex(bytes32 _mutex_id)\n           if_user_mutex_locked(_mutex_id)\n           internal\n           returns (bool _success)\n  {\n    user_mutexes[msg.sender][_mutex_id] = false;\n    _success = true;\n  }\n\n}\n",
-  "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/ACUserMutex.sol",
+  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/ACUserMutex.sol",
   "ast": {
-    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACUserMutex.sol",
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACUserMutex.sol",
     "exportedSymbols": {
       "ACUserMutex": [
         967
@@ -152,7 +152,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2739,
+                                "referencedDeclaration": 2761,
                                 "src": "266:3:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -247,10 +247,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "245:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -369,7 +369,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2739,
+                                "referencedDeclaration": 2761,
                                 "src": "393:3:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -464,10 +464,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "372:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -610,10 +610,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "494:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -761,10 +761,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "606:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -871,7 +871,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2739,
+                            "referencedDeclaration": 2761,
                             "src": "819:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1166,7 +1166,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2739,
+                            "referencedDeclaration": 2761,
                             "src": "1043:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1429,7 +1429,7 @@
     "src": "0:1103:7"
   },
   "legacyAST": {
-    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACUserMutex.sol",
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACUserMutex.sol",
     "exportedSymbols": {
       "ACUserMutex": [
         967
@@ -1573,7 +1573,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2739,
+                                "referencedDeclaration": 2761,
                                 "src": "266:3:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -1668,10 +1668,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "245:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1790,7 +1790,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2739,
+                                "referencedDeclaration": 2761,
                                 "src": "393:3:7",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -1885,10 +1885,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "372:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2031,10 +2031,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "494:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2182,10 +2182,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "606:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2292,7 +2292,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2739,
+                            "referencedDeclaration": 2761,
                             "src": "819:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2587,7 +2587,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2739,
+                            "referencedDeclaration": 2761,
                             "src": "1043:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2851,9 +2851,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-30T03:27:23.387Z"
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-08-01T06:55:27.713Z"
 }

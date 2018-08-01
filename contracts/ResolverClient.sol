@@ -18,21 +18,27 @@ contract ResolverClient {
   /// Function modifier to check if msg.sender corresponds to the resolved address of a given key
   /// @param _contract The resolver key
   modifier if_sender_is(bytes32 _contract) {
-    require(msg.sender == ContractResolver(resolver).get_contract(_contract));
+    require(sender_is(_contract));
     _;
   }
 
+  function sender_is(bytes32 _contract) internal view returns (bool _isFrom) {
+    _isFrom = msg.sender == ContractResolver(resolver).get_contract(_contract);
+  }
+
   modifier if_sender_is_from(bytes32[3] _contracts) {
-    bool _valid = false;
+    require(sender_is_from(_contracts));
+    _;
+  }
+
+  function sender_is_from(bytes32[3] _contracts) internal view returns (bool _isFrom) {
     uint256 _n = _contracts.length;
     for (uint256 i = 0; i < _n; i++) {
       if (_contracts[i] == bytes32(0x0)) continue;
       if (msg.sender == ContractResolver(resolver).get_contract(_contracts[i])) {
-        _valid = true;
+        _isFrom = true;
       }
     }
-    require(_valid);
-    _;
   }
 
   /// Function modifier to check resolver's locking status.

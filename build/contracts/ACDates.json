@@ -1,14 +1,14 @@
 {
   "contractName": "ACDates",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058205ae23f7c2871c97f72acb02d736e73326323f6bc3c4e33711c5cfddcc21a290c0029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058205ae23f7c2871c97f72acb02d736e73326323f6bc3c4e33711c5cfddcc21a290c0029",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582037ee2f8176dd89ab5ca95d8385f0cf208dabb9e214403633a9b53319d67ce9c80029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582037ee2f8176dd89ab5ca95d8385f0cf208dabb9e214403633a9b53319d67ce9c80029",
   "sourceMap": "93:171:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;93:171:1;;;;;;;",
   "deployedSourceMap": "93:171:1:-;;;;;",
   "source": "pragma solidity ^0.4.19;\n\n/// @title Blocktime based access control\n/// @author DigixGlobal\n\ncontract ACDates {\n\n  modifier if_before(uint256 _date) {\n    require(now < _date);\n    _;\n  }\n\n  modifier if_after(uint256 _date) {\n    require(now > _date);\n    _;\n  }\n}\n",
-  "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/ACDates.sol",
+  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/ACDates.sol",
   "ast": {
-    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACDates.sol",
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACDates.sol",
     "exportedSymbols": {
       "ACDates": [
         212
@@ -68,7 +68,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2741,
+                          "referencedDeclaration": 2763,
                           "src": "163:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -108,10 +108,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "155:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -210,7 +210,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2741,
+                          "referencedDeclaration": 2763,
                           "src": "238:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -250,10 +250,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "230:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -333,7 +333,7 @@
     "src": "0:265:1"
   },
   "legacyAST": {
-    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACDates.sol",
+    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACDates.sol",
     "exportedSymbols": {
       "ACDates": [
         212
@@ -393,7 +393,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2741,
+                          "referencedDeclaration": 2763,
                           "src": "163:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -433,10 +433,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "155:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -535,7 +535,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2741,
+                          "referencedDeclaration": 2763,
                           "src": "238:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -575,10 +575,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2742,
-                        2743
+                        2764,
+                        2765
                       ],
-                      "referencedDeclaration": 2742,
+                      "referencedDeclaration": 2764,
                       "src": "230:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -659,9 +659,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-30T03:27:23.383Z"
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-08-01T06:55:27.707Z"
 }
