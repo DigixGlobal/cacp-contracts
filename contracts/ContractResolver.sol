@@ -48,7 +48,7 @@ contract ContractResolver is ACGroups, Constants {
   }
 
   /// @dev ContractResolver constructor will perform the following: 1. Set msg.sender as the contract owner.  2. Adds msg.sender to the default groups 'admins' and 'nsadmins'
-  function ContractResolver() public
+  constructor() public
   {
     require(init_ac_groups());
     groups["nsadmins"].members[owner] = true;
@@ -121,7 +121,7 @@ contract ContractResolver is ACGroups, Constants {
            returns (bool _success)
   {
     contracts[_key] = _contract;
-    RegisterEvent(_key, _contract);
+    emit RegisterEvent(_key, _contract);
     _success = true;
   }
 
