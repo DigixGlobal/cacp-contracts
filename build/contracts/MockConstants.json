@@ -24,14 +24,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b5060f18061001f6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063bc17db50146044575b600080fd5b348015604f57600080fd5b50605660ae565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018381526020018260001916600019168152602001935050505060405180910390f35b6000806000806000806001029250925092509091925600a165627a7a72305820f9ce30294c46f083374a9aff599c35eed3e7f308d3ab79cef27bc1b145ee267e0029",
-  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063bc17db50146044575b600080fd5b348015604f57600080fd5b50605660ae565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018381526020018260001916600019168152602001935050505060405180910390f35b6000806000806000806001029250925092509091925600a165627a7a72305820f9ce30294c46f083374a9aff599c35eed3e7f308d3ab79cef27bc1b145ee267e0029",
+  "bytecode": "0x608060405234801561001057600080fd5b5060f18061001f6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063bc17db50146044575b600080fd5b348015604f57600080fd5b50605660ae565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018381526020018260001916600019168152602001935050505060405180910390f35b6000806000806000806001029250925092509091925600a165627a7a72305820a196b096267061f2e0fb30fe3d19a7e8775e934d97cd18ca804309243b2ef26c0029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063bc17db50146044575b600080fd5b348015604f57600080fd5b50605660ae565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018381526020018260001916600019168152602001935050505060405180910390f35b6000806000806000806001029250925092509091925600a165627a7a72305820a196b096267061f2e0fb30fe3d19a7e8775e934d97cd18ca804309243b2ef26c0029",
   "sourceMap": "110:289:19:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;110:289:19;;;;;;;",
   "deployedSourceMap": "110:289:19:-;;;;;;;;;;;;;;;;;;;;;;;;277:119;;8:9:-1;5:2;;;30:1;27;20:12;5:2;277:119:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;324:7;333;342;189:3;229:1;268:3;260:12;;357:34;;;;;;277:119;;;:::o",
   "source": "pragma solidity ^0.4.19;\nimport '../Constants.sol';\n/// @title Some useful constants\n/// @author DigixGlobal\n\ncontract MockConstants is Constants{\n  address constant NULL_ADDRESS = address(0x0);\n  uint256 constant ZERO = uint256(0);\n  bytes32 constant EMPTY = bytes32(0x0);\n\n  function test_constants() public pure returns (address, uint256, bytes32) {\n    return (NULL_ADDRESS, ZERO, EMPTY);\n  }\n\n}\n",
-  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockConstants.sol",
+  "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/Mock/MockConstants.sol",
   "ast": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockConstants.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Mock/MockConstants.sol",
     "exportedSymbols": {
       "MockConstants": [
         2263
@@ -52,7 +52,7 @@
         "src": "0:24:19"
       },
       {
-        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Constants.sol",
+        "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Constants.sol",
         "file": "../Constants.sol",
         "id": 2230,
         "nodeType": "ImportDirective",
@@ -524,7 +524,7 @@
     "src": "0:400:19"
   },
   "legacyAST": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Mock/MockConstants.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Mock/MockConstants.sol",
     "exportedSymbols": {
       "MockConstants": [
         2263
@@ -545,7 +545,7 @@
         "src": "0:24:19"
       },
       {
-        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/Constants.sol",
+        "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/Constants.sol",
         "file": "../Constants.sol",
         "id": 2230,
         "nodeType": "ImportDirective",
@@ -1021,6 +1021,6 @@
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.1",
-  "updatedAt": "2018-08-01T06:55:27.726Z"
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-08-17T06:51:00.391Z"
 }

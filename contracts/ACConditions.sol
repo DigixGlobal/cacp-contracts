@@ -50,7 +50,7 @@ contract ACConditions is Constants {
   }
 
   modifier require_gas(uint256 _requiredgas) {
-    require(msg.gas  >= (_requiredgas - 22000));
+    require(gasleft()  >= (_requiredgas - 22000));
     _;
   }
 

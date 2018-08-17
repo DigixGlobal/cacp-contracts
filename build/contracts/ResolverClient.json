@@ -63,14 +63,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b50610312806100206000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806304f3bcec146100675780633943380c146100be5780633f83acff146100f1578063db4ecbc114610162575b600080fd5b34801561007357600080fd5b5061007c6101b9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100ca57600080fd5b506100d36101de565b60405180826000191660001916815260200191505060405180910390f35b3480156100fd57600080fd5b5061012060048036038101908080356000191690602001909291905050506101e4565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561016e57600080fd5b506101776102c0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60015481565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633f83acff836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808260001916600019168152602001915050602060405180830381600087803b15801561027e57600080fd5b505af1158015610292573d6000803e3d6000fd5b505050506040513d60208110156102a857600080fd5b81019080805190602001909291905050509050919050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058204c54a12de0c7924abfae9179589d1d244136c3c60aaa2e23e7fde6771b49eef60029",
-  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806304f3bcec146100675780633943380c146100be5780633f83acff146100f1578063db4ecbc114610162575b600080fd5b34801561007357600080fd5b5061007c6101b9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100ca57600080fd5b506100d36101de565b60405180826000191660001916815260200191505060405180910390f35b3480156100fd57600080fd5b5061012060048036038101908080356000191690602001909291905050506101e4565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561016e57600080fd5b506101776102c0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60015481565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633f83acff836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808260001916600019168152602001915050602060405180830381600087803b15801561027e57600080fd5b505af1158015610292573d6000803e3d6000fd5b505050506040513d60208110156102a857600080fd5b81019080805190602001909291905050509050919050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058204c54a12de0c7924abfae9179589d1d244136c3c60aaa2e23e7fde6771b49eef60029",
+  "bytecode": "0x608060405234801561001057600080fd5b50610312806100206000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806304f3bcec146100675780633943380c146100be5780633f83acff146100f1578063db4ecbc114610162575b600080fd5b34801561007357600080fd5b5061007c6101b9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100ca57600080fd5b506100d36101de565b60405180826000191660001916815260200191505060405180910390f35b3480156100fd57600080fd5b5061012060048036038101908080356000191690602001909291905050506101e4565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561016e57600080fd5b506101776102c0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60015481565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633f83acff836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808260001916600019168152602001915050602060405180830381600087803b15801561027e57600080fd5b505af1158015610292573d6000803e3d6000fd5b505050506040513d60208110156102a857600080fd5b81019080805190602001909291905050509050919050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058205bd04108cc8d86311d243b7c2105ba151748eb9831b7d37c9900dd9554da56370029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806304f3bcec146100675780633943380c146100be5780633f83acff146100f1578063db4ecbc114610162575b600080fd5b34801561007357600080fd5b5061007c6101b9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100ca57600080fd5b506100d36101de565b60405180826000191660001916815260200191505060405180910390f35b3480156100fd57600080fd5b5061012060048036038101908080356000191690602001909291905050506101e4565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561016e57600080fd5b506101776102c0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60015481565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633f83acff836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808260001916600019168152602001915050602060405180830381600087803b15801561027e57600080fd5b505af1158015610292573d6000803e3d6000fd5b505050506040513d60208110156102a857600080fd5b81019080805190602001909291905050509050919050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058205bd04108cc8d86311d243b7c2105ba151748eb9831b7d37c9900dd9554da56370029",
   "sourceMap": "148:2980:22:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;148:2980:22;;;;;;;",
   "deployedSourceMap": "148:2980:22:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;237:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;237:23:22;;;;;;;;;;;;;;;;;;;;;;;;;;;264:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;264:18:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2943:183;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2943:183:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;344:31;;8:9:-1;5:2;;;30:1;27;20:12;5:2;344:31:22;;;;;;;;;;;;;;;;;;;;;;;;;;;237:23;;;;;;;;;;;;;:::o;264:18::-;;;;:::o;2943:183::-;3037:17;3093:8;;;;;;;;;;;3076:39;;;3116:4;3076:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3076:45:22;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;3076:45:22;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;3076:45:22;;;;;;;;;;;;;;;;3064:57;;2943:183;;;:::o;344:31::-;;;;;;;;;;;;;:::o",
   "source": "pragma solidity ^0.4.19;\n\nimport \"./ContractResolver.sol\";\nimport \"./ACOwned.sol\";\n\n/// @title Contract Resolver Interface\n/// @author DigixGlobal\n\ncontract ResolverClient {\n\n  /// The address of the resolver contract for this project\n  address public resolver;\n  bytes32 public key;\n\n  /// Make our own address available to us as a constant\n  address public CONTRACT_ADDRESS;\n\n  /// Function modifier to check if msg.sender corresponds to the resolved address of a given key\n  /// @param _contract The resolver key\n  modifier if_sender_is(bytes32 _contract) {\n    require(sender_is(_contract));\n    _;\n  }\n\n  function sender_is(bytes32 _contract) internal view returns (bool _isFrom) {\n    _isFrom = msg.sender == ContractResolver(resolver).get_contract(_contract);\n  }\n\n  modifier if_sender_is_from(bytes32[3] _contracts) {\n    require(sender_is_from(_contracts));\n    _;\n  }\n\n  function sender_is_from(bytes32[3] _contracts) internal view returns (bool _isFrom) {\n    uint256 _n = _contracts.length;\n    for (uint256 i = 0; i < _n; i++) {\n      if (_contracts[i] == bytes32(0x0)) continue;\n      if (msg.sender == ContractResolver(resolver).get_contract(_contracts[i])) {\n        _isFrom = true;\n      }\n    }\n  }\n\n  /// Function modifier to check resolver's locking status.\n  modifier unless_resolver_is_locked() {\n    require(is_locked() == false);\n    _;\n  }\n\n  /// @dev Initialize new contract\n  /// @param _key the resolver key for this contract\n  /// @return _success if the initialization is successful\n  function init(bytes32 _key, address _resolver)\n           internal\n           returns (bool _success)\n  {\n    bool _is_locked = ContractResolver(_resolver).locked();\n    if (_is_locked == false) {\n      CONTRACT_ADDRESS = address(this);\n      resolver = _resolver;\n      key = _key;\n      require(ContractResolver(resolver).init_register_contract(key, CONTRACT_ADDRESS));\n      _success = true;\n    }  else {\n      _success = false;\n    }\n  }\n\n  /// @dev Destroy the contract and unregister self from the ContractResolver\n  /// @dev Can only be called by the owner of ContractResolver\n  /* function destroy()\n           public\n           returns (bool _success)\n  {\n    bool _is_locked = ContractResolver(resolver).locked();\n    require(!_is_locked);\n\n    address _owner_of_contract_resolver = ContractResolver(resolver).owner();\n    require(msg.sender == _owner_of_contract_resolver);\n\n    _success = ContractResolver(resolver).unregister_contract(key);\n    require(_success);\n\n    selfdestruct(_owner_of_contract_resolver);\n  } */\n\n  /// @dev Check if resolver is locked\n  /// @return _locked if the resolver is currently locked\n  function is_locked()\n           private\n           constant\n           returns (bool _locked)\n  {\n    _locked = ContractResolver(resolver).locked();\n  }\n\n  /// @dev Get the address of a contract\n  /// @param _key the resolver key to look up\n  /// @return _contract the address of the contract\n  function get_contract(bytes32 _key)\n           public\n           constant\n           returns (address _contract)\n  {\n    _contract = ContractResolver(resolver).get_contract(_key);\n  }\n}\n",
-  "sourcePath": "/home/vu/digix/cacp-contracts/contracts/ResolverClient.sol",
+  "sourcePath": "/home/rohit/Develop/cacp-contracts/contracts/ResolverClient.sol",
   "ast": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ResolverClient.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ResolverClient.sol",
     "exportedSymbols": {
       "ResolverClient": [
         2746
@@ -91,7 +91,7 @@
         "src": "0:24:22"
       },
       {
-        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ContractResolver.sol",
+        "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ContractResolver.sol",
         "file": "./ContractResolver.sol",
         "id": 2541,
         "nodeType": "ImportDirective",
@@ -102,7 +102,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACOwned.sol",
+        "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACOwned.sol",
         "file": "./ACOwned.sol",
         "id": 2542,
         "nodeType": "ImportDirective",
@@ -2772,7 +2772,7 @@
     "src": "0:3129:22"
   },
   "legacyAST": {
-    "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ResolverClient.sol",
+    "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ResolverClient.sol",
     "exportedSymbols": {
       "ResolverClient": [
         2746
@@ -2793,7 +2793,7 @@
         "src": "0:24:22"
       },
       {
-        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ContractResolver.sol",
+        "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ContractResolver.sol",
         "file": "./ContractResolver.sol",
         "id": 2541,
         "nodeType": "ImportDirective",
@@ -2804,7 +2804,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/vu/digix/cacp-contracts/contracts/ACOwned.sol",
+        "absolutePath": "/home/rohit/Develop/cacp-contracts/contracts/ACOwned.sol",
         "file": "./ACOwned.sol",
         "id": 2542,
         "nodeType": "ImportDirective",
@@ -5478,6 +5478,6 @@
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.1",
-  "updatedAt": "2018-08-01T06:55:27.730Z"
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-08-17T06:51:00.392Z"
 }
