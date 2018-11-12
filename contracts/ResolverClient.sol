@@ -37,6 +37,7 @@ contract ResolverClient {
       if (_contracts[i] == bytes32(0x0)) continue;
       if (msg.sender == ContractResolver(resolver).get_contract(_contracts[i])) {
         _isFrom = true;
+        break;
       }
     }
   }
@@ -54,7 +55,7 @@ contract ResolverClient {
            internal
            returns (bool _success)
   {
-    bool _is_locked = ContractResolver(_resolver).locked();
+    bool _is_locked = ContractResolver(_resolver).locked_forever();
     if (_is_locked == false) {
       CONTRACT_ADDRESS = address(this);
       resolver = _resolver;
@@ -66,24 +67,6 @@ contract ResolverClient {
     }
   }
 
-  /// @dev Destroy the contract and unregister self from the ContractResolver
-  /// @dev Can only be called by the owner of ContractResolver
-  /* function destroy()
-           public
-           returns (bool _success)
-  {
-    bool _is_locked = ContractResolver(resolver).locked();
-    require(!_is_locked);
-
-    address _owner_of_contract_resolver = ContractResolver(resolver).owner();
-    require(msg.sender == _owner_of_contract_resolver);
-
-    _success = ContractResolver(resolver).unregister_contract(key);
-    require(_success);
-
-    selfdestruct(_owner_of_contract_resolver);
-  } */
-
   /// @dev Check if resolver is locked
   /// @return _locked if the resolver is currently locked
   function is_locked()
@@ -91,7 +74,7 @@ contract ResolverClient {
            constant
            returns (bool _locked)
   {
-    _locked = ContractResolver(resolver).locked();
+    _locked = ContractResolver(resolver).locked_forever();
   }
 
   /// @dev Get the address of a contract
