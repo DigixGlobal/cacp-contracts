@@ -1,4 +1,4 @@
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.25;
 
 /// @title Truffle Migrations Contract
 /// @author Consensys / Tim Coulter

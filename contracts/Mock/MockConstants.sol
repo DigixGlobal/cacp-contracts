@@ -1,4 +1,4 @@
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.25;
 import '../Constants.sol';
 /// @title Some useful constants
 /// @author DigixGlobal

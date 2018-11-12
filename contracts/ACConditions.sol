@@ -1,4 +1,4 @@
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.25;
 
 import "./Constants.sol";
 
@@ -54,6 +54,8 @@ contract ACConditions is Constants {
     _;
   }
 
+  // WARNING: this function will not return correctly when called from the
+  // constructor of _contract. It will return false instead of true
   function is_contract(address _contract)
            public
            constant
@@ -72,11 +74,15 @@ contract ACConditions is Constants {
     }
   }
 
+  // WARNING: this function will not work correctly when called from the
+  // constructor of _contract. It will revert instead of going through
   modifier if_contract(address _contract) {
     require(is_contract(_contract) == true);
     _;
   }
 
+  // WARNING: this function will not work correctly when called from the
+  // constructor of _contract. It will go through instead of reverting
   modifier unless_contract(address _contract) {
     require(is_contract(_contract) == false);
     _;

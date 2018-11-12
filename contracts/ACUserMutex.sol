@@ -1,4 +1,4 @@
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.25;
 
 /// @title Per user locking based access control
 /// @author DigixGlobal
