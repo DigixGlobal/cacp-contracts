@@ -58,10 +58,16 @@ contract('ContractResolver', function (addresses) {
     before(async function () {
       mockContractResolver = await MockContractResolver.new();
     });
+    it('register a zero address: revert', async function () {
+      assert(await a.failure(mockContractResolver.init_register_contract.call('test1', '0x0', { from: addresses[0] })));
+    });
     it('successfully register contract, return true', async function () {
       assert.deepEqual(await mockContractResolver.init_register_contract.call('test3', mockContractResolver.address, { from: addresses[0] }), true);
       await mockContractResolver.init_register_contract('test3', mockContractResolver.address);
       assert.deepEqual(await mockContractResolver.mock_check_contracts.call('test3'), mockContractResolver.address);
+    });
+    it('try to re-register same contract: revert', async function () {
+      assert(await a.failure(mockContractResolver.init_register_contract.call('test3', mockContractResolver.address, { from: addresses[0] })));
     });
   });
 

@@ -74,6 +74,9 @@ contract('ACGroups', function (addresses) {
     it('throws when not called by an admin', async function () {
       assert.ok(await a.failure(mockACGroups.add_user_to_group.call('test_group', addresses[1], { from: addresses[1] })));
     });
+    it('throws when tried adding to zero group', async function () {
+      assert.ok(await a.failure(mockACGroups.add_user_to_group.call('0x0', addresses[1], { from: addresses[0] })));
+    });
     it('called by an admin: _user is added to _group, returns true', async function () {
       assert.deepEqual(await mockACGroups.add_user_to_group.call('test_group', addresses[1], { from: addresses[0] }), true);
       await mockACGroups.add_user_to_group('test_group', addresses[1], { from: addresses[0] });
@@ -97,6 +100,9 @@ contract('ACGroups', function (addresses) {
     });
     it('throws when not called by an admin', async function () {
       assert.ok(await a.failure(mockACGroups.delete_user_from_group.call('test_group', addresses[1], { from: addresses[1] })));
+    });
+    it('throws when deleting from zero group', async function () {
+      assert.ok(await a.failure(mockACGroups.delete_user_from_group.call('0x0', addresses[1], { from: addresses[0] })));
     });
     it('called by an admin: _user is added to _group, returns true', async function () {
       assert.deepEqual(await mockACGroups.delete_user_from_group.call('test_group', addresses[1], { from: addresses[0] }), true);

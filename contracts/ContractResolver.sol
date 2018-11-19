@@ -51,6 +51,7 @@ contract ContractResolver is ACOwned, Constants {
            public
            returns (bool _success)
   {
+    require(_contract_address != NULL_ADDRESS);
     contracts[_key] = _contract_address;
     _success = true;
   }
