@@ -72,7 +72,7 @@ contract ContractResolver is ACOwned, Constants {
   /// @return _contract the address of the contract
   function get_contract(bytes32 _key)
            public
-           constant
+           view
            returns (address _contract)
   {
     require(contracts[_key] != NULL_ADDRESS);

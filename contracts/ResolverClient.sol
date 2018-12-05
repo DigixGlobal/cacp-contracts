@@ -71,7 +71,7 @@ contract ResolverClient {
   /// @return _locked if the resolver is currently locked
   function is_locked()
            private
-           constant
+           view
            returns (bool _locked)
   {
     _locked = ContractResolver(resolver).locked_forever();
@@ -82,7 +82,7 @@ contract ResolverClient {
   /// @return _contract the address of the contract
   function get_contract(bytes32 _key)
            public
-           constant
+           view
            returns (address _contract)
   {
     _contract = ContractResolver(resolver).get_contract(_key);
